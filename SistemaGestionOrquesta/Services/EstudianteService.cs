@@ -31,7 +31,6 @@ namespace ExiContratos.Services
                 try
                 {
                     LinQueris.SaveEstudiante(_orquestaContext, estudiante);
-                    await _orquestaContext.SaveChangesAsync();
                     return customResponse.BuildCustomResponse(estudiante, "Estudiante", "respuesta exitosa", "");
                 }
                 catch (DbUpdateException ex)
