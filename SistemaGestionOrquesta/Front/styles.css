@@ -1,0 +1,61 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Color de fondo similar al sitio proporcionado */
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+h1 {
+    text-align: center;
+    color: #007bff; /* Color del enlace del sitio proporcionado */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #495057; /* Color del texto principal del sitio proporcionado */
+}
+
+input,
+button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ced4da; /* Borde gris */
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff; /* Color del enlace del sitio proporcionado */
+    color: #fff; /* Color del texto en botones */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.checkbox-input {
+    margin-right: 4px;
+}
+
+.checkbox-label {
+    margin: 0;
+}

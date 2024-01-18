@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>FICHA DE INSCRIPCIÓN 2023</title>
+    <style>
+        /* Estilos específicos para la cabecera */
+        header {
+            background-color: #007bff; /* Color de fondo de la cabecera */
+            padding: 10px; /* Espaciado interno de la cabecera */
+            text-align: center;
+        }
+
+            header img {
+                max-height: 110px; /* Altura máxima de la imagen */
+                max-width: 100%; /* Ancho máximo de la imagen */
+                margin-left: 10px; /* Margen izquierdo */
+            }
+
+        /* Estilos para el formulario */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff; /* Fondo blanco */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+        }
+
+        header h1 {
+            color: #fff; /* Color del texto en la cabecera */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #495057; /* Color del texto principal del sitio proporcionado */
+        }
+
+        input,
+        button {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ced4da; /* Borde gris */
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007bff; /* Color del enlace del sitio proporcionado */
+            color: #fff; /* Color del texto en botones */
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #0056b3; /* Color de fondo al pasar el ratón */
+            }
+
+        .radio-container {
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ced4da; /* Borde gris */
+            border-radius: 5px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("form").submit(function (event) {
+                event.preventDefault();
+                function generateGuid() {
+                    // Genera un GUID aleatorio
+                    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                        var r = Math.random() * 16 | 0,
+                            v = c === 'x' ? r : (r & 0x3 | 0x8);
+                        return v.toString(16);
+                    });
+                }
+
+                // Llamas a la función para obtener un nuevo GUID
+                var nuevoGuid = generateGuid();
+
+                // Obtén los valores de los campos del formulario
+                var formData = {
+                    estudianteId: nuevoGuid,  // Puedes generar un nuevo GUID si es necesario
+                    nombre: $("#txtbNombres").val(),
+                    apellido: $("#txtbApellidos").val(),
+                    fechaNacimiento: $("#txtbFechaNacimiento").val(),
+                    documento: $("#txtbDNIAlumno").val(),
+                    telefono: $("#txtbCelularAlumno").val(),
+                 //   direccion: "",  // Agrega el valor correspondiente
+                 //   email: "",  // Agrega el valor correspondiente
+                 //   instrumentoId: parseInt($("#instrumento").val()),  // Convierte el valor a entero
+                 //   rutaFoto: "",  // Agrega el valor correspondiente
+                    activo: true,  // o false según sea necesario
+                    nombreTutor: $("#txtbNombrePadre").val(),
+                    telefonoTutor: $("#txtbCelularPadre").val(),
+                    asegurado: false,  // o false según sea necesario
+                    documentoTutor: $("#txtbDNIPadre").val(),
+                    nombreTutor2: $("#txtbNombreMadre").val(),
+                    documentoTutor2: $("#txtbDNIMadre").val(),
+                    telefonoTutor2: $("#txtbCelularMadre").val()
+                };
+
+                // Puedes imprimir los datos en la consola para verificar que se están recopilando correctamente
+                console.log(formData);
+
+                // Realiza la solicitud AJAX al endpoint de la API
+                $.ajax({
+                    type: "POST",
+                    url: "https://localhost:7182/estudiante/save", // Reemplaza con la URL correcta
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(formData),
+                    dataType: "json",
+                    success: function (data) {
+                      //  alert("Solicitud exitosa");  // Mensaje de éxito, puedes cambiarlo según tu necesidad
+                       // console.log(data); // Aquí accedes al cuerpo de la respuesta
+                      //  console.log(data.Estudiante); // Puedes acceder a propiedades específicas si las hay
+                    },
+                    error: function (error) {
+                        // Maneja el error aquí
+                    //    alert("Error en la solicitud");  // Mensaje de error, puedes cambiarlo según tu necesidad
+                       // console.error(error);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- Cabecera con imagen -->
+    <header>
+        <img src="LogoOesat.jpg" alt="LogoOesat">
+        <h1>Registro de Alumno</h1>
+    </header>
+
+    <div class="container-lg">
+        <form>
+            <!-- Datos del ALUMNO/A -->
+            <label for="txtbNombres">NOMBRES:</label>
+            <input type="text" id="txtbNombres" name="txtbNombres" required>
+
+            <label for="txtbApellidos">APELLIDOS:</label>
+            <input type="text" id="txtbApellidos" name="txtbApellidos" required>
+
+            <label for="txtbDNIAlumno">DNI:</label>
+            <input type="text" id="txtbDNIAlumno" name="txtbDNIAlumno" required>
+
+            <label for="txtbFechaNacimiento">FECHA DE NAC.:</label>
+            <input type="date" id="txtbFechaNacimiento" name="txtbFechaNacimiento" required>
+
+
+
+            <label for="txtbCelularAlumno">CEL:</label>
+            <input type="tel" id="txtbCelularAlumno" name="txtbCelularAlumno" required pattern="[0-9]+" title="Por favor, introduce solo números">
+
+            <!-- Datos de la FAMILIA -->
+            <label for="txtbNombrePadre">NOMBRE DEL PADRE:</label>
+            <input type="text" id="txtbNombrePadre" name="txtbNombrePadre" required>
+
+            <label for="txtbDNIPadre">DNI DEL PADRE:</label>
+            <input type="text" id="txtbDNIPadre" name="txtbDNIPadre" required>
+
+            <label for="txtbNombreMadre">NOMBRE DE LA MADRE:</label>
+            <input type="text" id="txtbNombreMadre" name="txtbNombreMadre" required>
+
+            <label for="txtbDNIMadre">DNI DE LA MADRE:</label>
+            <input type="text" id="txtbDNIMadre" name="txtbDNIMadre" required>
+
+            <label for="txtbCelularPadre">CEL DEL PADRE:</label>
+            <input type="tel" id="txtbCelularPadre" name="txtbCelularPadre" required pattern="[0-9]+" title="Por favor, introduce solo números">
+
+            <label for="txtbCelularMadre">CEL DE LA MADRE:</label>
+            <input type="tel" id="txtbCelularMadre" name="txtbCelularMadre" required pattern="[0-9]+" title="Por favor, introduce solo números">
+
+            <label for="instrumento">Instrumento:</label>
+            <select id="instrumento" name="instrumento" required>
+                <option value="Contrabajo">Contrabajo</option>
+                <option value="Violin">Violín</option>
+                <option value="Viola">Viola</option>
+                <option value="Violoncello">Violoncello</option>
+                <option value="Guitarra">Guitarra</option>
+                <option value="Percusión">Percusión</option>
+                <option value="Flauta">Flauta</option>
+                <option value="Clarinete">Clarinete</option>
+                <option value="Bandoneon">Bandoneón</option>
+                <!-- Puedes agregar más opciones según sea necesario -->
+            </select>
+            <label for="orquesta">Orquesta:</label>
+            <select id="orquesta" name="orquesta" required>
+                <option value="Pre-Orquesta">Pre-Orquesta</option>
+                <option value="Taller">Taller de iniciación Musical</option>
+                <option value="Inicial">Orquesta Inicial</option>
+                <option value="Juvenil">Orquesta Juvenil</option>
+                <option value="Danza">Kusikuy Danza</option>
+                <!-- Puedes agregar más opciones según sea necesario -->
+            </select>
+
+            <!-- Autorización -->
+            <label>Autoriza a retirar solo/a del establecimiento de la Orquesta:</label>
+            <div class="radio-container">
+                <input type="radio" id="autorizaSi" name="autoriza" value="SI">
+                <label for="autorizaSi">SI</label>
+
+                <input type="radio" id="autorizaNo" name="autoriza" value="NO">
+                <label for="autorizaNo">NO</label>
+            </div>
+
+            <!-- Firma y aclaración del padre/tutor -->
+            <label for="txtbFirmaPadre">Firma y aclaración del padre/tutor:</label>
+            <input type="text" id="txtbFirmaPadre" name="txtbFirmaPadre" required>
+
+            <!-- Firma y aclaración de la madre/tutora -->
+            <label for="txtbFirmaMadre">Firma y aclaración de la madre/tutora:</label>
+            <input type="text" id="txtbFirmaMadre" name="txtbFirmaMadre" required>
+
+            <!-- Botón de Registro -->
+            <button type="submit">Registrar</button>
+
+            <!-- Nota al pie -->
+            <p>* Doc. que acompaña: partida de nacimiento, fot. dni (alum madre padre), certificado judicial de tenencia, acuerdo extrajudicial o judicial de tenencia.</p>
+        </form>
+    </div>
+
+</body>
+
+</html>
