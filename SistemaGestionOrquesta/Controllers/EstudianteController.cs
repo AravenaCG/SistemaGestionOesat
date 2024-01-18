@@ -12,6 +12,7 @@ using ControllerBase = Microsoft.AspNetCore.Mvc.ControllerBase;
 
 namespace ExiContratos.Controllers
 {
+
     [ApiController]
     [Microsoft.AspNetCore.Mvc.Route("api/[controller]")]
     public class EstudianteController : ControllerBase
@@ -114,6 +115,73 @@ namespace ExiContratos.Controllers
                      }
                 else { return BadRequest(); }
 
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
+        [Microsoft.AspNetCore.Mvc.HttpGet("/estudianteNombreYDni/{nombre}/{documento}")]
+        public async Task<IActionResult> GetEstudiante(string nombre, string documento)
+        {
+            try
+            {
+                var customResponse = await estudianteService.GetEstudianteByNombreYDocumento(nombre, documento);
+                if (customResponse != null)
+                {
+                    return Ok(customResponse);
+                }
+                else { return BadRequest(); }
+
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
+        [Microsoft.AspNetCore.Mvc.HttpGet("/estudianteNombreApellido/{nombre}/{apellido}")]
+        public async Task<IActionResult> GetEstudianteNombreApellido(string nombre, string apellido)
+        {
+            try
+            {
+                var customResponse = await estudianteService.GetEstudianteByNombreYApellido(nombre, apellido);
+                if (customResponse != null)
+                {
+                    return Ok(customResponse);
+                }
+                else { return BadRequest(); }
+
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
+        [Microsoft.AspNetCore.Mvc.HttpGet("/estudiantesByCurso/{idCurso}")]
+        public async Task<List<Estudiante>> GetEstudiantesByCurso(int idCurso)
+        {
+            var customResponse = estudianteService.GetEstudiantesActivosByCurso(idCurso);
+            return customResponse;
+        }
+
+        [Microsoft.AspNetCore.Mvc.HttpGet("/cursosByEstudiante/{id}")]
+        public  Task<List<Curso>> GetCursosByEstudiante(Guid idEstudiante)
+        {
+            var customResponse = estudianteService.GetCursosByEstudiante(idEstudiante);
+            return customResponse;
+        }
+
+        [Microsoft.AspNetCore.Mvc.HttpPut("/estudianteCambiarCurso/{id}/{cursoNuevo}/{cursoViejo}")]
+        public async Task<IActionResult> EditCurso(Guid id, int cursoNuevo,int cursoViejo)
+        {
+
+            try
+            {
+                var customResponse =  estudianteService.CambiarEstudianteDeCurso(id, cursoNuevo,cursoViejo);
+                return Ok(customResponse);
             }
             catch (Exception ex)
             {

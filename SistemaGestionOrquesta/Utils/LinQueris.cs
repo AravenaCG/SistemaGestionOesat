@@ -19,17 +19,8 @@ namespace SistemaGestionOrquesta.Utils
         {
             try
             {
-                Estudiante estudianteExiste = await BuscarEstudiantePorNombreYDniAsync(context, estudianteToSave);
-
-                if (estudianteExiste != null)
-                {
-                    Console.WriteLine($"El estudiante {estudianteExiste.Nombre} ya existe en la DB!");
-                }
-                else
-                {
-                    context.Estudiantes.Add(estudianteToSave);
-                    return await context.SaveChangesAsync();
-                }
+                context.Estudiantes.Add(estudianteToSave);
+                return await context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -125,9 +116,9 @@ namespace SistemaGestionOrquesta.Utils
 
         }
 
-        public static async Task<Estudiante> BuscarEstudiantePorNombreYDniAsync(OrquestaOESATContext context, Estudiante estudiante)
+        public static async Task<Estudiante> BuscarEstudiantePorNombreYDniAsync(OrquestaOESATContext context, string nombre, string documento)
         {
-            return await context.Estudiantes.FirstOrDefaultAsync(p => p.Nombre == estudiante.Nombre && p.Apellido == estudiante.Apellido && p.Documento == estudiante.Documento);
+            return await context.Estudiantes.FirstOrDefaultAsync(p => p.Nombre == nombre && p.Documento == documento);
         }
 
         public static async Task<Estudiante> GetEstudianteByNameAsync(OrquestaOESATContext context, string nombreEstudiante, string apellidoEstudiante)
@@ -143,8 +134,6 @@ namespace SistemaGestionOrquesta.Utils
 
         public static List<Estudiante> GetEstudiantesByCurso(OrquestaOESATContext context, int idCurso)
         {
-            int cursoId = 1; // Reemplaza con el ID del curso que deseas consultar
-
             var estudiantesActivos = context.Cursos
                 .Where(curso => curso.CursoId == idCurso)
                 .SelectMany(curso => curso.Estudiantes.Where(estudiante => (bool)estudiante.Activo))
@@ -517,7 +506,7 @@ namespace SistemaGestionOrquesta.Utils
         }
 
 
-     
+
 
         #endregion
     }

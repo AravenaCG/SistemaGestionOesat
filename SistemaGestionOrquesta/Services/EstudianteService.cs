@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using SistemaGestionOrquesta.Models;
 using SistemaGestionOrquesta.Utils;
+using static ClosedXML.Excel.XLPredefinedFormat;
 
 namespace ExiContratos.Services
 {
@@ -19,7 +20,7 @@ namespace ExiContratos.Services
         public async Task<CustomResponse<Estudiante>> Save(Estudiante estudiante)
         {
 
-            Estudiante estudianteExistente = await LinQueris.BuscarEstudiantePorNombreYDniAsync(_orquestaContext, estudiante);
+            Estudiante estudianteExistente = await LinQueris.BuscarEstudiantePorNombreYDniAsync(_orquestaContext, estudiante.Nombre,estudiante.Documento);
             if (estudianteExistente != null)
             {
                 customResponse = customResponse.BuildCustomResponse(estudiante, "Estudiante", "Error", "El estudiante ya existe en la base de datos.");
@@ -103,12 +104,30 @@ namespace ExiContratos.Services
             }
         }
 
-        Task<Estudiante> IEstudianteService.GetEstudianteByName(Estudiante Estudiante)
+        Task<Estudiante> IEstudianteService.GetEstudianteByNombreYDocumento(string nombre, string documento)
         {
-            return LinQueris.GetEstudianteByNameAsync(_orquestaContext, Estudiante.Nombre,Estudiante.Apellido);
+            return LinQueris.BuscarEstudiantePorNombreYDniAsync(_orquestaContext, nombre, documento);
         }
 
-      
+        public Task<Estudiante> GetEstudianteByNombreYApellido(string nombre, string apellido)
+        {
+            return LinQueris.GetEstudianteByNameAsync(_orquestaContext,nombre, apellido);
+        }
+
+        public List<Estudiante> GetEstudiantesActivosByCurso(int idCurso)
+        {
+            return LinQueris.GetEstudiantesByCurso(_orquestaContext, idCurso);
+        }
+
+        public Task<List<Curso>> GetCursosByEstudiante(Guid estudianteId)
+        {
+            return LinQueris.GetCursosByEstudiante(_orquestaContext, estudianteId);
+        }
+
+        public Task CambiarEstudianteDeCurso(Guid estudianteId, int nuevoCurso, int viejoCurso)
+        {
+            return LinQueris.CambiarEstudianteDeCursoAsync(_orquestaContext, estudianteId,nuevoCurso,viejoCurso);
+        }
     }
 }
 
@@ -123,8 +142,15 @@ public interface IEstudianteService
     
     List<Estudiante> Get();
     Task<Estudiante> Get(Guid id);
-    Task<Estudiante> GetEstudianteByName(Estudiante Estudiante);
+    Task<Estudiante> GetEstudianteByNombreYDocumento(string nombre, string documento);
 
+    Task<Estudiante> GetEstudianteByNombreYApellido(string nombre, string apellido);
+
+    List<Estudiante> GetEstudiantesActivosByCurso(int idCurso);
+
+    Task<List<Curso>> GetCursosByEstudiante(Guid estudianteId);
+
+    Task CambiarEstudianteDeCurso(Guid estudianteId, int viejoCurso,int nuevoCurso);
 }
 
 
