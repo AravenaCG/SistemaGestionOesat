@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using SistemaGestionOrquesta.Models;
+using static ClosedXML.Excel.XLPredefinedFormat;
 
 namespace SistemaGestionOrquesta.Utils
 {
     internal class LinQueris
     {
-
         #region ABM_Estudiante
 
         public static async Task<int> SaveEstudiante(OrquestaOESATContext context, Estudiante estudianteToSave)
@@ -178,56 +178,141 @@ namespace SistemaGestionOrquesta.Utils
             }
         }
 
-
-        public static async Task CambiarEstudianteDeCursoAsync(OrquestaOESATContext context, Guid estudianteId, int nuevoCursoId, int viejoCursoId)
+        public static async Task<bool> InscribirEstudianteEnCurso(OrquestaOESATContext context, Guid estudianteId, int cursoId)
         {
             try
             {
-                // Cargar el estudiante por su ID
+                // Obtener el estudiante por su ID
                 var estudiante = await context.Estudiantes
-                    .Include(e => e.Cursos)
+                    .Include(e => e.Cursos)  // Asegurarse de incluir la relación de cursos
                     .FirstOrDefaultAsync(e => e.EstudianteId == estudianteId);
 
                 if (estudiante != null)
                 {
-                    // Verificar si el nuevo curso y el curso antiguo existen
-                    var nuevoCurso = await context.Cursos.FindAsync(nuevoCursoId);
-                    var viejoCurso = await context.Cursos.FindAsync(viejoCursoId);
+                    // Obtener el curso por su ID
+                    var curso = await context.Cursos.FindAsync(cursoId);
 
-                    if (nuevoCurso != null && viejoCurso != null)
+                    if (curso != null)
                     {
-                        // Quitar el curso antiguo de la lista de cursos del estudiante
-                        estudiante.Cursos.Remove(viejoCurso);
+                        // Verificar si el estudiante ya está inscrito en el curso
+                        if (!estudiante.Cursos.Any(c => c.CursoId == cursoId))
+                        {
+                            // Agregar el curso al estudiante
+                            estudiante.Cursos.Add(curso);
 
-                        // Agregar el nuevo curso a la lista de cursos del estudiante
-                        estudiante.Cursos.Add(nuevoCurso);
+                            // Guardar los cambios en la base de datos
+                            await context.SaveChangesAsync();
 
-                        // Guardar los cambios en la base de datos
-                        await context.SaveChangesAsync();
-
-                        Console.WriteLine($"Estudiante {estudiante.Nombre} cambió de {viejoCurso.Nombre} a {nuevoCurso.Nombre}");
+                            return true; // Éxito al inscribir al estudiante en el curso
+                        }
+                        else
+                        {
+                            // El estudiante ya está inscrito en el curso
+                            return false;
+                        }
                     }
                     else
                     {
-                        Console.WriteLine($"El nuevo curso con ID {nuevoCursoId} o el curso antiguo con ID {viejoCursoId} no existe");
+                        // No se encontró el curso con el ID proporcionado
+                        return false;
                     }
                 }
                 else
                 {
-                    Console.WriteLine($"No se encontró el estudiante con ID: {estudianteId}");
+                    // No se encontró el estudiante con el ID proporcionado
+                    return false;
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error al cambiar estudiante de curso: {ex.Message}");
-                throw;
+                // Manejar excepciones aquí
+                Console.WriteLine($"Error al inscribir estudiante en curso: {ex.Message}");
+                return false;
+            }
+        }
+
+        public static async Task<bool> DarDeBajaEstudianteDeCurso(OrquestaOESATContext context, Guid estudianteId, int cursoId)
+        {
+            try
+            {
+                // Obtener el estudiante por su ID
+                var estudiante = await context.Estudiantes
+                    .Include(e => e.Cursos)  // Asegurarse de incluir la relación de cursos
+                    .FirstOrDefaultAsync(e => e.EstudianteId == estudianteId);
+
+                if (estudiante != null)
+                {
+                    // Obtener el curso por su ID
+                    var curso = await context.Cursos.FindAsync(cursoId);
+
+                    if (curso != null)
+                    {
+                        // Verificar si el estudiante está inscrito en el curso
+                        var inscripcion = estudiante.Cursos.FirstOrDefault(c => c.CursoId == cursoId);
+
+                        if (inscripcion != null)
+                        {
+                            // Quitar el curso de la lista de cursos del estudiante
+                            estudiante.Cursos.Remove(inscripcion);
+
+                            // Guardar los cambios en la base de datos
+                            await context.SaveChangesAsync();
+
+                            return true; // Éxito al dar de baja al estudiante del curso
+                        }
+                        else
+                        {
+                            // El estudiante no está inscrito en el curso
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        // No se encontró el curso con el ID proporcionado
+                        return false;
+                    }
+                }
+                else
+                {
+                    // No se encontró el estudiante con el ID proporcionado
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejar excepciones aquí
+                Console.WriteLine($"Error al dar de baja estudiante del curso: {ex.Message}");
+                return false;
+            }
+        }
+        public static async Task CambiarEstudianteDeCursoAsync(OrquestaOESATContext context, Guid estudianteId, int nuevoCursoId, int viejoCursoId)
+        {
+            // Ejecutar ambas tareas de forma paralela y esperar a que ambas se completen
+            var tareas = new List<Task<bool>>
+    {
+        LinQueris.DarDeBajaEstudianteDeCurso(context, estudianteId, viejoCursoId),
+        LinQueris.InscribirEstudianteEnCurso(context, estudianteId, nuevoCursoId)
+    };
+
+            await Task.WhenAll(tareas);
+
+            // Puedes manejar el resultado de las tareas si es necesario
+            bool bajaExitosa = tareas[0].Result;
+            bool altaExitosa = tareas[1].Result;
+
+            // Realizar cualquier otro manejo necesario después de la actualización
+            if (bajaExitosa && altaExitosa)
+            {
+                Console.WriteLine($"Estudiante {estudianteId} cambió de {viejoCursoId} a {nuevoCursoId}");
+            }
+            else
+            {
+                Console.WriteLine($"Error al cambiar estudiante de curso");
             }
         }
 
 
         #endregion
-
-
 
         #region PROFESOR
 
@@ -245,26 +330,29 @@ namespace SistemaGestionOrquesta.Utils
             return await context.SaveChangesAsync();
         }
 
-        public static async Task<int> DeleteProfesor(OrquestaOESATContext context, Profesor profesorToDelete)
+        public static async Task<string> DeleteProfesor(OrquestaOESATContext context, Profesor profesorToDelete)
         {
-            Profesor profesorExiste = await GetProfesorByNameAsync(context, profesorToDelete.Nombre, profesorToDelete.Apellido);
-            if (profesorExiste != null)
+            try
             {
                 context.Remove(profesorToDelete);
+                await context.SaveChangesAsync();
+                return "Profesor eliminado exitosamente!";
             }
-            else
+            catch (DbUpdateConcurrencyException ex)
             {
-                profesorExiste = await GetProfesorById(context, profesorToDelete.ProfesorId);
-                if (profesorExiste != null)
-                {
-                    context.Remove(profesorToDelete);
-                }
-                else
-                {
-                    Console.WriteLine("El profesor no existe");
-                }
+                // Manejar excepción de concurrencia
+                return $"Error de concurrencia: {ex.Message}";
             }
-            return await context.SaveChangesAsync();
+            catch (DbUpdateException ex)
+            {
+                // Manejar excepción de actualización de base de datos
+                return $"Error al actualizar la base de datos: {ex.Message}";
+            }
+            catch (Exception ex)
+            {
+                // Manejar otras excepciones
+                return $"Error inesperado: {ex.Message}";
+            }
         }
 
         public static async Task DarBajaProfesorAsync(OrquestaOESATContext context, Guid profesorId)
@@ -278,7 +366,7 @@ namespace SistemaGestionOrquesta.Utils
             }
         }
 
-        public static async Task ModificarProfesorAsync(OrquestaOESATContext context, Guid profesorId, Profesor profesorModificado)
+        public static async Task<string> ModificarProfesorAsync(OrquestaOESATContext context, Guid profesorId, Profesor profesorModificado)
         {
             var profesorExistente = await context.Profesors.FindAsync(profesorId);
 
@@ -295,10 +383,13 @@ namespace SistemaGestionOrquesta.Utils
                 profesorExistente.Activo = profesorModificado.Activo ?? profesorExistente.Activo;
 
                 await context.SaveChangesAsync();
+                return "Estudiante Modificado Exitosamente!";
             }
+            else { return "El estudiante al parecer no existe en la DB"; }
+        
         }
 
-        private static async Task<Profesor?> GetProfesorById(OrquestaOESATContext context, Guid profesorId)
+        public static async Task<Profesor> GetProfesorById(OrquestaOESATContext context, Guid profesorId)
         {
             return await context.Profesors.FirstOrDefaultAsync(p => p.ProfesorId == profesorId);
         }
@@ -306,6 +397,11 @@ namespace SistemaGestionOrquesta.Utils
         public static async Task<Profesor> GetProfesorByNameAsync(OrquestaOESATContext context, string nombreProfesor, string apellidoProfesor)
         {
             return await context.Profesors.FirstOrDefaultAsync(p => p.Nombre == nombreProfesor && p.Apellido == apellidoProfesor);
+        }
+
+        public static async Task<Profesor> GetProfesorPorNombreYDniAsync(OrquestaOESATContext context, string nombreProfesor, string apellidoProfesor)
+        {
+            return await context.Profesors.FirstOrDefaultAsync(p => p.Nombre == nombreProfesor && p.Documento == apellidoProfesor);
         }
 
         public static List<Profesor> GetProfesoresActive(OrquestaOESATContext context)
@@ -336,29 +432,33 @@ namespace SistemaGestionOrquesta.Utils
             return await context.SaveChangesAsync();
         }
 
-        public static async Task<int> DeleteInstrumento(OrquestaOESATContext context, Instrumento instrumentoToDelete)
+        public static async Task<string> DeleteInstrumento(OrquestaOESATContext context, Instrumento instrumentoToDelete)
         {
-            Instrumento instrumentoExiste = await GetInstrumentoByNameAsync(context, instrumentoToDelete.Nombre);
-            if (instrumentoExiste != null)
+            try
             {
+                // Intenta eliminar el estudiante
                 context.Remove(instrumentoToDelete);
+                await context.SaveChangesAsync();
+                return "Instrumento eliminado exitosamente!";
             }
-            else
+            catch (DbUpdateConcurrencyException ex)
             {
-                instrumentoExiste = await GetInstrumentoById(context, instrumentoToDelete.InstrumentoId);
-                if (instrumentoExiste != null)
-                {
-                    context.Remove(instrumentoToDelete);
-                }
-                else
-                {
-                    Console.WriteLine("El instrumento no existe");
-                }
+                // Manejar excepción de concurrencia
+                return $"Error de concurrencia: {ex.Message}";
             }
-            return await context.SaveChangesAsync();
+            catch (DbUpdateException ex)
+            {
+                // Manejar excepción de actualización de base de datos
+                return $"Error al actualizar la base de datos: {ex.Message}";
+            }
+            catch (Exception ex)
+            {
+                // Manejar otras excepciones
+                return $"Error inesperado: {ex.Message}";
+            }
         }
 
-        public static async Task ModificarInstrumentoAsync(OrquestaOESATContext context, int instrumentoId, Instrumento instrumentoModificado)
+        public static async Task<string> ModificarInstrumentoAsync(OrquestaOESATContext context, int instrumentoId, Instrumento instrumentoModificado)
         {
             var instrumentoExistente = await context.Instrumentos.FindAsync(instrumentoId);
 
@@ -368,11 +468,12 @@ namespace SistemaGestionOrquesta.Utils
                 instrumentoExistente.Nombre = instrumentoModificado.Nombre ?? instrumentoExistente.Nombre;
                 instrumentoExistente.Detalles = instrumentoModificado.Detalles ?? instrumentoExistente.Detalles;
 
-                await context.SaveChangesAsync();
+                return "Instrumento Modificado Exitosamente!";
             }
+            else { return "El instrumento al parecer no existe en la DB"; }
         }
 
-        private static async Task<Instrumento?> GetInstrumentoById(OrquestaOESATContext context, int instrumentoId)
+        public static async Task<Instrumento?> GetInstrumentoById(OrquestaOESATContext context, int instrumentoId)
         {
             return await context.Instrumentos.FirstOrDefaultAsync(p => p.InstrumentoId == instrumentoId);
         }
@@ -398,7 +499,7 @@ namespace SistemaGestionOrquesta.Utils
                 // Crear un nuevo préstamo
                 var prestamo = new PrestamoInstrumento
                 {
-                    FechaPrestamo = DateTime.Now,
+                    FechaPrestamo = System.DateTime.Now,
                     Instrumento = instrumento,
                     Estudiante = estudiante
                 };
@@ -422,7 +523,7 @@ namespace SistemaGestionOrquesta.Utils
             if (prestamo != null)
             {
                 // Actualizar la fecha de devolución
-                prestamo.FechaDevolucion = DateTime.Now;
+                prestamo.FechaDevolucion = System.DateTime.Now;
 
                 // Actualizar el estado del instrumento a disponible
                 prestamo.Instrumento.Disponible = true;
@@ -435,7 +536,6 @@ namespace SistemaGestionOrquesta.Utils
 
 
         #endregion
-
 
         #region Curso
 
@@ -453,43 +553,49 @@ namespace SistemaGestionOrquesta.Utils
             return await context.SaveChangesAsync();
         }
 
-        public static async Task<int> DeleteCurso(OrquestaOESATContext context, Curso cursoToDelete)
+        public static async Task<string> DeleteCurso(OrquestaOESATContext context, Curso cursoToDelete)
         {
-            Curso cursoExiste = await GetCursoByNameAsync(context, cursoToDelete.Nombre);
-            if (cursoExiste != null)
+            try
             {
+                // Intenta eliminar el estudiante
                 context.Remove(cursoToDelete);
+                await context.SaveChangesAsync();
+                return "Curso eliminado exitosamente!";
             }
-            else
+            catch (DbUpdateConcurrencyException ex)
             {
-                cursoExiste = await GetCursoById(context, cursoToDelete.CursoId);
-                if (cursoExiste != null)
-                {
-                    context.Remove(cursoToDelete);
-                }
-                else
-                {
-                    Console.WriteLine("El curso no existe");
-                }
+                // Manejar excepción de concurrencia
+                return $"Error de concurrencia: {ex.Message}";
             }
-            return await context.SaveChangesAsync();
+            catch (DbUpdateException ex)
+            {
+                // Manejar excepción de actualización de base de datos
+                return $"Error al actualizar la base de datos: {ex.Message}";
+            }
+            catch (Exception ex)
+            {
+                // Manejar otras excepciones
+                return $"Error inesperado: {ex.Message}";
+            }
         }
 
-        public static async Task ModificarCursoAsync(OrquestaOESATContext context, int cursoId, Curso cursoModificado)
+        public static async Task<string> ModificarCursoAsync(OrquestaOESATContext context, int cursoId, Curso cursoModificado)
         {
             var cursoExistente = await context.Cursos.FindAsync(cursoId);
 
             if (cursoExistente != null)
             {
-                // Actualizar propiedades según tu lógica de modificación
                 cursoExistente.Nombre = cursoModificado.Nombre ?? cursoExistente.Nombre;
                 cursoExistente.ProfesorId = cursoModificado.ProfesorId ?? cursoExistente.ProfesorId;
 
                 await context.SaveChangesAsync();
+                return "Curso Modificado Exitosamente!";
             }
+            else { return "El curso al parecer no existe en la DB"; }
         }
+        
 
-        private static async Task<Curso?> GetCursoById(OrquestaOESATContext context, int cursoId)
+        public static async Task<Curso?> GetCursoById(OrquestaOESATContext context, int cursoId)
         {
             return await context.Cursos.FirstOrDefaultAsync(p => p.CursoId == cursoId);
         }

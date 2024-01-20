@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 
-namespace ExiContratos.Models.Middleware
+namespace SistemaGestionOrquesta.Models.Middleware
 {
 
     public class CustomResponse<TDto> : ControllerBase

@@ -1,14 +1,14 @@
-﻿using ExiContratos.Models.Middleware;
+﻿using SistemaGestionOrquesta.Models.Middleware;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using SistemaGestionOrquesta.Models;
 using SistemaGestionOrquesta.Utils;
 using static ClosedXML.Excel.XLPredefinedFormat;
 
-namespace ExiContratos.Services
+namespace SistemaGestionOrquesta.Services
 {
     public class EstudianteService : IEstudianteService
-{
+    {
     CustomResponse<Estudiante> customResponse;
     OrquestaOESATContext _orquestaContext;
 
@@ -127,6 +127,16 @@ namespace ExiContratos.Services
         {
             return LinQueris.CambiarEstudianteDeCursoAsync(_orquestaContext, estudianteId,nuevoCurso,viejoCurso);
         }
+
+        public Task<bool> InscribirEstudianteCurso(Guid estudianteId, int nuevoCurso)
+        {
+            return LinQueris.InscribirEstudianteEnCurso(_orquestaContext,estudianteId,nuevoCurso);
+        }
+
+        public Task<bool> EliminarCursoEstudiante(Guid estudianteId, int viejoCurso)
+        {
+            return LinQueris.DarDeBajaEstudianteDeCurso(_orquestaContext, estudianteId, viejoCurso);
+        }
     }
 }
 
@@ -148,6 +158,8 @@ public interface IEstudianteService
     List<Estudiante> GetEstudiantesActivosByCurso(int idCurso);
 
     Task<List<Curso>> GetCursosByEstudiante(Guid estudianteId);
+    Task<bool> InscribirEstudianteCurso(Guid estudianteId, int nuevoCurso);
+    Task<bool> EliminarCursoEstudiante(Guid estudianteId, int viejoCurso);
 
     Task CambiarEstudianteDeCurso(Guid estudianteId, int viejoCurso,int nuevoCurso);
 }

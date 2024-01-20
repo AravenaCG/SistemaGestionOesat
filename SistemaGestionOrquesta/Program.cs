@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using ExiContratos.Services;
+using SistemaGestionOrquesta.Services;
 using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,7 +25,10 @@ builder.Services.AddDbContext<OrquestaOESATContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerConStringOesat"));
 });
-builder.Services.AddScoped<IEstudianteService, EstudianteService>();
+builder.Services.AddScoped<EstudianteService, EstudianteService>();
+builder.Services.AddScoped<IProfesorService, ProfesorService>();
+builder.Services.AddScoped<IInstrumentoService, InstrumentoService>();
+builder.Services.AddScoped<ICursoService, CursoService>();
 
 var app = builder.Build();
 

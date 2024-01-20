@@ -1,4 +1,4 @@
-﻿namespace ExiContratos.Models.Middleware
+﻿namespace SistemaGestionOrquesta.Models.Middleware
 {
     public class CustomResponses<TDto>
     {

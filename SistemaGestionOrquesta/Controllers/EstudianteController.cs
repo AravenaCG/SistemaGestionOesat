@@ -1,6 +1,6 @@
 ﻿
-using ExiContratos.Models.Middleware;
-using ExiContratos.Services;
+using SistemaGestionOrquesta.Models.Middleware;
+using SistemaGestionOrquesta.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Query.Internal;
@@ -10,7 +10,7 @@ using System.Threading;
 using System.Web.Mvc;
 using ControllerBase = Microsoft.AspNetCore.Mvc.ControllerBase;
 
-namespace ExiContratos.Controllers
+namespace SistemaGestionOrquesta.Controllers
 {
 
     [ApiController]
@@ -168,12 +168,41 @@ namespace ExiContratos.Controllers
             return customResponse;
         }
 
-        [Microsoft.AspNetCore.Mvc.HttpGet("/cursosByEstudiante/{id}")]
+        [Microsoft.AspNetCore.Mvc.HttpGet("/cursosByEstudiante/{idEstudiante}")]
         public  Task<List<Curso>> GetCursosByEstudiante(Guid idEstudiante)
         {
             var customResponse = estudianteService.GetCursosByEstudiante(idEstudiante);
             return customResponse;
         }
+
+        [Microsoft.AspNetCore.Mvc.HttpDelete("/estudianteEliminarCurso/{id}/{Idcurso}")]
+        public async Task<IActionResult> DeleteCursoEstudiante(Guid id, int Idcurso)
+        {
+            try
+            {
+                var customResponse = estudianteService.EliminarCursoEstudiante(id, Idcurso);
+                return Ok(customResponse);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
+        [Microsoft.AspNetCore.Mvc.HttpPost("/estudianteDarDeAltaEnCurso/{id}/{Idcurso}")]
+        public async Task<IActionResult> DarDeAltaEnCurso(Guid id, int Idcurso)
+        {
+            try
+            {
+                var customResponse = estudianteService.InscribirEstudianteCurso(id, Idcurso);
+                return Ok(customResponse);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
 
         [Microsoft.AspNetCore.Mvc.HttpPut("/estudianteCambiarCurso/{id}/{cursoNuevo}/{cursoViejo}")]
         public async Task<IActionResult> EditCurso(Guid id, int cursoNuevo,int cursoViejo)
@@ -189,5 +218,6 @@ namespace ExiContratos.Controllers
                 return NotFound(ex.Message);
             }
         }
+
     }
 }
