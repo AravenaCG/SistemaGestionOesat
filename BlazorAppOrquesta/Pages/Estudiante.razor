@@ -1,0 +1,50 @@
+﻿@page "/estudiante"
+@inject HttpClient Http
+
+<PageTitle>Estudiante</PageTitle>
+
+<h3>Estudiante</h3>
+
+<button @onclick="ObtenerListaAlumnos">Obtener lista de alumnos</button>
+
+@if (Estudiantes == null)
+{
+    //<p><em>Loading... </em></p>
+}
+else{ 
+<table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha de Nacimiento</th>
+                <!-- Agrega más encabezados según sea necesario -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var estudiante in Estudiantes)
+            {
+                <tr>
+                    <td>@estudiante.Nombre</td>
+                    <td>@estudiante.Apellido</td>
+                    <td>@estudiante.FechaNacimiento</td>
+                    <!-- Agrega más celdas según sea necesario -->
+                </tr>
+            }
+        </tbody>
+    </table>
+    }
+
+
+@code {
+    private ICollection<BlazorAppOrquesta.Estudiante> Estudiantes;
+    private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://localhost:7182", new HttpClient());
+
+    private async Task ObtenerListaAlumnos()
+    {
+        // Realiza la llamada HTTP para obtener la lista de alumnos
+        Estudiantes = await orquestaClient.EstudiantesAsync();
+    }
+
+
+}
