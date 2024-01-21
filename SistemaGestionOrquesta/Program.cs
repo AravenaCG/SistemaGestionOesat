@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 string MyCors = "MyCors";
 
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -21,11 +22,12 @@ builder.Services.AddCors(options =>
         build.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
     });
 });
+
 builder.Services.AddDbContext<OrquestaOESATContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerConStringOesat"));
 });
-builder.Services.AddScoped<EstudianteService, EstudianteService>();
+builder.Services.AddScoped<IEstudianteService, EstudianteService>();
 builder.Services.AddScoped<IProfesorService, ProfesorService>();
 builder.Services.AddScoped<IInstrumentoService, InstrumentoService>();
 builder.Services.AddScoped<ICursoService, CursoService>();
@@ -37,9 +39,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 
-    app.UseCors(MyCors);
 }
 
+app.UseCors(MyCors);
 app.UseHttpsRedirection();
 app.UseAuthorization();
 
