@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace SistemaGestionOrquesta.Models
 {
@@ -35,8 +36,15 @@ namespace SistemaGestionOrquesta.Models
         public string? Particularidad { get; set; }
         public bool? Autoretiro { get; set; }
 
+        [JsonIgnore]
+
         public virtual Instrumento? Instrumento { get; set; }
+
+        [JsonIgnore]
+
         public virtual ICollection<PrestamosInstrumento> PrestamosInstrumentos { get; set; }
+
+        [JsonIgnore]
 
         public virtual ICollection<Curso> Cursos { get; set; }
     }

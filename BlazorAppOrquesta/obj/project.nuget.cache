@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GvlIJ87sf9qTs5ryix785zAKnOjxx+WHjMvkC9VVG+4iCij+GjDCo2PPic0GibgcsMZ4dGbXgSpS6vyAUVBuFA==",
+  "dgSpecHash": "JDqejfiP9RMKOlxY5h7lGhthuVanTCLhjk6sQHzgrmSb+baP0sC2uCvgklkdC0zmXuL+OJ0T0E4DLeFXYnNdag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Exiuser\\Desktop\\SistemaOESAT\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
+  "projectFilePath": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.1\\microsoft.aspnetcore.authorization.8.0.1.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.1\\microsoft.aspnetcore.components.8.0.1.nupkg.sha512",

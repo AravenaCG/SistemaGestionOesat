@@ -2823,14 +2823,38 @@ namespace BlazorAppOrquesta
         [Newtonsoft.Json.JsonProperty("documentoTutor", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string DocumentoTutor { get; set; }
 
-        [Newtonsoft.Json.JsonProperty("nombreTutor2", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string NombreTutor2 { get; set; }
-
         [Newtonsoft.Json.JsonProperty("documentoTutor2", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string DocumentoTutor2 { get; set; }
 
+        [Newtonsoft.Json.JsonProperty("nombreTutor2", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string NombreTutor2 { get; set; }
+
         [Newtonsoft.Json.JsonProperty("telefonoTutor2", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string TelefonoTutor2 { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("nacionalidad", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Nacionalidad { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("tmtMédico", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string TmtMédico { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("epPsicoMotriz", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string EpPsicoMotriz { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("particularidad", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Particularidad { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("autoretiro", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool? Autoretiro { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("instrumento", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public Instrumento Instrumento { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("prestamosInstrumentos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<PrestamosInstrumento> PrestamosInstrumentos { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("cursos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<Curso> Cursos { get; set; }
 
     }
 
@@ -2851,6 +2875,35 @@ namespace BlazorAppOrquesta
 
         [Newtonsoft.Json.JsonProperty("estudiantes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<Estudiante> Estudiantes { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("prestamosInstrumentos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<PrestamosInstrumento> PrestamosInstrumentos { get; set; }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.18.2.0 (NJsonSchema v10.8.0.0 (Newtonsoft.Json v11.0.0.0))")]
+    public partial class PrestamosInstrumento
+    {
+        [Newtonsoft.Json.JsonProperty("prestamoInstrumentoId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public int PrestamoInstrumentoId { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("fechaPrestamo", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.DateTimeOffset FechaPrestamo { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("fechaDevolucion", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.DateTimeOffset? FechaDevolucion { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("instrumentoId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public int InstrumentoId { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("estudianteId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Guid EstudianteId { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("estudiante", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public Estudiante Estudiante { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("instrumento", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public Instrumento Instrumento { get; set; }
 
     }
 

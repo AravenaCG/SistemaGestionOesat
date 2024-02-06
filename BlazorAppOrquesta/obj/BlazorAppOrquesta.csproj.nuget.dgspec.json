@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Exiuser\\Desktop\\SistemaOESAT\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj": {}
+    "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Exiuser\\Desktop\\SistemaOESAT\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj": {
+    "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Exiuser\\Desktop\\SistemaOESAT\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
+        "projectUniqueName": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
         "projectName": "BlazorAppOrquesta",
-        "projectPath": "C:\\Users\\Exiuser\\Desktop\\SistemaOESAT\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
+        "projectPath": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
         "packagesPath": "C:\\Users\\Exiuser\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Exiuser\\Desktop\\SistemaOESAT\\BlazorAppOrquesta\\obj\\",
+        "outputPath": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

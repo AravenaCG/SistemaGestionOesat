@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <OpenApiReference Include="..\..\..\Downloads\swagger.json" CodeGenerator="NSwagCSharp" ClassName="OrquestaCñ" Link="OpenAPIs\swagger.json" />
+    <OpenApiReference Include="..\..\..\..\Documents\swagger.json" CodeGenerator="NSwagCSharp" ClassName="OrquestaCñ" Link="OpenAPIs\swagger.json" />
   </ItemGroup>
 
   <ItemGroup>
