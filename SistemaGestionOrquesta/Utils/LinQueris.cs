@@ -497,11 +497,13 @@ namespace SistemaGestionOrquesta.Utils
             if (estudiante != null && instrumento != null && instrumento.Disponible)
             {
                 // Crear un nuevo préstamo
-                var prestamo = new PrestamoInstrumento
+                PrestamosInstrumento prestamo = new PrestamosInstrumento
                 {
                     FechaPrestamo = System.DateTime.Now,
                     Instrumento = instrumento,
-                    Estudiante = estudiante
+                    Estudiante = estudiante,
+                    EstudianteId = estudianteId,
+                    InstrumentoId = instrumentoId
                 };
 
                 // Actualizar el estado del instrumento a no disponible

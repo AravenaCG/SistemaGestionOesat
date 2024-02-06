@@ -8,16 +8,15 @@ namespace SistemaGestionOrquesta.Models
         public Instrumento()
         {
             Estudiantes = new HashSet<Estudiante>();
+            PrestamosInstrumentos = new HashSet<PrestamosInstrumento>();
         }
 
         public int InstrumentoId { get; set; }
         public string? Nombre { get; set; }
         public string? Detalles { get; set; }
-
-        // Nueva propiedad para rastrear el estado del préstamo
-        public bool Disponible { get; set; } = true;
+        public bool Disponible { get; set; }
 
         public virtual ICollection<Estudiante> Estudiantes { get; set; }
+        public virtual ICollection<PrestamosInstrumento> PrestamosInstrumentos { get; set; }
     }
-
 }

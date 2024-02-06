@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
 
 namespace SistemaGestionOrquesta.Models
 {
@@ -8,6 +7,7 @@ namespace SistemaGestionOrquesta.Models
     {
         public Estudiante()
         {
+            PrestamosInstrumentos = new HashSet<PrestamosInstrumento>();
             Cursos = new HashSet<Curso>();
         }
 
@@ -25,25 +25,19 @@ namespace SistemaGestionOrquesta.Models
         public string? NombreTutor { get; set; }
         public string? TelefonoTutor { get; set; }
         public bool? Asegurado { get; set; }
-
-
         public string? DocumentoTutor { get; set; }
-        public string? NombreTutor2 { get; set; }
         public string? DocumentoTutor2 { get; set; }
+        public string? NombreTutor2 { get; set; }
         public string? TelefonoTutor2 { get; set; }
-
-
-        [JsonIgnore]
+        public string? Nacionalidad { get; set; }
+        public string? TmtMédico { get; set; }
+        public string? EpPsicoMotriz { get; set; }
+        public string? Particularidad { get; set; }
+        public bool? Autoretiro { get; set; }
 
         public virtual Instrumento? Instrumento { get; set; }
-        [JsonIgnore]
+        public virtual ICollection<PrestamosInstrumento> PrestamosInstrumentos { get; set; }
 
-        public virtual ICollection<Curso>? Cursos { get; set; }
-
-        // Nueva propiedad para el préstamo de instrumentos
-        [JsonIgnore]
-
-        public virtual ICollection<PrestamoInstrumento>? Prestamos { get; set; }
+        public virtual ICollection<Curso> Cursos { get; set; }
     }
-
 }
