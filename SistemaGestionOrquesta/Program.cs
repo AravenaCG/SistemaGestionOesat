@@ -6,6 +6,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using SistemaGestionOrquesta.Services;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,15 +30,35 @@ builder.Services.AddDbContext<OrquestaOESATContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerConStringOesat"));
 });
+
+
 builder.Services.AddScoped<IEstudianteService, EstudianteService>();
 builder.Services.AddScoped<IProfesorService, ProfesorService>();
 builder.Services.AddScoped<IInstrumentoService, InstrumentoService>();
 builder.Services.AddScoped<ICursoService, CursoService>();
 
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+    };
+}
+);
+//builder.Services.AddAuthentication(.AddIdentityServerJwt();
+
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
-{
+{   
     app.UseSwagger();
     app.UseSwaggerUI();
 
@@ -43,6 +66,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors(MyCors);
 app.UseHttpsRedirection();
+app.UseAuthentication();
+//app.UseIdentityServer();
+
 app.UseAuthorization();
 
 app.MapControllers();
