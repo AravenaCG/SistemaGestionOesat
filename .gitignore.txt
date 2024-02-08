@@ -1,0 +1,10 @@
+# Ignorar archivos compilados
+*.exe
+*.dll
+
+# Ignorar directorios de paquetes
+/packages/
+/node_modules/
+SistemaGestionOrquesta/.vs/
+# Ignorar archivos de configuración específicos
+appsettings.json

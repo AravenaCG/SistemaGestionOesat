@@ -24,6 +24,7 @@ namespace SistemaGestionOrquesta.Models
                         result = ""
                     };
                 }
+
                 var id = identity.Claims.FirstOrDefault(x => x.Type == "id").Value;
 
                 Usuario usuario = Usuario.DB().FirstOrDefault(x => x.IdUsuario == id);

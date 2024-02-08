@@ -1,22 +1,19 @@
 ﻿
 using SistemaGestionOrquesta.Models.Middleware;
-using SistemaGestionOrquesta.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Query.Internal;
 using SistemaGestionOrquesta.Models;
-using SistemaGestionOrquesta.Utils;
-using System.Threading;
-using System.Web.Mvc;
 using ControllerBase = Microsoft.AspNetCore.Mvc.ControllerBase;
-
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 namespace SistemaGestionOrquesta.Controllers
 {
 
     [ApiController]
     [Microsoft.AspNetCore.Mvc.Route("api/[controller]")]
+    [Authorize]
     public class EstudianteController : ControllerBase
     {
+       
 
         IEstudianteService estudianteService;
 
@@ -97,10 +94,27 @@ namespace SistemaGestionOrquesta.Controllers
             }
         }
 
-
-        [Microsoft.AspNetCore.Mvc.HttpGet("/estudiantes")]
-        public async Task<List<Estudiante>> Get()
+        [HttpGet("/estudiantes")]
+        public async Task<ActionResult<List<Estudiante>>> Get()
         {
+
+          
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+            var rToken = Jwt.ValidarToken(identity);
+            if (!rToken.succes)
+            {
+                // Si la validación del token falla, devolver un mensaje de error
+                return BadRequest("Token de autorización inválido");
+            }
+
+            Usuario usuario = rToken.result;
+            if (usuario.Rol != "Admin")
+            {
+                // Si el usuario no tiene el rol "Admin", devolver un mensaje de error
+                return Unauthorized("No tienes permisos para acceder a esta función");
+            }
+
+            // Si el usuario tiene el rol "Admin", obtener la lista de estudiantes
             var customResponse =  estudianteService.Get();
             return customResponse;
         }
