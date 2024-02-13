@@ -6,5 +6,7 @@
 /packages/
 /node_modules/
 SistemaGestionOrquesta/.vs/
+SistemaGestionOrquesta/bin/
+SistemaGestionOrquesta/obj/
 # Ignorar archivos de configuración específicos
 appsettings.json
