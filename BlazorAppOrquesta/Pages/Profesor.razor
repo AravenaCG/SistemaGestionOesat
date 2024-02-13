@@ -5,6 +5,55 @@
 
 <h3>Profesor</h3>
 
+
+<button @onclick="ObtenerListaProfesores">Obtener lista de profesores</button>
+
+@if (Profesores == null)
+{
+    //<p><em>Loading... </em></p>
+}else{
+<table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Documento</th>
+                <th>Teléfono</th>
+                <th>Dirección</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+<tbody>
+    @foreach (var profesor in Profesores)
+    {
+        <tr>
+            <td>@profesor.Nombre</td>
+            <td>@profesor.Apellido</td>
+            <td>@(profesor.FechaNacimiento != null ? profesor.FechaNacimiento.Value.ToString("dd/MM/yyyy") : "")</td>
+            <td>@profesor.Documento</td>
+            <td>@profesor.Telefono</td>
+            <td>@profesor.Direccion</td>
+            <td>@profesor.Email</td>
+            <td>@(profesor.Activo != null && profesor.Activo.Value ? "Sí" : "No")</td>
+        </tr>
+    }
+    </tbody>
+    </table>
+}
+
+
+
 @code {
+        private ICollection<BlazorAppOrquesta.Profesor> Profesores;
+        private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://localhost:7182", new HttpClient());
+
+        private async Task ObtenerListaProfesores()
+        {
+            // Realiza la llamada HTTP para obtener la lista de alumnos
+            Profesores = await orquestaClient.ProfesoresAsync();
+        }
+
+
 
 }

@@ -4,7 +4,48 @@
 <PageTitle>Instrumento</PageTitle>
 
 <h3>Instrumento</h3>
+<button @onclick="ObtenerListaInstrumentos">Obtener lista de Instrumentos</button>
+
+@if (Instrumentos == null)
+{
+    //<p><em>Loading... </em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>InstrumentoId</th>
+                <th>Nombre</th>
+                <th>Detalles</th>
+                <th>Disponible</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var instrumento in Instrumentos)
+            {
+                <tr>
+                    <td>@instrumento.InstrumentoId</td>
+                    <td>@instrumento.Nombre</td>
+                    <td>@instrumento.Detalles</td>
+                    <td>@instrumento.Disponible</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
 
 @code {
+    private ICollection<BlazorAppOrquesta.Instrumento> Instrumentos;
+    private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://localhost:7182", new HttpClient());
+
+    private async Task ObtenerListaInstrumentos()
+    {
+        // Realiza la llamada HTTP para obtener la lista de alumnos
+        Instrumentos = await orquestaClient.InstrumentosAsync();
+    }
+
 
 }
