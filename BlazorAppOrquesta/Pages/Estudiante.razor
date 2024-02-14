@@ -1,11 +1,18 @@
 ﻿@page "/estudiante"
+@using System.Text
 @inject HttpClient Http
-
+@inject IJSRuntime jsRuntime
+@inject HttpClient _httpClient
+@using OfficeOpenXml;
+@using OfficeOpenXml.Style;
 <PageTitle>Estudiante</PageTitle>
 
 <h3>Estudiante</h3>
 
-<button @onclick="ObtenerListaAlumnos">Obtener lista de alumnos</button>
+<button class="btn btn-primary" @onclick="ObtenerListaAlumnos">Obtener lista de alumnos</button>
+<!-- Botón para exportar a CSV -->
+<button type="button" class="btn btn-primary" @onclick="ExportarCSV">Exportar a .csv</button>
+
 
 @if (Estudiantes == null)
 {
@@ -81,6 +88,99 @@ else{
         // Realiza la llamada HTTP para obtener la lista de alumnos
         Estudiantes = await orquestaClient.EstudiantesAsync();
     }
+       private async Task ExportarCSV()
+    {
+        // Generar el contenido del archivo Excel
+        byte[] excelContent = GenerarArchivoExcel();
 
+        // Nombre del archivo Excel
+        string fileName = "estudiantes.xlsx";
+
+      
+
+
+        var module = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./js/blazorDownloadFile.js");
+        await module.InvokeVoidAsync("BlazorDownloadFile", fileName, excelContent);
+
+    }
+ 
+    private byte[] GenerarArchivoExcel()
+    {
+        ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+        using (var package = new ExcelPackage())
+        {
+            var worksheet = package.Workbook.Worksheets.Add("Estudiantes");
+            // Agregar una hoja al paquete de Excel
+
+            // Agregar encabezados de columnas
+            worksheet.Cells[1, 1].Value = "Nombre";
+            worksheet.Cells[1, 2].Value = "Apellido";
+            worksheet.Cells[1, 3].Value = "Fecha de Nacimiento";
+            worksheet.Cells[1, 4].Value = "Documento";
+            worksheet.Cells[1, 5].Value = "Teléfono";
+            worksheet.Cells[1, 6].Value = "Dirección";
+            worksheet.Cells[1, 7].Value = "Email";
+            worksheet.Cells[1, 8].Value = "InstrumentoID";
+            worksheet.Cells[1, 9].Value = "RutaFoto";
+            worksheet.Cells[1, 10].Value = "Activo";
+            worksheet.Cells[1, 11].Value = "Nombre Tutor";
+            worksheet.Cells[1, 12].Value = "Teléfono Tutor";
+            worksheet.Cells[1, 13].Value = "Asegurado";
+            worksheet.Cells[1, 14].Value = "Documento Tutor";
+            worksheet.Cells[1, 15].Value = "Documento Tutor2";
+            worksheet.Cells[1, 16].Value = "Nombre Tutor2";
+            worksheet.Cells[1, 17].Value = "Teléfono Tutor2";
+            worksheet.Cells[1, 18].Value = "Nacionalidad";
+            worksheet.Cells[1, 19].Value = "Tmt_médico";
+            worksheet.Cells[1, 20].Value = "Ep_psico_motriz";
+            worksheet.Cells[1, 21].Value = "Particularidad";
+            worksheet.Cells[1, 22].Value = "Autoretiro";
+
+            // Fila inicial para los datos de los estudiantes
+            int row = 2;
+
+            // Agregar datos de estudiantes
+            foreach (var estudiante in Estudiantes)
+            {
+                worksheet.Cells[row, 1].Value = estudiante.Nombre;
+                worksheet.Cells[row, 2].Value = estudiante.Apellido;
+                worksheet.Cells[row, 3].Value = estudiante.FechaNacimiento;
+                worksheet.Cells[row, 4].Value = estudiante.Documento;
+                worksheet.Cells[row, 5].Value = estudiante.Telefono;
+                worksheet.Cells[row, 6].Value = estudiante.Direccion;
+                worksheet.Cells[row, 7].Value = estudiante.Email;
+                worksheet.Cells[row, 8].Value = estudiante.InstrumentoId;
+                worksheet.Cells[row, 9].Value = estudiante.RutaFoto;
+                worksheet.Cells[row, 10].Value = estudiante.Activo;
+                worksheet.Cells[row, 11].Value = estudiante.NombreTutor;
+                worksheet.Cells[row, 12].Value = estudiante.TelefonoTutor;
+                worksheet.Cells[row, 13].Value = estudiante.Asegurado;
+                worksheet.Cells[row, 14].Value = estudiante.DocumentoTutor;
+                worksheet.Cells[row, 15].Value = estudiante.DocumentoTutor2;
+                worksheet.Cells[row, 16].Value = estudiante.NombreTutor2;
+                worksheet.Cells[row, 17].Value = estudiante.TelefonoTutor2;
+                worksheet.Cells[row, 18].Value = estudiante.Nacionalidad;
+                worksheet.Cells[row, 19].Value = estudiante.TmtMédico;
+                worksheet.Cells[row, 20].Value = estudiante.EpPsicoMotriz;
+                worksheet.Cells[row, 21].Value = estudiante.Particularidad;
+                worksheet.Cells[row, 22].Value = estudiante.Autoretiro;
+
+                row++;
+            }
+
+            // Autoajustar ancho de las columnas
+            worksheet.Cells.AutoFitColumns();
+            var range = worksheet.Cells[worksheet.Dimension.Address];
+            var borderStyle = ExcelBorderStyle.Thin;
+
+            // Establecer los bordes de todas las celdas en la tabla
+            range.Style.Border.Top.Style = borderStyle;
+            range.Style.Border.Bottom.Style = borderStyle;
+            range.Style.Border.Left.Style = borderStyle;
+            range.Style.Border.Right.Style = borderStyle;
+            // Convierte el paquete Excel en bytes
+            return package.GetAsByteArray();
+        }
+    }
 
 }
