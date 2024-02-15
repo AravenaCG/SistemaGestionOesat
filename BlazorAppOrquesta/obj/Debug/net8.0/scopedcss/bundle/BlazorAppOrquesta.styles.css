@@ -160,3 +160,53 @@ main[b-t0f8pyd11s] {
         overflow-y: auto;
     }
 }
+/* /Pages/Estudiante.razor.rz.scp.css */
+/* Estilos para la tabla */
+.table[b-4gtsbyytz6] {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #333;
+    border-collapse: collapse;
+}
+.h3[b-4gtsbyytz6] {
+    color: #4cff00
+}
+
+
+    .table th[b-4gtsbyytz6],
+    .table td[b-4gtsbyytz6] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-4gtsbyytz6] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+        background-color: #f8f9fa; /* Color de fondo para las cabeceras */
+    }
+
+    /* Estilos alternados para filas */
+    .table tbody tr:nth-of-type(odd)[b-4gtsbyytz6] {
+        background-color: rgba(0, 0, 0, 0.05); /* Color de fondo para filas impares */
+    }
+
+    /* Estilos para filas al pasar el ratón */
+    .table tbody tr:hover[b-4gtsbyytz6] {
+        background-color: rgba(0, 0, 0, 0.075); /* Color de fondo al pasar el ratón */
+    }
+
+    /* Estilos para las celdas de la primera columna */
+    .table tbody td:first-child[b-4gtsbyytz6] {
+        border-left: 1px solid #dee2e6;
+    }
+
+    /* Estilos para las celdas de la última columna */
+    .table tbody td:last-child[b-4gtsbyytz6] {
+        border-right: 1px solid #dee2e6;
+    }
+
+    /* Estilos para la última fila */
+    .table tbody tr:last-child td[b-4gtsbyytz6] {
+        border-bottom: 1px solid #dee2e6;
+    }

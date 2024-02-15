@@ -46,8 +46,10 @@ namespace SistemaGestionOrquesta.Controllers
 
 
         [Microsoft.AspNetCore.Mvc.HttpPost("/profesor/save")]
-        public async Task<IActionResult> Post([FromBody] Profesor profesor)
-        {   
+        public async Task<IActionResult> Post([FromBody] ProfesorDTO profesordto)
+        {
+
+            Profesor profesor = ConvertDTOs.convertDTOProfesor(profesordto);
             var customResponse = await profesorService.Save(profesor);
             return HandleCustomResponse(customResponse);
         }
@@ -64,7 +66,7 @@ namespace SistemaGestionOrquesta.Controllers
             {
                 return NotFound(ex.Message);
             }
-            
+
         }
 
         [Microsoft.AspNetCore.Mvc.HttpDelete("/profesor/baja/{id}")]
@@ -83,9 +85,9 @@ namespace SistemaGestionOrquesta.Controllers
         }
 
         [Microsoft.AspNetCore.Mvc.HttpPut("/profesor/update/{id}")]
-        public async Task<IActionResult> Edit(Guid id,[FromBody] Profesor profesor)
+        public async Task<IActionResult> Edit(Guid id, [FromBody] ProfesorDTO profesordto)
         {
-
+            Profesor profesor = ConvertDTOs.convertDTOProfesor(profesordto);
             try
             {
                 var customResponse = await profesorService.Update(id, profesor);
@@ -111,9 +113,10 @@ namespace SistemaGestionOrquesta.Controllers
             try
             {
                 var customResponse = await profesorService.Get(id);
-                if(customResponse != null) { 
-                return Ok(customResponse);
-                     }
+                if (customResponse != null)
+                {
+                    return Ok(customResponse);
+                }
                 else { return BadRequest(); }
 
             }
@@ -161,6 +164,6 @@ namespace SistemaGestionOrquesta.Controllers
             }
         }
 
-     
+
     }
 }

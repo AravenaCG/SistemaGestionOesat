@@ -47,7 +47,7 @@ namespace SistemaGestionOrquesta.Controllers
 
         [Microsoft.AspNetCore.Mvc.HttpPost("/curso/save")]
         public async Task<IActionResult> Post([FromBody] Curso curso)
-        {   
+        {
             var customResponse = await cursoService.Save(curso);
             return HandleCustomResponse(customResponse);
         }
@@ -64,12 +64,12 @@ namespace SistemaGestionOrquesta.Controllers
             {
                 return NotFound(ex.Message);
             }
-            
+
         }
 
 
         [Microsoft.AspNetCore.Mvc.HttpPut("/curso/update/{id}")]
-        public async Task<IActionResult> Edit(int id,[FromBody] Curso curso)
+        public async Task<IActionResult> Edit(int id, [FromBody] Curso curso)
         {
 
             try
@@ -97,24 +97,6 @@ namespace SistemaGestionOrquesta.Controllers
             try
             {
                 var customResponse = await cursoService.Get(id);
-                if(customResponse != null) { 
-                return Ok(customResponse);
-                     }
-                else { return BadRequest(); }
-
-            }
-            catch (Exception ex)
-            {
-                return NotFound(ex.Message);
-            }
-        }
-
-        [Microsoft.AspNetCore.Mvc.HttpGet("/cursoNombre/{nombre}")]
-        public async Task<IActionResult> GetProfesor(string nombre)
-        {
-            try
-            {
-                var customResponse = await cursoService.GetCursoByNombre(nombre);
                 if (customResponse != null)
                 {
                     return Ok(customResponse);
@@ -128,7 +110,30 @@ namespace SistemaGestionOrquesta.Controllers
             }
         }
 
-   
+        [Microsoft.AspNetCore.Mvc.HttpGet("/cursoNombre/{nombre}")]
+        public async Task<Curso> GetCursoNombre(string nombre)
+        {
+            try
+            {
+                var customResponse = await cursoService.GetCursoByNombre(nombre);
+                if (customResponse != null)
+                {
+                    return customResponse; 
+                }
+                else
+                {
+                
+                    throw new Exception("El curso especificado no fue encontrado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Puedes manejar el error de acuerdo a tus necesidades
+                throw new Exception("Error al obtener el curso: " + ex.Message);
+            }
+        }
+
+
 
     }
 }

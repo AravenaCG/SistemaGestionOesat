@@ -2,6 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using DocumentFormat.OpenXml.Drawing.Diagrams;
+using static ClosedXML.Excel.XLPredefinedFormat;
+using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
+using SistemaGestionOrquesta.Utils;
 
 namespace SistemaGestionOrquesta.Models.Middleware
 {
@@ -130,9 +134,63 @@ namespace SistemaGestionOrquesta.Models.Middleware
         public string text { get; set; }
         public string help { get; set; }
     }
+
+    public class ConvertDTOs
+    {
+        public static Estudiante convertDTOEstudiante(EstudianteDTO estudiantedto)
+        {
+            Estudiante estudiante = new Estudiante
+            {
+                EstudianteId = estudiantedto.EstudianteId,
+                Nombre = estudiantedto.Nombre,
+                Apellido = estudiantedto.Apellido,
+                FechaNacimiento = estudiantedto.FechaNacimiento,
+                Documento = estudiantedto.Documento,
+                Telefono = estudiantedto.Telefono,
+                Direccion = estudiantedto.Direccion,
+                Email = estudiantedto.Email,
+                InstrumentoId = estudiantedto.InstrumentoId,
+                RutaFoto = estudiantedto.RutaFoto,
+                Activo = estudiantedto.Activo,
+                NombreTutor = estudiantedto.NombreTutor,
+                TelefonoTutor = estudiantedto.TelefonoTutor,
+                Asegurado = estudiantedto.Asegurado,
+                DocumentoTutor = estudiantedto.DocumentoTutor,
+                DocumentoTutor2 = estudiantedto.DocumentoTutor2,
+                NombreTutor2 = estudiantedto.NombreTutor2,
+                TelefonoTutor2 = estudiantedto.TelefonoTutor2,
+                Nacionalidad = estudiantedto.Nacionalidad,
+                TmtMédico = estudiantedto.TmtMédico,
+                EpPsicoMotriz = estudiantedto.EpPsicoMotriz,
+                Particularidad = estudiantedto.Particularidad,
+                Autoretiro = estudiantedto.Autoretiro
+            };
+            return estudiante;
+        }
+
+        public static Profesor convertDTOProfesor(ProfesorDTO profesordto)
+        {
+            Profesor profesor = new Profesor
+            {
+                ProfesorId = profesordto.ProfesorId,
+                Nombre = profesordto.Nombre,
+                Apellido = profesordto.Apellido,
+                FechaNacimiento = profesordto.FechaNacimiento,
+                Documento = profesordto.Documento,
+                Telefono = profesordto.Telefono,
+                Direccion = profesordto.Direccion,
+                Email = profesordto.Email,
+                Activo = profesordto.Activo
+            };
+
+            return profesor;
+        }
+
+       
+    }
 }
 
-    
+
 
 
 

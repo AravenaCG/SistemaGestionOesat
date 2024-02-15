@@ -8,11 +8,12 @@
         public string Email { get; set; }
         public string Rol { get; set; }
 
-        public static List<Usuario> DB ()
+        public static List<Usuario> DB()
         {
-            var list = new List<Usuario> ();
+            var list = new List<Usuario>();
             list.Add(
-                new Usuario {
+                new Usuario
+                {
                     IdUsuario = "1",
                     User = "mateo",
                     Password = "123",

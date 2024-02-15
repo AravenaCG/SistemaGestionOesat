@@ -5,6 +5,7 @@ using SistemaGestionOrquesta.Models;
 using ControllerBase = Microsoft.AspNetCore.Mvc.ControllerBase;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
+using SistemaGestionOrquesta.Utils;
 namespace SistemaGestionOrquesta.Controllers
 {
 
@@ -13,14 +14,15 @@ namespace SistemaGestionOrquesta.Controllers
     [Authorize]
     public class EstudianteController : ControllerBase
     {
-       
+
 
         IEstudianteService estudianteService;
+        private readonly ICursoService _cursoService;
 
-
-        public EstudianteController(IEstudianteService _estudianteService)
+        public EstudianteController(IEstudianteService _estudianteService, ICursoService cursoService)
         {
             estudianteService = _estudianteService;
+            _cursoService = cursoService;
         }
 
         private IActionResult HandleCustomResponse(CustomResponse<Estudiante> customResponse)
@@ -43,9 +45,44 @@ namespace SistemaGestionOrquesta.Controllers
 
 
         [Microsoft.AspNetCore.Mvc.HttpPost("/estudiante/save")]
-        public async Task<IActionResult> Post([FromBody] Estudiante estudiante)
-        {   
+        public async Task<IActionResult> Post([FromBody] EstudianteDTO estudiantedto)
+        {
+            Curso orquesta = await _cursoService.GetCursoByNombre(estudiantedto.Orquesta);
+
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+            var rToken = Jwt.ValidarToken(identity);
+            int? instrumentoId;
+            if (!rToken.succes)
+            {
+                // Si la validación del token falla, devolver un mensaje de error
+                return BadRequest("Token de autorización inválido : Estudiante Controller");
+            }
+            
+            Estudiante estudiante = ConvertDTOs.convertDTOEstudiante(estudiantedto);
             var customResponse = await estudianteService.Save(estudiante);
+
+            var customResponse2 = await estudianteService.InscribirEstudianteCurso(estudiantedto.EstudianteId, orquesta.CursoId);
+
+            if (estudiantedto.InstrumentoId != null)
+            {
+                instrumentoId = estudiantedto.InstrumentoId;
+                if(estudiantedto.InstrumentoId == 6)
+                {
+                    switch (estudiantedto.profeCursoViolin)
+                    {
+                        case "Violin Pablo":
+                            instrumentoId = 6;
+                            break;
+                        case "Violin Tamara":
+                            instrumentoId = 7;
+                            break;
+                        case "Violin Carolina":
+                            instrumentoId = 8;
+                            break;
+                    }
+                }
+                var customResponse3 = await estudianteService.InscribirEstudianteCurso(estudiantedto.EstudianteId, instrumentoId.GetValueOrDefault());
+            }
             return HandleCustomResponse(customResponse);
         }
 
@@ -61,7 +98,7 @@ namespace SistemaGestionOrquesta.Controllers
             {
                 return NotFound(ex.Message);
             }
-            
+
         }
 
         [Microsoft.AspNetCore.Mvc.HttpDelete("/estudiante/baja/{id}")]
@@ -80,9 +117,9 @@ namespace SistemaGestionOrquesta.Controllers
         }
 
         [Microsoft.AspNetCore.Mvc.HttpPut("/estudiante/update/{id}")]
-        public async Task<IActionResult> Edit(Guid id,[FromBody] Estudiante estudiante)
+        public async Task<IActionResult> Edit(Guid id, [FromBody] EstudianteDTO estudiantedto)
         {
-
+            Estudiante estudiante = ConvertDTOs.convertDTOEstudiante(estudiantedto);
             try
             {
                 var customResponse = await estudianteService.Update(id, estudiante);
@@ -97,25 +134,15 @@ namespace SistemaGestionOrquesta.Controllers
         [HttpGet("/estudiantes")]
         public async Task<ActionResult<List<Estudiante>>> Get()
         {
-
-          
             var identity = HttpContext.User.Identity as ClaimsIdentity;
             var rToken = Jwt.ValidarToken(identity);
             if (!rToken.succes)
             {
                 // Si la validación del token falla, devolver un mensaje de error
-                return BadRequest("Token de autorización inválido");
+                return BadRequest("Token de autorización inválido /EstudianteController:GET");
             }
-
-            Usuario usuario = rToken.result;
-            if (usuario.Rol != "Admin")
-            {
-                // Si el usuario no tiene el rol "Admin", devolver un mensaje de error
-                return Unauthorized("No tienes permisos para acceder a esta función");
-            }
-
             // Si el usuario tiene el rol "Admin", obtener la lista de estudiantes
-            var customResponse =  estudianteService.Get();
+            var customResponse = estudianteService.Get();
             return customResponse;
         }
 
@@ -125,9 +152,10 @@ namespace SistemaGestionOrquesta.Controllers
             try
             {
                 var customResponse = await estudianteService.Get(id);
-                if(customResponse != null) { 
-                return Ok(customResponse);
-                     }
+                if (customResponse != null)
+                {
+                    return Ok(customResponse);
+                }
                 else { return BadRequest(); }
 
             }
@@ -183,7 +211,7 @@ namespace SistemaGestionOrquesta.Controllers
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet("/cursosByEstudiante/{idEstudiante}")]
-        public  Task<List<Curso>> GetCursosByEstudiante(Guid idEstudiante)
+        public Task<List<Curso>> GetCursosByEstudiante(Guid idEstudiante)
         {
             var customResponse = estudianteService.GetCursosByEstudiante(idEstudiante);
             return customResponse;
@@ -206,10 +234,21 @@ namespace SistemaGestionOrquesta.Controllers
         [Microsoft.AspNetCore.Mvc.HttpPost("/estudianteDarDeAltaEnCurso/{id}/{Idcurso}")]
         public async Task<IActionResult> DarDeAltaEnCurso(Guid id, int Idcurso)
         {
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+            var rToken = Jwt.ValidarToken(identity);
+            if (!rToken.succes)
+            {
+                // Si la validación del token falla, devolver un mensaje de error
+                return BadRequest("Token de autorización inválido");
+            }
             try
             {
-                var customResponse = estudianteService.InscribirEstudianteCurso(id, Idcurso);
-                return Ok(customResponse);
+                var customResponse = await estudianteService.InscribirEstudianteCurso(id, Idcurso);
+                if (customResponse != null)
+                {
+                    return Ok(customResponse);
+                }
+                else { return BadRequest(); }
             }
             catch (Exception ex)
             {
@@ -219,12 +258,12 @@ namespace SistemaGestionOrquesta.Controllers
 
 
         [Microsoft.AspNetCore.Mvc.HttpPut("/estudianteCambiarCurso/{id}/{cursoNuevo}/{cursoViejo}")]
-        public async Task<IActionResult> EditCurso(Guid id, int cursoNuevo,int cursoViejo)
+        public async Task<IActionResult> CambiarEstudianteDeCurso(Guid id, int cursoNuevo, int cursoViejo)
         {
 
             try
             {
-                var customResponse =  estudianteService.CambiarEstudianteDeCurso(id, cursoNuevo,cursoViejo);
+                var customResponse = estudianteService.CambiarEstudianteDeCurso(id, cursoNuevo, cursoViejo);
                 return Ok(customResponse);
             }
             catch (Exception ex)

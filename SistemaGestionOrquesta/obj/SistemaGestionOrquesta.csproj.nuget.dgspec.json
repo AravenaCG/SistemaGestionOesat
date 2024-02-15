@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Exiuser\\Desktop\\SistemaOESAT\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj": {}
+    "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Exiuser\\Desktop\\SistemaOESAT\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj": {
+    "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Exiuser\\Desktop\\SistemaOESAT\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
+        "projectUniqueName": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
         "projectName": "SistemaGestionOrquesta",
-        "projectPath": "C:\\Users\\Exiuser\\Desktop\\SistemaOESAT\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
+        "projectPath": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
         "packagesPath": "C:\\Users\\Exiuser\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Exiuser\\Desktop\\SistemaOESAT\\SistemaGestionOrquesta\\obj\\",
+        "outputPath": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -61,6 +61,10 @@
               "target": "Package",
               "version": "[5.3.0, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.26, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.26, )"
@@ -75,6 +79,10 @@
               "target": "Package",
               "version": "[6.0.26, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
@@ -82,6 +90,18 @@
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.6, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.35.0, )"
+            },
+            "System.Security.Claims": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Security.Principal": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [
@@ -103,7 +123,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

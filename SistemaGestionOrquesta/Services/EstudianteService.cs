@@ -9,10 +9,11 @@ namespace SistemaGestionOrquesta.Services
 {
     public class EstudianteService : IEstudianteService
     {
-    CustomResponse<Estudiante> customResponse;
-    OrquestaOESATContext _orquestaContext;
+        CustomResponse<Estudiante> customResponse;
+        OrquestaOESATContext _orquestaContext;
 
-    public EstudianteService(OrquestaOESATContext devContext) { 
+        public EstudianteService(OrquestaOESATContext devContext)
+        {
             _orquestaContext = devContext;
             customResponse = new CustomResponse<Estudiante>();  // Inicializar customResponse
         }
@@ -20,7 +21,7 @@ namespace SistemaGestionOrquesta.Services
         public async Task<CustomResponse<Estudiante>> Save(Estudiante estudiante)
         {
 
-            Estudiante estudianteExistente = await LinQueris.BuscarEstudiantePorNombreYDniAsync(_orquestaContext, estudiante.Nombre,estudiante.Documento);
+            Estudiante estudianteExistente = await LinQueris.BuscarEstudiantePorNombreYDniAsync(_orquestaContext, estudiante.Nombre, estudiante.Documento);
             if (estudianteExistente != null)
             {
                 customResponse = customResponse.BuildCustomResponse(estudiante, "Estudiante", "Error", "El estudiante ya existe en la base de datos.");
@@ -49,7 +50,7 @@ namespace SistemaGestionOrquesta.Services
             {
                 Estudiante estudiante = await LinQueris.GetEstudianteById(_orquestaContext, id);
                 message = await LinQueris.DeleteEstudianteAsync(_orquestaContext, estudiante);
-                return customResponse.BuildCustomResponse(estudiante,"Estudiante", "respuesta exitosa",message);
+                return customResponse.BuildCustomResponse(estudiante, "Estudiante", "respuesta exitosa", message);
                 // Resto del código para manejar el mensaje
             }
             catch (DbUpdateException ex)
@@ -64,8 +65,8 @@ namespace SistemaGestionOrquesta.Services
 
         async Task<CustomResponse<Estudiante>> IEstudianteService.Baja(Guid id)
         {
-            Estudiante estudiante = await LinQueris.GetEstudianteById(_orquestaContext,id);
-             LinQueris.DarBajaEstudianteAsync(_orquestaContext, id);
+            Estudiante estudiante = await LinQueris.GetEstudianteById(_orquestaContext, id);
+            LinQueris.DarBajaEstudianteAsync(_orquestaContext, id);
             return customResponse.BuildCustomResponse(estudiante, "Estudiante", "respuesta exitosa", "Estudiante dado de baja exitosamente");
         }
         async Task<CustomResponse<Estudiante>> IEstudianteService.Update(Guid id, Estudiante estudianteModificado)
@@ -86,7 +87,7 @@ namespace SistemaGestionOrquesta.Services
         }
         List<Estudiante> IEstudianteService.Get()
         {
-           return LinQueris.GetEstudiantesActive(_orquestaContext);
+            return LinQueris.GetEstudiantesActive(_orquestaContext);
         }
 
         async Task<Estudiante> IEstudianteService.Get(Guid id)
@@ -110,7 +111,7 @@ namespace SistemaGestionOrquesta.Services
 
         public Task<Estudiante> GetEstudianteByNombreYApellido(string nombre, string apellido)
         {
-            return LinQueris.GetEstudianteByNameAsync(_orquestaContext,nombre, apellido);
+            return LinQueris.GetEstudianteByNameAsync(_orquestaContext, nombre, apellido);
         }
 
         public List<Estudiante> GetEstudiantesActivosByCurso(int idCurso)
@@ -125,12 +126,12 @@ namespace SistemaGestionOrquesta.Services
 
         public Task CambiarEstudianteDeCurso(Guid estudianteId, int nuevoCurso, int viejoCurso)
         {
-            return LinQueris.CambiarEstudianteDeCursoAsync(_orquestaContext, estudianteId,nuevoCurso,viejoCurso);
+            return LinQueris.CambiarEstudianteDeCursoAsync(_orquestaContext, estudianteId, nuevoCurso, viejoCurso);
         }
 
         public Task<bool> InscribirEstudianteCurso(Guid estudianteId, int nuevoCurso)
         {
-            return LinQueris.InscribirEstudianteEnCurso(_orquestaContext,estudianteId,nuevoCurso);
+            return LinQueris.InscribirEstudianteEnCurso(_orquestaContext, estudianteId, nuevoCurso);
         }
 
         public Task<bool> EliminarCursoEstudiante(Guid estudianteId, int viejoCurso)
@@ -148,7 +149,7 @@ public interface IEstudianteService
     Task<CustomResponse<Estudiante>> Delete(Guid id);
     Task<CustomResponse<Estudiante>> Baja(Guid id);
     Task<CustomResponse<Estudiante>> Update(Guid id, Estudiante estudiante);
-    
+
     List<Estudiante> Get();
     Task<Estudiante> Get(Guid id);
     Task<Estudiante> GetEstudianteByNombreYDocumento(string nombre, string documento);
@@ -161,7 +162,7 @@ public interface IEstudianteService
     Task<bool> InscribirEstudianteCurso(Guid estudianteId, int nuevoCurso);
     Task<bool> EliminarCursoEstudiante(Guid estudianteId, int viejoCurso);
 
-    Task CambiarEstudianteDeCurso(Guid estudianteId, int viejoCurso,int nuevoCurso);
+    Task CambiarEstudianteDeCurso(Guid estudianteId, int viejoCurso, int nuevoCurso);
 }
 
 

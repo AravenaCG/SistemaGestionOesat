@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaGestionOrquesta.Models
 {
-     public class Persona
+    public class Persona
     {
         public string? Nombre { get; set; }
         public string? Apellido { get; set; }
