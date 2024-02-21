@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "75IWHQX9QTGftbIWDa5cZneO1XgRlprlspIIkOQqjF3pqTe/Oqd/zfPVyAEA+C4BSUXE5g84NBkLwx70wlX3fw==",
+  "dgSpecHash": "yeYeIowtgjMQosif9APOd6Pjz3G7c9X9CmSaJve4MBV+So9nk/zqWCTaNgrt1g6O9KVGToX/Pmz3kisj4QUiCA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
   "expectedPackageFiles": [
@@ -43,6 +43,7 @@
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.formats.asn1\\8.0.0\\system.formats.asn1.8.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\system.net.http.json\\6.0.0\\system.net.http.json.6.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.0\\system.security.cryptography.pkcs.8.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.text.encoding.codepages\\8.0.0\\system.text.encoding.codepages.8.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",

@@ -16,6 +16,7 @@ namespace SistemaGestionOrquesta.Models
         public string? Nombre { get; set; }
         public string? Detalles { get; set; }
         public bool Disponible { get; set; }
+
         [JsonIgnore]
 
         public virtual ICollection<Estudiante> Estudiantes { get; set; }

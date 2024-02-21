@@ -85,9 +85,9 @@ namespace SistemaGestionOrquesta.Services
                 return customResponse.HandleDbUpdateException(ex, "Estudiante", "Parámetros de entrada inválidos/mal escritos", "Violación de clave única");
             }
         }
-        List<Estudiante> IEstudianteService.Get()
+        async Task<List<Estudiante>> IEstudianteService.Get()
         {
-            return LinQueris.GetEstudiantesActive(_orquestaContext);
+            return  await LinQueris.GetEstudiantesActiveAsync(_orquestaContext);
         }
 
         async Task<Estudiante> IEstudianteService.Get(Guid id)
@@ -150,7 +150,7 @@ public interface IEstudianteService
     Task<CustomResponse<Estudiante>> Baja(Guid id);
     Task<CustomResponse<Estudiante>> Update(Guid id, Estudiante estudiante);
 
-    List<Estudiante> Get();
+    Task<List<Estudiante>> Get();
     Task<Estudiante> Get(Guid id);
     Task<Estudiante> GetEstudianteByNombreYDocumento(string nombre, string documento);
 

@@ -129,10 +129,14 @@ namespace SistemaGestionOrquesta.Utils
             return await context.Estudiantes.FirstOrDefaultAsync(p => p.Nombre == nombreEstudiante && p.Apellido == apellidoEstudiante);
         }
 
-        public static List<Estudiante> GetEstudiantesActive(OrquestaOESATContext context)
+        public static async Task<List<Estudiante>> GetEstudiantesActiveAsync(OrquestaOESATContext context)
         {
-            var activeCountries = context.Estudiantes.Where(p => p.Activo == true).ToList();
-            return activeCountries;
+            var activeEstudiantes = context.Estudiantes.Where(p => p.Activo == true).ToList();
+            foreach (var estudiante in activeEstudiantes)
+            {
+                estudiante.Cursos = await GetCursosByEstudiante(context, estudiante.EstudianteId);
+            }
+            return activeEstudiantes;
         }
 
         public static List<Estudiante> GetEstudiantesByCurso(OrquestaOESATContext context, int idCurso)

@@ -37,6 +37,11 @@ namespace BlazorAppOrquesta
             UpdateJsonSerializerSettings(settings);
             return settings;
         }
+        public void SetAccessToken(string accessToken)
+        {
+            _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+        }
+
 
         public string BaseUrl
         {
@@ -2847,7 +2852,7 @@ namespace BlazorAppOrquesta
         [Newtonsoft.Json.JsonProperty("autoretiro", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool? Autoretiro { get; set; }
 
-        [Newtonsoft.Json.JsonProperty("instrumento", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [Newtonsoft.Json.JsonProperty("instrumento", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public Instrumento Instrumento { get; set; }
 
         [Newtonsoft.Json.JsonProperty("prestamosInstrumentos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]

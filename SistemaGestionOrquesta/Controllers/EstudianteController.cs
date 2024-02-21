@@ -142,7 +142,7 @@ namespace SistemaGestionOrquesta.Controllers
                 return BadRequest("Token de autorización inválido /EstudianteController:GET");
             }
             // Si el usuario tiene el rol "Admin", obtener la lista de estudiantes
-            var customResponse = estudianteService.Get();
+            var customResponse = await estudianteService.Get();
             return customResponse;
         }
 

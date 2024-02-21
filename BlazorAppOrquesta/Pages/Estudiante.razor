@@ -5,12 +5,15 @@
 @inject HttpClient _httpClient
 @using OfficeOpenXml;
 @using OfficeOpenXml.Style;
+@using System.Net.Http.Headers;
+@inject Microsoft.JSInterop.IJSRuntime JSRuntime
+
 <PageTitle>Estudiante</PageTitle>
 
 <h3>Estudiante</h3>
 
 <button class="btn btn-primary" @onclick="ObtenerListaAlumnos">Obtener lista de alumnos</button>
-<!-- Botón para exportar a CSV -->
+
 <button type="button" class="btn btn-primary" @onclick="ExportarCSV">Exportar a .csv</button>
 
 
@@ -83,10 +86,27 @@ else{
     private ICollection<BlazorAppOrquesta.Estudiante> Estudiantes;
     private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://localhost:7182", new HttpClient());
 
+
+
     private async Task ObtenerListaAlumnos()
     {
-        // Realiza la llamada HTTP para obtener la lista de alumnos
-        Estudiantes = await orquestaClient.EstudiantesAsync();
+        try
+        {
+            // Obtiene el token de localStorage
+            var accessToken = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "accessToken");
+            Console.WriteLine(accessToken + ": OBTUVE EL TOKEN");
+
+            orquestaClient.SetAccessToken(accessToken);
+
+            Estudiantes = await orquestaClient.EstudiantesAsync();
+            Console.WriteLine(Estudiantes.Count + ": Alumnos");
+        }
+        catch (Exception ex)
+        {
+            // Maneja el caso en el que la solicitud lanza una excepción
+            // Puedes mostrar un mensaje de error o realizar alguna otra acción
+            Console.WriteLine($"Error: {ex.Message}");
+        }
     }
        private async Task ExportarCSV()
     {

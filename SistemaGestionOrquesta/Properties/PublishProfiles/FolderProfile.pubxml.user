@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Release\net6.0\publish\SistemaGestionOrquesta\</_PublishTargetUrl>
+    <History>False|2024-02-21T00:19:42.7766806Z;False|2024-02-20T21:18:04.7322286-03:00;False|2024-02-20T21:11:40.5593938-03:00;False|2024-02-20T21:10:31.6944443-03:00;False|2024-02-20T21:09:59.5004088-03:00;False|2024-02-20T21:09:18.3658998-03:00;False|2024-02-20T21:09:07.0969980-03:00;False|2024-02-20T21:08:51.0178634-03:00;False|2024-02-20T21:08:36.7390157-03:00;True|2024-02-20T19:40:40.8696912-03:00;False|2024-02-20T19:30:19.5485330-03:00;True|2024-02-20T19:14:43.2299872-03:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="SqlServerConStringOesat">
+      <Value>Data Source=SQL5106.site4now.net%3bInitial Catalog=db_aa586a_orquestaoesat%3bUser Id=db_aa586a_orquestaoesat_admin%3bPassword=5eeBbEp8wi_2HP%2a%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

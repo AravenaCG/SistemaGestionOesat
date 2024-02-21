@@ -87,7 +87,7 @@ namespace SistemaGestionOrquesta.Controllers
         [Microsoft.AspNetCore.Mvc.HttpGet("/cursos")]
         public async Task<List<Curso>> Get()
         {
-            var customResponse = cursoService.Get();
+            var customResponse =  cursoService.Get();
             return customResponse;
         }
 
