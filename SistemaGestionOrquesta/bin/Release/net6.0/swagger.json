@@ -1,0 +1,1275 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "SistemaGestionOrquesta, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "version": "1.0"
+  },
+  "paths": {
+    "/curso/save": {
+      "post": {
+        "tags": [
+          "Curso"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Curso"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/curso/delete/{id}": {
+      "delete": {
+        "tags": [
+          "Curso"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/curso/update/{id}": {
+      "put": {
+        "tags": [
+          "Curso"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Curso"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/cursos": {
+      "get": {
+        "tags": [
+          "Curso"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Curso"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/curso/{id}": {
+      "get": {
+        "tags": [
+          "Curso"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/cursoNombre/{nombre}": {
+      "get": {
+        "tags": [
+          "Curso"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "nombre",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Curso"
+            }
+          }
+        }
+      }
+    },
+    "/estudiante/save": {
+      "post": {
+        "tags": [
+          "Estudiante"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/EstudianteDTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/estudiante/delete/{id}": {
+      "delete": {
+        "tags": [
+          "Estudiante"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/estudiante/baja/{id}": {
+      "delete": {
+        "tags": [
+          "Estudiante"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/estudiante/update/{id}": {
+      "put": {
+        "tags": [
+          "Estudiante"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/EstudianteDTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/estudiantes": {
+      "get": {
+        "tags": [
+          "Estudiante"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Estudiante"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/estudiante/{id}": {
+      "get": {
+        "tags": [
+          "Estudiante"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/estudianteNombreYDni/{nombre}/{documento}": {
+      "get": {
+        "tags": [
+          "Estudiante"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "nombre",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "documento",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/estudianteNombreApellido/{nombre}/{apellido}": {
+      "get": {
+        "tags": [
+          "Estudiante"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "nombre",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "apellido",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/estudiantesByCurso/{idCurso}": {
+      "get": {
+        "tags": [
+          "Estudiante"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "idCurso",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Estudiante"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cursosByEstudiante/{idEstudiante}": {
+      "get": {
+        "tags": [
+          "Estudiante"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "idEstudiante",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Curso"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/estudianteEliminarCurso/{id}/{Idcurso}": {
+      "delete": {
+        "tags": [
+          "Estudiante"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "path",
+            "name": "Idcurso",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/estudianteDarDeAltaEnCurso/{id}/{Idcurso}": {
+      "post": {
+        "tags": [
+          "Estudiante"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "path",
+            "name": "Idcurso",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/estudianteCambiarCurso/{id}/{cursoNuevo}/{cursoViejo}": {
+      "put": {
+        "tags": [
+          "Estudiante"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "path",
+            "name": "cursoNuevo",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "cursoViejo",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/instrumento/save": {
+      "post": {
+        "tags": [
+          "Instrumento"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Instrumento"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/instrumento/delete/{id}": {
+      "delete": {
+        "tags": [
+          "Instrumento"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/instrumento/update/{id}": {
+      "put": {
+        "tags": [
+          "Instrumento"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Instrumento"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/instrumentos": {
+      "get": {
+        "tags": [
+          "Instrumento"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Instrumento"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/instrumento/{id}": {
+      "get": {
+        "tags": [
+          "Instrumento"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/instrumentoNombre/{nombre}": {
+      "get": {
+        "tags": [
+          "Instrumento"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "nombre",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/instrumento/prestamo/{idEstudiante}/{idInstrumento}": {
+      "post": {
+        "tags": [
+          "Instrumento"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "idEstudiante",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "path",
+            "name": "idInstrumento",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/instrumento/devolucion/{idEstudiante}/{idInstrumento}": {
+      "post": {
+        "tags": [
+          "Instrumento"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "idEstudiante",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "path",
+            "name": "idInstrumento",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/profesor/save": {
+      "post": {
+        "tags": [
+          "Profesor"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ProfesorDTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/profesor/delete/{id}": {
+      "delete": {
+        "tags": [
+          "Profesor"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/profesor/baja/{id}": {
+      "delete": {
+        "tags": [
+          "Profesor"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/profesor/update/{id}": {
+      "put": {
+        "tags": [
+          "Profesor"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ProfesorDTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/profesores": {
+      "get": {
+        "tags": [
+          "Profesor"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Profesor"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/profesor/{id}": {
+      "get": {
+        "tags": [
+          "Profesor"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/profesorNombreYDni/{nombre}/{documento}": {
+      "get": {
+        "tags": [
+          "Profesor"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "nombre",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "documento",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/profesorNombreApellido/{nombre}/{apellido}": {
+      "get": {
+        "tags": [
+          "Profesor"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "nombre",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "apellido",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/usuario/login": {
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Usuario"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Curso": {
+      "type": "object",
+      "properties": {
+        "cursoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "profesorId": {
+          "format": "uuid",
+          "type": "string"
+        }
+      }
+    },
+    "Estudiante": {
+      "type": "object",
+      "properties": {
+        "estudianteId": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "apellido": {
+          "type": "string"
+        },
+        "fechaNacimiento": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "documento": {
+          "type": "string"
+        },
+        "telefono": {
+          "type": "string"
+        },
+        "direccion": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "instrumentoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "rutaFoto": {
+          "type": "string"
+        },
+        "activo": {
+          "type": "boolean"
+        },
+        "nombreTutor": {
+          "type": "string"
+        },
+        "telefonoTutor": {
+          "type": "string"
+        },
+        "asegurado": {
+          "type": "boolean"
+        },
+        "documentoTutor": {
+          "type": "string"
+        },
+        "documentoTutor2": {
+          "type": "string"
+        },
+        "nombreTutor2": {
+          "type": "string"
+        },
+        "telefonoTutor2": {
+          "type": "string"
+        },
+        "nacionalidad": {
+          "type": "string"
+        },
+        "tmtMédico": {
+          "type": "string"
+        },
+        "epPsicoMotriz": {
+          "type": "string"
+        },
+        "particularidad": {
+          "type": "string"
+        },
+        "autoretiro": {
+          "type": "boolean"
+        },
+        "instrumento": {
+          "$ref": "#/definitions/Instrumento"
+        },
+        "prestamosInstrumentos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PrestamosInstrumento"
+          }
+        },
+        "cursos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Curso"
+          }
+        }
+      }
+    },
+    "EstudianteDTO": {
+      "type": "object",
+      "properties": {
+        "estudianteId": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "apellido": {
+          "type": "string"
+        },
+        "documento": {
+          "type": "string"
+        },
+        "fechaNacimiento": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "direccion": {
+          "type": "string"
+        },
+        "nacionalidad": {
+          "type": "string"
+        },
+        "telefono": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "nombreTutor": {
+          "type": "string"
+        },
+        "documentoTutor": {
+          "type": "string"
+        },
+        "nombreTutor2": {
+          "type": "string"
+        },
+        "documentoTutor2": {
+          "type": "string"
+        },
+        "telefonoTutor": {
+          "type": "string"
+        },
+        "telefonoTutor2": {
+          "type": "string"
+        },
+        "orquesta": {
+          "type": "string"
+        },
+        "instrumentoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "profeCursoViolin": {
+          "type": "string"
+        },
+        "rutaFoto": {
+          "type": "string"
+        },
+        "activo": {
+          "type": "boolean"
+        },
+        "asegurado": {
+          "type": "boolean"
+        },
+        "tmtMédico": {
+          "type": "string"
+        },
+        "epPsicoMotriz": {
+          "type": "string"
+        },
+        "particularidad": {
+          "type": "string"
+        },
+        "autoretiro": {
+          "type": "boolean"
+        },
+        "instrumentoNombre": {
+          "type": "string"
+        }
+      }
+    },
+    "Instrumento": {
+      "type": "object",
+      "properties": {
+        "instrumentoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "detalles": {
+          "type": "string"
+        },
+        "disponible": {
+          "type": "boolean"
+        }
+      }
+    },
+    "PrestamosInstrumento": {
+      "type": "object",
+      "properties": {
+        "prestamoInstrumentoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaPrestamo": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaDevolucion": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "instrumentoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estudianteId": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "estudiante": {
+          "$ref": "#/definitions/Estudiante"
+        },
+        "instrumento": {
+          "$ref": "#/definitions/Instrumento"
+        }
+      }
+    },
+    "Profesor": {
+      "type": "object",
+      "properties": {
+        "profesorId": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "apellido": {
+          "type": "string"
+        },
+        "fechaNacimiento": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "documento": {
+          "type": "string"
+        },
+        "telefono": {
+          "type": "string"
+        },
+        "direccion": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "activo": {
+          "type": "boolean"
+        },
+        "cursos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Curso"
+          }
+        }
+      }
+    },
+    "ProfesorDTO": {
+      "type": "object",
+      "properties": {
+        "profesorId": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "apellido": {
+          "type": "string"
+        },
+        "fechaNacimiento": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "documento": {
+          "type": "string"
+        },
+        "telefono": {
+          "type": "string"
+        },
+        "direccion": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "activo": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Usuario": {
+      "type": "object",
+      "properties": {
+        "idUsuario": {
+          "type": "string"
+        },
+        "user": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "rol": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

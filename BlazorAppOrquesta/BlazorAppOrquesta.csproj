@@ -7,8 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <OpenApiReference Include="..\..\..\..\Documents\swagger.json" CodeGenerator="NSwagCSharp" ClassName="OrquestaCñ" Link="OpenAPIs\swagger.json" />
-    <OpenApiReference Include="..\..\..\swaggerJWT.json" CodeGenerator="NSwagCSharp" Namespace="BlazorAppOrquestaAuthAPI" ClassName="JwtAUTHAPIClass" Link="OpenAPIs\swaggerJWT.json" />
+    <Content Remove="swagger.json" />
+    <Content Remove="swaggerJWT.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <OpenApiReference Include="swagger.json" CodeGenerator="NSwagCSharp" ClassName="OrquestaCñ" />
+    <OpenApiReference Include="swaggerJWT.json" CodeGenerator="NSwagCSharp" Namespace="BlazorAppOrquestaAuthAPI" ClassName="JwtAUTHAPIClass" />
   </ItemGroup>
 
   <ItemGroup>

@@ -17,12 +17,17 @@ namespace SistemaGestionOrquesta.Controllers
 
 
         IEstudianteService estudianteService;
-        private readonly ICursoService _cursoService;
+     
 
-        public EstudianteController(IEstudianteService _estudianteService, ICursoService cursoService)
+
+        private readonly ICursoService _cursoService;
+        private readonly IInstrumentoService _instrumentoService;
+
+        public EstudianteController(IEstudianteService _estudianteService, ICursoService cursoService, IInstrumentoService instrumentoService)
         {
             estudianteService = _estudianteService;
             _cursoService = cursoService;
+            _instrumentoService = instrumentoService;
         }
 
         private IActionResult HandleCustomResponse(CustomResponse<Estudiante> customResponse)
@@ -49,6 +54,8 @@ namespace SistemaGestionOrquesta.Controllers
         {
             Curso orquesta = await _cursoService.GetCursoByNombre(estudiantedto.Orquesta);
 
+            
+            #region manejo token
             var identity = HttpContext.User.Identity as ClaimsIdentity;
             var rToken = Jwt.ValidarToken(identity);
             int? instrumentoId;
@@ -57,32 +64,58 @@ namespace SistemaGestionOrquesta.Controllers
                 // Si la validación del token falla, devolver un mensaje de error
                 return BadRequest("Token de autorización inválido : Estudiante Controller");
             }
-            
+            #endregion
+
+            #region guardar estudiante
+
             Estudiante estudiante = ConvertDTOs.convertDTOEstudiante(estudiantedto);
+
             var customResponse = await estudianteService.Save(estudiante);
 
-            var customResponse2 = await estudianteService.InscribirEstudianteCurso(estudiantedto.EstudianteId, orquesta.CursoId);
+            #endregion
+            ////////////////////////////
 
-            if (estudiantedto.InstrumentoId != null)
+            #region guardar estudiante en orquesta
+            var _orquestaContext = new OrquestaOESATContext();
+            await LinQueris.InscribirEstudianteEnCurso(_orquestaContext, estudiantedto.EstudianteId, orquesta.CursoId);
+
+            #endregion
+
+
+            #region guardar estudiante instrumento
+            Curso instrumentoCurso = new Curso();
+            var _instrumentoContext = new OrquestaOESATContext();
+            if (!string.IsNullOrEmpty(estudiantedto.InstrumentoNombre))
             {
-                instrumentoId = estudiantedto.InstrumentoId;
-                if(estudiantedto.InstrumentoId == 6)
+                switch (estudiantedto.InstrumentoNombre)
                 {
-                    switch (estudiantedto.profeCursoViolin)
-                    {
-                        case "Violin Pablo":
-                            instrumentoId = 6;
-                            break;
-                        case "Violin Tamara":
-                            instrumentoId = 7;
-                            break;
-                        case "Violin Carolina":
-                            instrumentoId = 8;
-                            break;
-                    }
+                    case "Violín":
+                        if (!string.IsNullOrEmpty(estudiantedto.profeCursoViolin))
+                        {
+                            instrumentoCurso = await _cursoService.GetCursoByNombre(estudiantedto.profeCursoViolin);
+                        }
+                        break;
+                    default:
+                        instrumentoCurso = await _cursoService.GetCursoByNombre(estudiantedto.InstrumentoNombre);
+                        break;
                 }
-                var customResponse3 = await estudianteService.InscribirEstudianteCurso(estudiantedto.EstudianteId, instrumentoId.GetValueOrDefault());
+
+                if (instrumentoCurso != null)
+                {
+                    await LinQueris.InscribirEstudianteEnCurso(_instrumentoContext, estudiantedto.EstudianteId, instrumentoCurso.CursoId);
+                }
+                else
+                {
+                    // Manejar el caso cuando no se encuentra un curso para el instrumento seleccionado
+                }
             }
+            else
+            {
+                // Manejar el caso cuando el nombre del instrumento es nulo o vacío
+            }
+
+            #endregion
+        
             return HandleCustomResponse(customResponse);
         }
 

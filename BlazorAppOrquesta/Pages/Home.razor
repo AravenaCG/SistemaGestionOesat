@@ -50,7 +50,7 @@
                     Password = passwordInput
                 };
 
-            var response = await httpClient.PostAsJsonAsync("https://localhost:7231/usuario/login", loginDto);
+            var response = await httpClient.PostAsJsonAsync("https://jwtauthapi.azurewebsites.net/usuario/login", loginDto);
 
             response.EnsureSuccessStatusCode(); // Lanza una excepción si la solicitud no es exitosa
             var responseContent = await response.Content.ReadAsStringAsync();

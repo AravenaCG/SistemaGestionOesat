@@ -75,6 +75,10 @@ else{
                     <td>@estudiante.EpPsicoMotriz</td>
                     <td>@estudiante.Particularidad</td>
                     <td>@estudiante.Autoretiro</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" @onclick="() => EliminarEstudiante(estudiante.EstudianteId)">Eliminar</button>
+                        <button class="btn btn-primary btn-sm" @onclick="() => VerDetalleEstudiante(estudiante.EstudianteId)">Detalle</button>
+                    </td>
                 </tr>
             }
         </tbody>
@@ -84,7 +88,7 @@ else{
 
 @code {
     private ICollection<BlazorAppOrquesta.Estudiante> Estudiantes;
-    private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://localhost:7182", new HttpClient());
+    private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://sistemagestionorquesta.azurewebsites.net", new HttpClient());
 
 
 
@@ -124,6 +128,23 @@ else{
 
     }
  
+    private async Task EliminarEstudiante(Guid estudianteId)
+    {
+        // Aquí puedes llamar a un servicio o método para eliminar al estudiante con el ID proporcionado
+        // Por ejemplo:
+        await orquestaClient.Baja2Async(estudianteId);
+        // Luego, puedes volver a cargar la lista de estudiantes para reflejar los cambios en la interfaz
+        await ObtenerListaAlumnos();
+    }
+
+    private void VerDetalleEstudiante(Guid estudianteId)
+    {
+        // Aquí puedes redirigir a una página de detalles del estudiante con el ID proporcionado
+        // Por ejemplo:
+       // NavigationManager.NavigateTo($"/estudiante/{estudianteId}");
+    }
+
+
     private byte[] GenerarArchivoExcel()
     {
         ExcelPackage.LicenseContext = LicenseContext.NonCommercial;

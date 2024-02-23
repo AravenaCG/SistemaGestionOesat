@@ -39,6 +39,8 @@ namespace SistemaGestionOrquesta.Models
         public string? Particularidad { get; set; }
         public bool? Autoretiro { get; set; }
 
+        public string? InstrumentoNombre { get; set; }
+
         [JsonIgnore]
         public virtual Instrumento? Instrumento { get; set; }
 
