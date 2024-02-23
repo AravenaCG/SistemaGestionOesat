@@ -1071,3 +1071,4 @@ C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\R
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Release\net8.0\compressed\jstsbkxywd.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Release\net8.0\compressed\5ux8ql4ho3.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Release\net8.0\compressed\ra7i2zljza.gz
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Release\net8.0\.babelrc.json

@@ -1,4 +1,5 @@
-﻿export function BlazorDownloadFile(fileName, fileContent) {
+﻿
+/*export*/ function BlazorDownloadFile(fileName, fileContent) {
     // Convertir el contenido del archivo a un blob
     const blob = new Blob([new Uint8Array(fileContent)], { type: 'text/csv' });
 
