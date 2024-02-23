@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "C6+GQlvdG7nYTzYKGIxdxmgGc9Ydeq8Jj1PqDA/9G/0=",
+  "Hash": "pNG1S+njZLzE3u2ns8Dqn+N1FQh0pgjQDsOZ4L+Cvp8=",
   "Source": "BlazorAppOrquesta",
   "BasePath": "/",
   "Mode": "Root",
@@ -8225,12 +8225,12 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\js\\blazorDownloadFile.js",
+      "Identity": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\js\\blazorDownloadFile-transpiled.js",
       "SourceId": "BlazorAppOrquesta",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "js/blazorDownloadFile.js",
+      "RelativePath": "js/blazorDownloadFile-transpiled.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -8241,7 +8241,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\blazorDownloadFile.js"
+      "OriginalItemSpec": "wwwroot\\js\\blazorDownloadFile-transpiled.js"
+    },
+    {
+      "Identity": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\js\\BlazorDownloadFile.js",
+      "SourceId": "BlazorAppOrquesta",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "js/BlazorDownloadFile.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\BlazorDownloadFile.js"
     },
     {
       "Identity": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\sample-data\\weather.json",
