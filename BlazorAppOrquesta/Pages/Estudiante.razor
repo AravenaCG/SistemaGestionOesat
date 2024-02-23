@@ -144,12 +144,14 @@ else{
        // NavigationManager.NavigateTo($"/estudiante/{estudianteId}");
     }
 
-    /*
+    
     private byte[] GenerarArchivoExcel()
         {
+        
         ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
         using (var package = new ExcelPackage())
             {
+            /*
             var worksheet = package.Workbook.Worksheets.Add("Estudiantes");
             // Agregar una hoja al paquete de Excel
 
@@ -220,8 +222,10 @@ else{
             range.Style.Border.Left.Style = borderStyle;
             range.Style.Border.Right.Style = borderStyle;
             // Convierte el paquete Excel en bytes
-            return package.GetAsByteArray();
+            */
+        return package.GetAsByteArray();
+            
             }
-    }*/
+    }
 
 }
