@@ -144,12 +144,12 @@ else{
        // NavigationManager.NavigateTo($"/estudiante/{estudianteId}");
     }
 
-
+    /*
     private byte[] GenerarArchivoExcel()
-    {
+        {
         ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
         using (var package = new ExcelPackage())
-        {
+            {
             var worksheet = package.Workbook.Worksheets.Add("Estudiantes");
             // Agregar una hoja al paquete de Excel
 
@@ -182,7 +182,7 @@ else{
 
             // Agregar datos de estudiantes
             foreach (var estudiante in Estudiantes)
-            {
+                {
                 worksheet.Cells[row, 1].Value = estudiante.Nombre;
                 worksheet.Cells[row, 2].Value = estudiante.Apellido;
                 worksheet.Cells[row, 3].Value = estudiante.FechaNacimiento;
@@ -206,7 +206,7 @@ else{
                 worksheet.Cells[row, 21].Value = estudiante.Particularidad;
                 worksheet.Cells[row, 22].Value = estudiante.Autoretiro;
 
-                row++;
+            row++;
             }
 
             // Autoajustar ancho de las columnas
@@ -221,7 +221,7 @@ else{
             range.Style.Border.Right.Style = borderStyle;
             // Convierte el paquete Excel en bytes
             return package.GetAsByteArray();
-        }
-    }
+            }
+    }*/
 
 }
