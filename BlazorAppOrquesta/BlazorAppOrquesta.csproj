@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <OpenApiReference Include="swagger.json" CodeGenerator="NSwagCSharp" ClassName="OrquestaCñ" />
-    <OpenApiReference Include="swaggerJWT.json" CodeGenerator="NSwagCSharp" Namespace="BlazorAppOrquestaAuthAPI" ClassName="JwtAUTHAPIClass" />
+    <OpenApiReference Include="swagger.json" ClassName="OrquestaCñ" CodeGenerator="NSwagCSharp" />
+    <OpenApiReference Include="swaggerJWT.json" ClassName="JwtAUTHAPIClass" CodeGenerator="NSwagCSharp" Namespace="BlazorAppOrquestaAuthAPI" />
   </ItemGroup>
 
   <ItemGroup>
