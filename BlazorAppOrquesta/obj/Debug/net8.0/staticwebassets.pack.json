@@ -37,6 +37,14 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
+      "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\js\\BlazorDownloadFile.js",
+      "PackagePath": "staticwebassets\\js\\BlazorDownloadFile.js"
+    },
+    {
+      "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\js\\blazorDownloadFile-transpiled.js",
+      "PackagePath": "staticwebassets\\js\\blazorDownloadFile-transpiled.js"
+    },
+    {
       "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
