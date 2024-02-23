@@ -185,3 +185,5 @@ C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\ref\SistemaGestionOrquesta.dll
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\package-lock.json
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\package.json
