@@ -160,6 +160,123 @@ main[b-t0f8pyd11s] {
         overflow-y: auto;
     }
 }
+/* /Pages/DetalleEstudiante.razor.rz.scp.css */
+.resume-wrapper[b-53uj2bvsu0] {
+    position: relative;
+    text-align: center;
+    height: 100%;
+}
+
+.container[b-53uj2bvsu0] {
+    min-height: 600px;
+}
+
+.profile[b-53uj2bvsu0] {
+    background: #fff;
+    width: 40%;
+    float: left;
+    color: #9099a0;
+    .name-wrapper {
+        float: left;
+        width: 60%;
+    }
+    h1[b-53uj2bvsu0] {
+        font-size: 2.5em;
+        text-align: left;
+        font-family: 'Varela Round', sans-serif;
+        color: #4a4e51;
+        text-transform: uppercase;
+        line-height: 1em;
+        padding-top: 40px;
+    }
+    .contact-info[b-53uj2bvsu0] {
+        margin-top: 100px;
+        font-weight: 300;
+    }
+    .list-titles[b-53uj2bvsu0] {
+        float: left;
+        text-align: left;
+        font-weight: 600;
+        width: 40%;
+        color: #4a4e51;
+    }
+    .list-content[b-53uj2bvsu0] {
+        float: left;
+        width: 60%;
+        text-align: left;
+        font-weight: 300;
+    }
+}
+
+.list-content li[b-53uj2bvsu0] {
+    margin-bottom: 10px;
+}
+
+.list-content li strong[b-53uj2bvsu0] {
+    color: #4a4e51;
+}
+
+.contact-info ul[b-53uj2bvsu0] {
+    padding-left: 0;
+}
+
+.contact-info ul li[b-53uj2bvsu0] {
+    list-style: none;
+}
+
+.contact-info ul li strong[b-53uj2bvsu0] {
+    margin-right: 5px;
+}
+
+.container[b-53uj2bvsu0] {
+    max-width: 960px;
+    margin: 0 auto;
+}
+/* Estilos para la imagen del estudiante */
+.student-image[b-53uj2bvsu0] {
+    text-align: center; /* Centrado horizontal */
+    margin-bottom: 20px; /* Espacio entre la imagen y el contenido */
+}
+
+    .student-image img[b-53uj2bvsu0] {
+        border-radius: 50%; /* Hacer la imagen redonda */
+        width: 400px; /* Tamaño de la imagen */
+        height: 400px;
+        object-fit: cover; /* Ajustar la imagen */
+        border: 5px solid #add8e6; /* Borde celeste */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    }
+.student-container[b-53uj2bvsu0] {
+    background-color: #CDCEF7; /* Color de fondo */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px; /* Establece márgenes automáticos en los lados izquierdo y derecho */
+    width: 99%; /* Ancho del contenedor */
+}
+strong[b-53uj2bvsu0] {
+    color: #000; /* Color de texto negro */
+    font-weight: bold; /* Asegura que el texto en negrita */
+}
+
+.button-container[b-53uj2bvsu0] {
+    text-align: right; /* Centra el contenido horizontalmente */
+    align: center
+}
+
+
+.row[b-53uj2bvsu0] {
+    margin-bottom: 10px;
+}
+
+.col-sm-6[b-53uj2bvsu0] {
+    padding: 0 5px;
+}
+
+.form-control[b-53uj2bvsu0] {
+    margin-bottom: 10px;
+}
+
 /* /Pages/Estudiante.razor.rz.scp.css */
 /* Estilos para la tabla */
 .table[b-4gtsbyytz6] {
@@ -172,6 +289,15 @@ main[b-t0f8pyd11s] {
     color: #4cff00
 }
 
+.lupa-icono[b-4gtsbyytz6] {
+    width: 35px; /* Ancho deseado */
+    height: 35px; /* Alto deseado */
+}
+
+.lupa-button[b-4gtsbyytz6] {
+    border-radius: 50%; /* Para hacer el botón circular */
+    padding: 0; /* Para eliminar el espacio interior del botón */
+}
 
     .table th[b-4gtsbyytz6],
     .table td[b-4gtsbyytz6] {

@@ -92,21 +92,22 @@ namespace SistemaGestionOrquesta.Controllers
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet("/curso/{id}")]
-        public async Task<IActionResult> Details(int id)
+        public async Task<Curso> Details(int id)
         {
             try
             {
                 var customResponse = await cursoService.Get(id);
                 if (customResponse != null)
                 {
-                    return Ok(customResponse);
+                    return customResponse;
                 }
-                else { return BadRequest(); }
+                else { return null; }
 
             }
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                Console.WriteLine(ex.Message);
+                return null;
             }
         }
 

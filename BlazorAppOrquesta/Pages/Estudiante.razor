@@ -7,6 +7,7 @@
 @using OfficeOpenXml.Style;
 @using System.Net.Http.Headers;
 @inject Microsoft.JSInterop.IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
 
 <PageTitle>Estudiante</PageTitle>
 
@@ -16,8 +17,15 @@
 
 <button type="button" class="btn btn-primary" @onclick="ExportarCSV">Exportar a .csv</button>
 
-
-@if (Estudiantes == null)
+<div class="input-group mb-3">
+    <input type="text" class="form-control" style="width: 200px;" @bind="filtroNombre" placeholder="Filtrar por nombre">
+    <div class="input-group-append">
+        <button class="btn btn-outline-secondary lupa-button" type="button" @onclick="BuscarAlumnoPorNombreYApellido">
+            <img src="./classic-blue-magnifying-glass.png" alt="Buscar" class="lupa-icono"> <!-- Imagen de la lupa -->
+        </button>
+    </div>
+</div>
+@if (EstudiantesFiltrados == null)
 {
     //<p><em>Loading... </em></p>
 }
@@ -50,7 +58,7 @@ else{
             </tr>
         </thead>
         <tbody>
-            @foreach (var estudiante in Estudiantes)
+            @foreach (var estudiante in EstudiantesFiltrados)
             {
                 <tr>
                     <td>@estudiante.Nombre</td>
@@ -77,7 +85,8 @@ else{
                     <td>@estudiante.Autoretiro</td>
                     <td>
                         <button class="btn btn-danger btn-sm" @onclick="() => EliminarEstudiante(estudiante.EstudianteId)">Eliminar</button>
-                        <button class="btn btn-primary btn-sm" @onclick="() => VerDetalleEstudiante(estudiante.EstudianteId)">Detalle</button>
+                        <!--   <button class="btn btn-primary btn-sm" @onclick="() => VerDetalleEstudiante(estudiante.EstudianteId)">Detalle</button>-->
+                        <a href="/DetalleEstudiante/@estudiante.EstudianteId.ToString()"> Detalle </a>
                     </td>
                 </tr>
             }
@@ -86,72 +95,79 @@ else{
     }
 
 
+
+
 @code {
     private ICollection<BlazorAppOrquesta.Estudiante> Estudiantes;
-    private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://sistemagestionorquesta.azurewebsites.net", new HttpClient());
+    // private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://sistemagestionorquesta.azurewebsites.net", new HttpClient());
+    private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://localhost:7182", new HttpClient());
 
+    public BlazorAppOrquesta.Estudiante estudianteDetallado;
+    private string accessToken;
 
+    List<BlazorAppOrquesta.Estudiante> EstudiantesFiltrados = new List<BlazorAppOrquesta.Estudiante>();
+    string filtroNombre = "";
+    void FiltrarPorNombre()
+    {
+        if (string.IsNullOrEmpty(filtroNombre))
+        {
+            // Si el filtro está vacío, mostrar todos los estudiantes
+            EstudiantesFiltrados = Estudiantes.ToList();
+        }
+        else
+        {
+            // Filtrar la lista de estudiantes por nombre
+            EstudiantesFiltrados = Estudiantes.Where(estudiante =>
+                estudiante.Nombre.ToLower().Contains(filtroNombre.ToLower()) ||
+                estudiante.Apellido.ToLower().Contains(filtroNombre.ToLower())
+            ).ToList();
+        }
+    }
 
     private async Task ObtenerListaAlumnos()
     {
         try
         {
             // Obtiene el token de localStorage
-            var accessToken = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "accessToken");
-            Console.WriteLine(accessToken + ": OBTUVE EL TOKEN");
+            accessToken = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "accessToken");
+
 
             orquestaClient.SetAccessToken(accessToken);
 
             Estudiantes = await orquestaClient.EstudiantesAsync();
             Console.WriteLine(Estudiantes.Count + ": Alumnos");
+            FiltrarPorNombre();
+
         }
         catch (Exception ex)
         {
-            // Maneja el caso en el que la solicitud lanza una excepción
-            // Puedes mostrar un mensaje de error o realizar alguna otra acción
             Console.WriteLine($"Error: {ex.Message}");
         }
     }
-       private async Task ExportarCSV()
+    private void BuscarAlumnoPorNombreYApellido()
     {
-        // Generar el contenido del archivo Excel
-        byte[] excelContent = GenerarArchivoExcel();
-
-        // Nombre del archivo Excel
-        string fileName = "estudiantes.xlsx";
-
-      
-
-
-        var module = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./js/blazorDownloadFile.js");
-        await module.InvokeVoidAsync("BlazorDownloadFile", fileName, excelContent);
-
+        FiltrarPorNombre(); // Aplicar filtro
     }
- 
+
+    
+
     private async Task EliminarEstudiante(Guid estudianteId)
     {
         // Aquí puedes llamar a un servicio o método para eliminar al estudiante con el ID proporcionado
         // Por ejemplo:
-        await orquestaClient.Baja2Async(estudianteId);
+        await orquestaClient.BajaAsync(estudianteId);
         // Luego, puedes volver a cargar la lista de estudiantes para reflejar los cambios en la interfaz
         await ObtenerListaAlumnos();
     }
 
-    private void VerDetalleEstudiante(Guid estudianteId)
-    {
-        // Aquí puedes redirigir a una página de detalles del estudiante con el ID proporcionado
-        // Por ejemplo:
-       // NavigationManager.NavigateTo($"/estudiante/{estudianteId}");
-    }
 
-    
     private byte[] GenerarArchivoExcel()
-        {
-        
+    {
+
         ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
         using (var package = new ExcelPackage())
-            {
-            
+        {
+
             var worksheet = package.Workbook.Worksheets.Add("Estudiantes");
             // Agregar una hoja al paquete de Excel
 
@@ -184,7 +200,7 @@ else{
 
             // Agregar datos de estudiantes
             foreach (var estudiante in Estudiantes)
-                {
+            {
                 worksheet.Cells[row, 1].Value = estudiante.Nombre;
                 worksheet.Cells[row, 2].Value = estudiante.Apellido;
                 worksheet.Cells[row, 3].Value = estudiante.FechaNacimiento;
@@ -208,7 +224,7 @@ else{
                 worksheet.Cells[row, 21].Value = estudiante.Particularidad;
                 worksheet.Cells[row, 22].Value = estudiante.Autoretiro;
 
-            row++;
+                row++;
             }
 
             // Autoajustar ancho de las columnas
@@ -222,10 +238,27 @@ else{
             range.Style.Border.Left.Style = borderStyle;
             range.Style.Border.Right.Style = borderStyle;
             // Convierte el paquete Excel en bytes
-            
-        return package.GetAsByteArray();
-            
-            }
-    }
 
+            return package.GetAsByteArray();
+
+        }
+    }
+    private async Task ExportarCSV()
+    {
+        // Generar el contenido del archivo Excel
+        byte[] excelContent = GenerarArchivoExcel();
+
+        // Nombre del archivo Excel
+        string fileName = "estudiantes.xlsx";
+
+
+
+
+        var module = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./js/blazorDownloadFile.js");
+        await module.InvokeVoidAsync("BlazorDownloadFile", fileName, excelContent);
+
+    }
+    
+    
+   
 }

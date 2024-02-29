@@ -12,6 +12,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Pages\DetalleEstudiante.razor.css" />
+    <None Remove="Pages\DetalleEstudiante.razor.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Pages\DetalleEstudiante.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <OpenApiReference Include="swagger.json" ClassName="OrquestaCñ" CodeGenerator="NSwagCSharp" />
     <OpenApiReference Include="swaggerJWT.json" ClassName="JwtAUTHAPIClass" CodeGenerator="NSwagCSharp" Namespace="BlazorAppOrquestaAuthAPI" />
   </ItemGroup>

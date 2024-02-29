@@ -92,40 +92,41 @@ namespace SistemaGestionOrquesta.Controllers
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet("/instrumento/{id}")]
-        public async Task<IActionResult> Details(int id)
+        public async Task<Instrumento> Details(int id)
         {
             try
             {
                 var customResponse = await instrumentoService.Get(id);
                 if (customResponse != null)
                 {
-                    return Ok(customResponse);
+                    return customResponse;
                 }
-                else { return BadRequest(); }
+                else { return null; }
 
             }
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                 throw new Exception(ex.Message);
+
             }
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet("/instrumentoNombre/{nombre}")]
-        public async Task<IActionResult> GetProfesor(string nombre)
+        public async Task<Instrumento> GetProfesor(string nombre)
         {
             try
             {
                 var customResponse = await instrumentoService.GetInstrumentoByNombre(nombre);
                 if (customResponse != null)
                 {
-                    return Ok(customResponse);
+                    return customResponse;
                 }
-                else { return BadRequest(); }
+                else { return null; }
 
             }
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                throw new Exception(ex.Message);
             }
         }
 

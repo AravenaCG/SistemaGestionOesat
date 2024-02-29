@@ -77,7 +77,7 @@ namespace SistemaGestionOrquesta.Services
             try
             {
                 message = await LinQueris.ModificarEstudianteAsync(_orquestaContext, id, estudianteModificado);
-                return customResponse.BuildCustomResponse(estudiante, "Estudiante", "respuesta exitosa", message);
+                return customResponse.BuildCustomResponse(estudiante, "Estudiante", "Estudiante Modificado Exitosamente!", message);
                 // Resto del código para manejar el mensaje
             }
             catch (DbUpdateException ex)

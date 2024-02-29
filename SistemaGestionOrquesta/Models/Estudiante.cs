@@ -40,9 +40,9 @@ namespace SistemaGestionOrquesta.Models
         public virtual Instrumento? Instrumento { get; set; }
 
 
-        public virtual ICollection<PrestamosInstrumento> PrestamosInstrumentos { get; set; }
+        public virtual ICollection<PrestamosInstrumento>? PrestamosInstrumentos { get; set; }
 
 
-        public virtual ICollection<Curso> Cursos { get; set; }
+        public virtual ICollection<Curso>? Cursos { get; set; }
     }
 }

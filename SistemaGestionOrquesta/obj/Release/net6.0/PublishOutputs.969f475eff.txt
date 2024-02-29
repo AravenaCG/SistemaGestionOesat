@@ -1,6 +1,8 @@
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\PubTmp\Out\SistemaGestionOrquesta.exe
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\PubTmp\Out\package-lock.json
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\PubTmp\Out\package.json
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\PubTmp\Out\SistemaGestionOrquesta.dll
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\PubTmp\Out\SistemaGestionOrquesta.runtimeconfig.json
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\PubTmp\Out\SistemaGestionOrquesta.pdb

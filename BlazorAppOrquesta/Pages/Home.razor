@@ -54,11 +54,9 @@
 
             response.EnsureSuccessStatusCode(); // Lanza una excepción si la solicitud no es exitosa
             var responseContent = await response.Content.ReadAsStringAsync();
-            Console.WriteLine(responseContent);
             try
             {
                 var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(responseContent);
-                Console.WriteLine(tokenResponse.Token + " a vei");
                 // Verifica si se obtuvo un token
                 if (tokenResponse != null && !string.IsNullOrEmpty(tokenResponse.Token))
                 {

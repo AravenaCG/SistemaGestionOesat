@@ -36,6 +36,10 @@ namespace SistemaGestionOrquesta.Controllers
             {
                 return StatusCode(StatusCodes.Status201Created, customResponse.JsonResult);
             }
+            else if (customResponse.Messages.Any(message => message.status == "Estudiante Modificado Exitosamente!"))
+            {
+                return StatusCode(StatusCodes.Status200OK, customResponse.JsonResult);
+            }
             else if (customResponse.Messages.Any(message => message.status == "Parámetros de entrada inválidos/mal escritos"))
             {
                 return BadRequest(customResponse);
@@ -77,6 +81,8 @@ namespace SistemaGestionOrquesta.Controllers
 
             #region guardar estudiante en orquesta
             var _orquestaContext = new OrquestaOESATContext();
+            Thread.Sleep(2000);
+
             await LinQueris.InscribirEstudianteEnCurso(_orquestaContext, estudiantedto.EstudianteId, orquesta.CursoId);
 
             #endregion
@@ -87,21 +93,25 @@ namespace SistemaGestionOrquesta.Controllers
             var _instrumentoContext = new OrquestaOESATContext();
             if (!string.IsNullOrEmpty(estudiantedto.InstrumentoNombre))
             {
-                switch (estudiantedto.InstrumentoNombre)
+                if (estudiantedto.profeCursoViolin != "sinClases")
                 {
-                    case "Violín":
-                        if (!string.IsNullOrEmpty(estudiantedto.profeCursoViolin))
-                        {
-                            instrumentoCurso = await _cursoService.GetCursoByNombre(estudiantedto.profeCursoViolin);
-                        }
-                        break;
-                    default:
-                        instrumentoCurso = await _cursoService.GetCursoByNombre(estudiantedto.InstrumentoNombre);
-                        break;
+                    switch (estudiantedto.InstrumentoNombre)
+                    {
+                        case "Violín":
+                            if (!string.IsNullOrEmpty(estudiantedto.profeCursoViolin))
+                            {
+                                instrumentoCurso = await _cursoService.GetCursoByNombre(estudiantedto.profeCursoViolin);
+                            }
+                            break;
+                        default:
+                            instrumentoCurso = await _cursoService.GetCursoByNombre(estudiantedto.InstrumentoNombre);
+                            break;
+                    }
                 }
 
                 if (instrumentoCurso != null)
                 {
+                    Thread.Sleep(2000);
                     await LinQueris.InscribirEstudianteEnCurso(_instrumentoContext, estudiantedto.EstudianteId, instrumentoCurso.CursoId);
                 }
                 else
@@ -180,59 +190,54 @@ namespace SistemaGestionOrquesta.Controllers
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet("/estudiante/{id}")]
-        public async Task<IActionResult> Details(Guid id)
+        public async Task<Estudiante> Details(Guid id)
         {
             try
             {
                 var customResponse = await estudianteService.Get(id);
-                if (customResponse != null)
-                {
-                    return Ok(customResponse);
-                }
-                else { return BadRequest(); }
-
+                return customResponse;
             }
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                throw new Exception(ex.Message);
             }
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet("/estudianteNombreYDni/{nombre}/{documento}")]
-        public async Task<IActionResult> GetEstudiante(string nombre, string documento)
+        public async Task<Estudiante> GetEstudiante(string nombre, string documento)
         {
             try
             {
                 var customResponse = await estudianteService.GetEstudianteByNombreYDocumento(nombre, documento);
                 if (customResponse != null)
                 {
-                    return Ok(customResponse);
+                    return customResponse;
                 }
-                else { return BadRequest(); }
+                else { return null; }
 
             }
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                throw new Exception(ex.Message);
             }
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet("/estudianteNombreApellido/{nombre}/{apellido}")]
-        public async Task<IActionResult> GetEstudianteNombreApellido(string nombre, string apellido)
+        public async Task<Estudiante> GetEstudianteNombreApellido(string nombre, string apellido)
         {
             try
             {
                 var customResponse = await estudianteService.GetEstudianteByNombreYApellido(nombre, apellido);
                 if (customResponse != null)
                 {
-                    return Ok(customResponse);
+                    return customResponse;
                 }
-                else { return BadRequest(); }
+                else { return null; }
 
             }
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                throw new Exception(ex.Message);
             }
         }
 

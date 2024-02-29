@@ -1,0 +1,429 @@
+﻿@page "/DetalleEstudiante/{EstudianteId}"
+
+@inject HttpClient HttpClient
+@inject HttpClient _httpClient
+@using System.Text
+@inject IJSRuntime jsRuntime
+@using System.Net.Http.Headers;
+@using Newtonsoft.Json
+@inject Microsoft.JSInterop.IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
+
+
+
+<PageTitle>Detalle del Estudiante</PageTitle>
+<div class="centered-content">
+    <div class="profile section-padding student-container">
+        <div class="picture-resume-wrapper student-image">
+            <div class="picture-resume">
+                <img src="https://www.clarin.com/2023/10/05/ccQHb4oO1_2000x1500__1.jpg" alt="Foto del estudiante" />
+            </div>
+        </div>
+        <div class="container">
+            <div class="name-wrapper">
+                <h1>@($"{estudianteDetallado?.Nombre} {estudianteDetallado?.Apellido}")</h1>
+            </div>
+            <div class="contact-info clearfix">
+                <ul class="list-content">
+                    <li>
+                        <strong>Estudiante ID:</strong>
+                        <input type="text" value="@estudianteDetallado?.EstudianteId.ToString()" style="width: 100%;" disabled="@(!editable)" />
+                    </li>
+                    <div class="col-sm-6">
+                    <li>
+                        <strong>Fecha de Nacimiento:</strong>
+                        <input id="fechaNacimientoInput" type="text" value="@((estudianteDetallado?.FechaNacimiento != null ? estudianteDetallado.FechaNacimiento.Value.ToString("dd/MM/yyyy") : ""))" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.FechaNacimiento), e))" disabled="@(!editable)" />
+                    </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>Dirección:</strong>
+                    <input id="direccionInput" type="text" value="@estudianteDetallado?.Direccion" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.Direccion), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>Documento:</strong>
+                    <input id="documentoInput" type="text" value="@estudianteDetallado?.Documento" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.Documento), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>Telefono:</strong>
+                    <input id="telefonoInput" type="text" value="@estudianteDetallado?.Telefono" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.Telefono), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>Email:</strong>
+                    <input id="emailInput" type="text" value="@estudianteDetallado?.Email" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.Email), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>Ruta Foto:</strong>
+                    <input id="rutaFotoInput" type="text" value="@estudianteDetallado?.RutaFoto" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.RutaFoto), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>Activo:</strong>
+                    <input id="activoInput" type="text" value="@estudianteDetallado?.Activo.ToString()" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.Activo), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>Nombre Tutor:</strong>
+                    <input id="nombreTutorInput" type="text" value="@estudianteDetallado?.NombreTutor" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.NombreTutor), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>Telefono Tutor:</strong>
+                    <input id="telefonoTutorInput" type="text" value="@estudianteDetallado?.TelefonoTutor" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.TelefonoTutor), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>Asegurado:</strong>
+                    <input id="aseguradoInput" type="text" value="@estudianteDetallado?.Asegurado.ToString()" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.Asegurado), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>Documento Tutor:</strong>
+                    <input id="documentoTutorInput" type="text" value="@estudianteDetallado?.DocumentoTutor" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.DocumentoTutor), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>Documento Tutor 2:</strong>
+                    <input id="documentoTutor2Input" type="text" value="@estudianteDetallado?.DocumentoTutor2" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.DocumentoTutor2), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>Nombre Tutor 2:</strong>
+                    <input id="nombreTutor2Input" type="text" value="@estudianteDetallado?.NombreTutor2" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.NombreTutor2), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>Telefono Tutor 2:</strong>
+                    <input id="telefonoTutor2Input" type="text" value="@estudianteDetallado?.TelefonoTutor2" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.TelefonoTutor2), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>Nacionalidad:</strong>
+                    <input id="nacionalidadInput" type="text" value="@estudianteDetallado?.Nacionalidad" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.Nacionalidad), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>TMT Médico:</strong>
+                    <input id="tmtMedicoInput" type="text" value="@estudianteDetallado?.TmtMédico" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.TmtMédico), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>EP Psico Motriz:</strong>
+                    <input id="epPsicoMotrizInput" type="text" value="@estudianteDetallado?.EpPsicoMotriz" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.EpPsicoMotriz), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>Particularidad:</strong>
+                    <input id="particularidadInput" type="text" value="@estudianteDetallado?.Particularidad" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.Particularidad), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <li>
+                    <strong>Autoretiro:</strong>
+                    <input id="autoretiroInput" type="text" value="@estudianteDetallado?.Autoretiro.ToString()" @oninput="@(e => HandleInputChange(nameof(estudianteDetallado.Autoretiro), e))" disabled="@(!editable)" />
+                </li>
+            </div>
+            <div class="col-sm-6">
+                <button class="btn btn-danger btn-sm" @onclick="() => VerCursosEstudiante(estudianteDetallado)">Ver Orquesta y Cursos</button>
+                        @if (mostrarCursos)
+                        {
+                    <li>
+                        <strong>Cursos:</strong>
+                        <ul>
+                                    @foreach (var curso in estudianteDetallado?.Cursos)
+                                    {
+                                <li>
+                                    <strong>@curso.Nombre</strong>
+                                    <!-- Botones para acciones -->
+                                    <div class="btn-group" role="group" aria-label="Acciones de Curso">
+
+                                    <button class="btn btn-warning btn-sm" @onclick="() => DarDeBajaCurso(estudianteDetallado.EstudianteId, curso.CursoId)">Dar de Baja</button>
+                                        <!--  <button class="btn btn-info btn-sm" @onclick="() => CambiarCurso(estudianteDetallado.EstudianteId, curso.CursoId, curso.CursoId)">Cambiar Curso</button>-->
+                                    </div>
+
+                                </li>
+                                    }
+                        </ul>
+                    </li>
+                        }
+            </div>
+            </ul>
+        </div>
+    </div>
+    <div class="button-container">
+        <!-- Botón para mostrar el formulario de selección de curso -->
+        <button class="btn btn-primary" @onclick="MostrarFormularioSeleccionCurso">Dar de Alta en Curso</button>
+
+        <!-- Formulario de selección de curso (solo se mostrará si se ha presionado el botón anterior) -->
+            @if (mostrarFormularioSeleccionCurso)
+            {
+            <div class="form-group">
+                <label for="cursoSelect">Seleccionar Curso:</label>
+                <select class="form-control" id="cursoSelect" @bind="cursoSeleccionadoId">
+                    <option value="">Seleccione un curso</option>
+                        @foreach (var curso in cursosDisponibles)
+                        {
+                        <option value="@curso.CursoId">@curso.Nombre - @curso.CursoId</option>
+                        }
+                </select>
+                <button class="btn btn-primary" @onclick="ProcesarSeleccionCurso">Seleccionar Curso</button>
+            </div>
+            }
+            <button class="btn btn-primary" @onclick="ToggleEdicion">@((editable ? "Guardar cambios" : "Editar"))</button>
+    </div>
+</div>
+</div>
+
+@code {
+    [Parameter]
+    public string EstudianteId { get; set; }
+    private BlazorAppOrquesta.Estudiante estudianteDetallado;
+    private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://localhost:7182", new HttpClient());
+    private BlazorAppOrquesta.Instrumento instrumento;
+    private ICollection<BlazorAppOrquesta.Curso> Cursos;
+    private string accessToken;
+    private bool editable = false;
+    private BlazorAppOrquesta.EstudianteDTO estudianteModificado = new BlazorAppOrquesta.EstudianteDTO();
+    private Dictionary<string, string> valoresModificados = new Dictionary<string, string>();
+    private bool mostrarCursos = false;
+    private bool mostrarFormularioSeleccionCurso = false;
+    private ICollection<BlazorAppOrquesta.Curso> cursosDisponibles;
+    private string cursoSeleccionadoId { get; set; }
+    public BlazorAppOrquesta.Curso cursoSeleccionado;
+
+
+
+    private async void MostrarFormularioSeleccionCurso()
+    {
+        cursosDisponibles = await orquestaClient.CursosAsync();
+        if (cursosDisponibles != null)
+            mostrarFormularioSeleccionCurso = true;
+    }
+
+
+    private async Task ProcesarSeleccionCurso()
+    {
+        if (!string.IsNullOrEmpty(cursoSeleccionadoId))
+        {
+            int selectedCursoId = int.Parse(cursoSeleccionadoId);
+
+            cursoSeleccionado = cursosDisponibles.FirstOrDefault(c => c.CursoId == selectedCursoId);
+            if (cursoSeleccionado != null)
+            {
+                // Mostrar una ventana emergente de confirmación al usuario
+                var confirmar = await jsRuntime.InvokeAsync<bool>("confirm", $"¿Estás seguro de dar de alta al estudiante en el curso {cursoSeleccionado.Nombre}?");
+
+                // Si el usuario confirma, realizar la acción correspondiente
+                if (confirmar)
+                {
+                    // Aquí debes implementar la lógica para dar de alta al estudiante en el curso seleccionado
+                    // Puedes llamar a un servicio, hacer una solicitud HTTP, etc.
+                    // Por ahora, simplemente imprimiremos el nombre del curso seleccionado en la consola
+                    Console.WriteLine($"El estudiante será dado de alta en el curso: {cursoSeleccionado.Nombre}");
+                    await orquestaClient.EstudianteDarDeAltaEnCursoAsync(estudianteDetallado.EstudianteId, cursoSeleccionado.CursoId);
+                }
+                else
+                {
+                    // Si el usuario cancela, no hacer nada
+                }
+            }
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            accessToken = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "accessToken");
+            orquestaClient.SetAccessToken(accessToken);
+            string guidString = EstudianteId;
+            guidString = guidString.Replace(" ", "").Replace("-", "");
+            Guid guidValue = new Guid(guidString);
+
+            estudianteDetallado = await ObtenerEstudianteDetallado(guidValue);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al obtener el estudiante: {ex.Message}");
+        }
+
+
+    }
+
+
+    private async Task<BlazorAppOrquesta.Estudiante> ObtenerEstudianteDetallado(Guid estudianteId)
+    {
+        estudianteDetallado = await orquestaClient.EstudianteAsync(estudianteId);
+        if (estudianteDetallado != null)
+        {
+            if (estudianteDetallado.InstrumentoId.HasValue)
+            {
+                instrumento = await orquestaClient.InstrumentoAsync(estudianteDetallado.InstrumentoId.Value);
+            }
+            return estudianteDetallado;
+        }
+        return null;
+    }
+
+    private async Task VerCursosEstudiante(BlazorAppOrquesta.Estudiante estudiante)
+    {
+        Cursos = await orquestaClient.CursosByEstudianteAsync(estudiante.EstudianteId);
+        estudianteDetallado.Cursos = Cursos;
+        mostrarCursos = true;
+    }
+
+    private void ToggleEdicion()
+    {
+        if (editable)
+        {
+            // Lógica para guardar los cambios
+            GuardarCambios();
+        }
+        editable = !editable;
+    }
+
+    private void HandleInputChange(string fieldName, ChangeEventArgs e)
+    {
+        string newValue = e.Value.ToString();
+        if (valoresModificados.ContainsKey(fieldName))
+        {
+            valoresModificados[fieldName] = newValue;
+        }
+        else
+        {
+            valoresModificados.Add(fieldName, newValue);
+        }
+    }
+
+    private async Task GuardarCambios()
+    {
+        try
+        {
+            var estudianteCopia = new BlazorAppOrquesta.EstudianteDTO
+                {
+                    EstudianteId = estudianteDetallado.EstudianteId,
+                    Nombre = estudianteDetallado.Nombre,
+                    Apellido = estudianteDetallado.Apellido,
+                    FechaNacimiento = estudianteDetallado.FechaNacimiento,
+                    Documento = GetValue(nameof(estudianteDetallado.Documento)),
+                    Telefono = GetValue(nameof(estudianteDetallado.Telefono)),
+                    Direccion = GetValue(nameof(estudianteDetallado.Direccion)),
+                    Email = GetValue(nameof(estudianteDetallado.Email)),
+                    InstrumentoId = estudianteDetallado.InstrumentoId,
+                    RutaFoto = estudianteDetallado.RutaFoto,
+                    Activo = estudianteDetallado.Activo,
+                    NombreTutor = GetValue(nameof(estudianteDetallado.NombreTutor)),
+                    TelefonoTutor = GetValue(nameof(estudianteDetallado.TelefonoTutor)),
+                    Asegurado = estudianteDetallado.Asegurado,
+                    DocumentoTutor = GetValue(nameof(estudianteDetallado.DocumentoTutor)),
+                    DocumentoTutor2 = GetValue(nameof(estudianteDetallado.DocumentoTutor2)),
+                    NombreTutor2 = GetValue(nameof(estudianteDetallado.NombreTutor2)),
+                    TelefonoTutor2 = GetValue(nameof(estudianteDetallado.TelefonoTutor2)),
+                    Nacionalidad = GetValue(nameof(estudianteDetallado.Nacionalidad)),
+                    TmtMédico = GetValue(nameof(estudianteDetallado.TmtMédico)),
+                    EpPsicoMotriz = GetValue(nameof(estudianteDetallado.EpPsicoMotriz)),
+                    Particularidad = GetValue(nameof(estudianteDetallado.Particularidad)),
+                    Autoretiro = estudianteDetallado.Autoretiro
+                };
+
+            Console.WriteLine("Antes de cargar los cambios " + estudianteCopia.Documento);
+            await orquestaClient.Update2Async(estudianteDetallado.EstudianteId, estudianteCopia);
+            Console.WriteLine("Los cambios se guardaron correctamente.");
+            Console.WriteLine("Después de cargar los cambios " + estudianteCopia.Documento);
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al guardar cambios: {ex.Message}");
+        }
+    }
+
+    private string GetValue(string fieldName)
+    {
+        if (valoresModificados.ContainsKey(fieldName))
+        {
+            return valoresModificados[fieldName];
+        }
+        else
+        {
+            switch (fieldName)
+            {
+                case nameof(estudianteDetallado.Documento):
+                    return estudianteDetallado.Documento;
+                case nameof(estudianteDetallado.Telefono):
+                    return estudianteDetallado.Telefono;
+                case nameof(estudianteDetallado.Direccion):
+                    return estudianteDetallado.Direccion;
+                case nameof(estudianteDetallado.Email):
+                    return estudianteDetallado.Email;
+                case nameof(estudianteDetallado.NombreTutor):
+                    return estudianteDetallado.NombreTutor;
+                case nameof(estudianteDetallado.TelefonoTutor):
+                    return estudianteDetallado.TelefonoTutor;
+                case nameof(estudianteDetallado.DocumentoTutor):
+                    return estudianteDetallado.DocumentoTutor;
+                case nameof(estudianteDetallado.DocumentoTutor2):
+                    return estudianteDetallado.DocumentoTutor2;
+                case nameof(estudianteDetallado.NombreTutor2):
+                    return estudianteDetallado.NombreTutor2;
+                case nameof(estudianteDetallado.TelefonoTutor2):
+                    return estudianteDetallado.TelefonoTutor2;
+                case nameof(estudianteDetallado.Nacionalidad):
+                    return estudianteDetallado.Nacionalidad;
+                case nameof(estudianteDetallado.TmtMédico):
+                    return estudianteDetallado.TmtMédico;
+                case nameof(estudianteDetallado.EpPsicoMotriz):
+                    return estudianteDetallado.EpPsicoMotriz;
+                case nameof(estudianteDetallado.Particularidad):
+                    return estudianteDetallado.Particularidad;
+                default:
+                    return "";
+            }
+        }
+    }
+
+    private async Task CambiarCurso(Guid id, int cursoId, int cursoNuevoId)
+    {
+
+    }
+
+    private async Task DarDeBajaCurso(Guid id, int cursoId)
+    {
+        var confirmar = await jsRuntime.InvokeAsync<bool>("confirm", $"¿Estás seguro de dar de baja al estudiante del curso?");
+
+        // Si el usuario confirma, realizar la acción correspondiente
+        if (confirmar)
+        {
+            // Aquí debes implementar la lógica para dar de alta al estudiante en el curso seleccionado
+            // Puedes llamar a un servicio, hacer una solicitud HTTP, etc.
+            // Por ahora, simplemente imprimiremos el nombre del curso seleccionado en la consola
+           // Console.WriteLine($"El estudiante será dado de alta en el curso: {cursoSeleccionado.Nombre}");
+            await orquestaClient.EstudianteEliminarCursoAsync(id, cursoId);
+        }
+        else
+        {
+            // Si el usuario cancela, no hacer nada
+        }
+    }
+
+}

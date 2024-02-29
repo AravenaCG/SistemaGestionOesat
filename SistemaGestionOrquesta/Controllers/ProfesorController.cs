@@ -108,59 +108,59 @@ namespace SistemaGestionOrquesta.Controllers
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet("/profesor/{id}")]
-        public async Task<IActionResult> Details(Guid id)
+        public async Task<Profesor> Details(Guid id)
         {
             try
             {
                 var customResponse = await profesorService.Get(id);
                 if (customResponse != null)
                 {
-                    return Ok(customResponse);
+                    return customResponse;
                 }
-                else { return BadRequest(); }
+                else { return null; }
 
             }
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                throw new Exception(ex.Message);
             }
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet("/profesorNombreYDni/{nombre}/{documento}")]
-        public async Task<IActionResult> GetProfesor(string nombre, string documento)
+        public async Task<Profesor> GetProfesor(string nombre, string documento)
         {
             try
             {
                 var customResponse = await profesorService.GetProfesorByNombreYDocumento(nombre, documento);
                 if (customResponse != null)
                 {
-                    return Ok(customResponse);
+                    return customResponse;
                 }
-                else { return BadRequest(); }
+                else { return null; }
 
             }
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                throw new Exception(ex.Message);
             }
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet("/profesorNombreApellido/{nombre}/{apellido}")]
-        public async Task<IActionResult> GetProfesorNombreApellido(string nombre, string apellido)
+        public async Task<Profesor> GetProfesorNombreApellido(string nombre, string apellido)
         {
             try
             {
                 var customResponse = await profesorService.GetProfesorByNombreYApellido(nombre, apellido);
                 if (customResponse != null)
                 {
-                    return Ok(customResponse);
+                    return customResponse;
                 }
-                else { return BadRequest(); }
+                else { return null; }
 
             }
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                throw new Exception(ex.Message);
             }
         }
 

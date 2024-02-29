@@ -93,3 +93,5 @@ C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\SistemaGestionOrquesta.pdb
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\SistemaGestionOrquesta.genruntimeconfig.cache
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\ref\SistemaGestionOrquesta.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Release\net6.0\package-lock.json
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Release\net6.0\package.json
