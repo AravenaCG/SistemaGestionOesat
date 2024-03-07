@@ -12,3 +12,4 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddSingleton<ITokenManager, TokenManager>();
 
 await builder.Build().RunAsync();
+

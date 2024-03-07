@@ -18,7 +18,9 @@
     border-radius: 50%; /* Para hacer el botón circular */
     padding: 0; /* Para eliminar el espacio interior del botón */
 }
-
+.mi-clase[b-4gtsbyytz6] {
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+}
     .table th[b-4gtsbyytz6],
     .table td[b-4gtsbyytz6] {
         padding: 0.75rem;

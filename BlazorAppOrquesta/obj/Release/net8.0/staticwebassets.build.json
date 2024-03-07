@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IOOBbb+oE5hu/P0BlmilxgrdEpUzcxFFmXvpizllEeE=",
+  "Hash": "I0W+unOMuEc8ZCrth6kXkWOOeYjSlVmwOASKHKHLkjU=",
   "Source": "BlazorAppOrquesta",
   "BasePath": "/",
   "Mode": "Root",
@@ -8111,6 +8111,25 @@
       "OriginalItemSpec": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\BlazorAppOrquesta.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\classic-blue-magnifying-glass.png",
+      "SourceId": "BlazorAppOrquesta",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "classic-blue-magnifying-glass.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\classic-blue-magnifying-glass.png"
+    },
+    {
       "Identity": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\css\\app.css",
       "SourceId": "BlazorAppOrquesta",
       "SourceType": "Discovered",
@@ -8187,6 +8206,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
+      "Identity": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\giphy.gif",
+      "SourceId": "BlazorAppOrquesta",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "giphy.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\giphy.gif"
+    },
+    {
       "Identity": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\icon-192.png",
       "SourceId": "BlazorAppOrquesta",
       "SourceType": "Discovered",
@@ -8242,25 +8280,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\BlazorDownloadFile.js"
-    },
-    {
-      "Identity": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\js\\blazorDownloadFile-transpiled.js",
-      "SourceId": "BlazorAppOrquesta",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "js/blazorDownloadFile-transpiled.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\blazorDownloadFile-transpiled.js"
     },
     {
       "Identity": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\sample-data\\weather.json",
