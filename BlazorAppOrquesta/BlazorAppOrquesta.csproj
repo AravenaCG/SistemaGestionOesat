@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <Content Include="Pages\DetalleEstudiante.razor.css" />
-    <Content Include="Pages\Home.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
