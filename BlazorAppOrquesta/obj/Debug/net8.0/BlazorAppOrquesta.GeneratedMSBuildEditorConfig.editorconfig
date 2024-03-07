@@ -34,10 +34,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3Vyc28ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Exiuser/Desktop/copia OESAT/SistemaGestionOesat/BlazorAppOrquesta/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Exiuser/Desktop/copia OESAT/SistemaGestionOesat/BlazorAppOrquesta/Pages/Instrumento.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zdHJ1bWVudG8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -65,3 +61,7 @@ build_metadata.AdditionalFiles.CssScope = b-53uj2bvsu0
 [C:/Users/Exiuser/Desktop/copia OESAT/SistemaGestionOesat/BlazorAppOrquesta/Pages/Estudiante.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXN0dWRpYW50ZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-4gtsbyytz6
+
+[C:/Users/Exiuser/Desktop/copia OESAT/SistemaGestionOesat/BlazorAppOrquesta/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-wj4cc3p3gw
