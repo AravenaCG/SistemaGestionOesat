@@ -12,13 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Pages\DetalleEstudiante.razor.css" />
     <None Remove="Pages\DetalleEstudiante.razor.js" />
     <None Remove="Pages\Home.razor.css" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Pages\DetalleEstudiante.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
