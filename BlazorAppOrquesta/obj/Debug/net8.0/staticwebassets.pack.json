@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\BlazorAppOrquesta.styles.css"
     },
     {
+      "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\BlazorDownloadFile.js",
+      "PackagePath": "staticwebassets\\BlazorDownloadFile.js"
+    },
+    {
       "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\classic-blue-magnifying-glass.png",
       "PackagePath": "staticwebassets\\classic-blue-magnifying-glass.png"
     },
@@ -39,10 +43,6 @@
     {
       "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
-    },
-    {
-      "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\js\\BlazorDownloadFile.js",
-      "PackagePath": "staticwebassets\\js\\BlazorDownloadFile.js"
     },
     {
       "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\sample-data\\weather.json",
