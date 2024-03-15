@@ -296,7 +296,7 @@ else{
 
 
 
-        var module = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./js/blazorDownloadFile.js");
+        var module = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "BlazorDownloadFile.js");
         await module.InvokeVoidAsync("BlazorDownloadFile", fileName, excelContent);
 
     }
