@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaGestionOrquesta")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90564a800e56624b0a69dfba43a0a555857071a1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70fada45f086f90be73fc5e0967f6a60a7b80ba4")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaGestionOrquesta")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaGestionOrquesta")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
