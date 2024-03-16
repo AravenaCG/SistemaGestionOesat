@@ -46,7 +46,7 @@
 
 @code {
         private ICollection<BlazorAppOrquesta.Profesor> Profesores;
-        private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://localhost:7182", new HttpClient());
+    private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://sistemagestionorquesta.azurewebsites.net", new HttpClient());
 
         private async Task ObtenerListaProfesores()
         {
