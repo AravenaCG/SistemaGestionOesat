@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -31,7 +31,7 @@
         },
         "frameworks": {
           "net8.0": {
-            "targetAlias": "net8.0.0",
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -43,7 +43,7 @@
       },
       "frameworks": {
         "net8.0": {
-          "targetAlias": "net8.0.0",
+          "targetAlias": "net8.0",
           "dependencies": {
             "EPPlus": {
               "target": "Package",
