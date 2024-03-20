@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlazorAppOrquesta")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca409c788c69a6cc89fc09dab83133f5f6c19624")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df76fd3755738c5b0f120cab597d80407628ca16")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlazorAppOrquesta")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlazorAppOrquesta")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

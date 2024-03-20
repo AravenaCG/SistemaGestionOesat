@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yF0z9Vl/K2KbVChTm2EBQEoKbTdA3RGqeSr8mE3aoCU=",
+  "Hash": "QyWfCPIRVHKB17lST4rTb7ZGOU9LEYD3rjZ/B7ARUOE=",
   "Source": "BlazorAppOrquesta",
   "BasePath": "/",
   "Mode": "Root",
@@ -52,7 +52,7 @@
       "AssetTraitValue": "boot",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.1\\build\\net8.0\\blazor.webassembly.js"
+      "OriginalItemSpec": "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.0\\build\\net8.0\\blazor.webassembly.js"
     },
     {
       "Identity": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\bin\\Debug\\net8.0\\wwwroot\\_framework\\BlazorAppOrquesta.pdb",
@@ -5128,25 +5128,6 @@
       "OriginalItemSpec": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.ComponentModel.Primitives.wasm"
     },
     {
-      "Identity": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\obj\\Debug\\net8.0\\compressed\\a2os0wca9o.gz",
-      "SourceId": "BlazorAppOrquesta",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/blazor.webassembly.js.gz",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js"
-    },
-    {
       "Identity": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\obj\\Debug\\net8.0\\compressed\\a7mexbjfgw.gz",
       "SourceId": "BlazorAppOrquesta",
       "SourceType": "Computed",
@@ -6836,6 +6817,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.IO.FileSystem.Primitives.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\obj\\Debug\\net8.0\\compressed\\obezg8vu06.gz",
+      "SourceId": "BlazorAppOrquesta",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/blazor.webassembly.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js"
     },
     {
       "Identity": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\obj\\Debug\\net8.0\\compressed\\oen7kk6fv8.gz",
