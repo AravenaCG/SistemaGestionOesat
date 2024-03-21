@@ -13,8 +13,8 @@
 <div class="login">
     <h1>Sistema de Gestión OESAT</h1>
     <form @onsubmit="HandleLogin">
-        <InputText @bind-Value="@passwordInput" type="password" id="passwordInput" placeholder="Password" />
         <InputText @bind-Value="@emailInput" id="emailInput" placeholder="Email" />
+        <InputText @bind-Value="@passwordInput" type="password" id="passwordInput" placeholder="Password" />
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Ingresar</button>
     </form>
