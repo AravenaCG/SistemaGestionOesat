@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RwK+XikHi5Cz1/URCbO7V6Y77Sa4jxEauC2VKCJZ0WlEgpFxTBdLdZ3W/wHJvyZNMnWTGfphWGnkTMnXaA+pVQ==",
+  "dgSpecHash": "vPmiI6F8SlTWPXhw42xqQ888uy/MGRNs54EQQJShb+pR8Ru0Gy+h2q8aHGZ3nYPdHtpSguc6M8gbu6h44u6mVQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
   "expectedPackageFiles": [
@@ -47,7 +47,8 @@
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.0\\system.security.cryptography.pkcs.8.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.text.encoding.codepages\\8.0.0\\system.text.encoding.codepages.8.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
-    "C:\\Users\\Exiuser\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512"
+    "C:\\Users\\Exiuser\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\zxing.net\\0.16.9\\zxing.net.0.16.9.nupkg.sha512"
   ],
   "logs": []
 }
