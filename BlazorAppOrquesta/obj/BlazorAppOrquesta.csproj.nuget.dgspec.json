@@ -86,6 +86,10 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "QRCoderNetCore": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "System.Net.Http.Json": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -93,6 +97,10 @@
             "ZXing.Net": {
               "target": "Package",
               "version": "[0.16.9, )"
+            },
+            "ZXing.Net.Bindings.Windows.Compatibility": {
+              "target": "Package",
+              "version": "[0.16.12, )"
             }
           },
           "imports": [

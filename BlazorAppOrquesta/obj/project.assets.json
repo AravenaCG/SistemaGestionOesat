@@ -558,6 +558,18 @@
           "buildCrossTargeting/NSwag.MSBuild.props": {}
         }
       },
+      "QRCoderNetCore/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/QRCoder.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/QRCoder.dll": {}
+        }
+      },
       "System.ComponentModel.Annotations/5.0.0": {
         "type": "package",
         "compile": {
@@ -745,6 +757,23 @@
         "runtime": {
           "lib/net7.0/zxing.dll": {
             "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Bindings.Windows.Compatibility/0.16.12": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "7.0.0",
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0/ZXing.Windows.Compatibility.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/ZXing.Windows.Compatibility.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -1300,6 +1329,18 @@
           "buildCrossTargeting/NSwag.MSBuild.props": {}
         }
       },
+      "QRCoderNetCore/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/QRCoder.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/QRCoder.dll": {}
+        }
+      },
       "System.ComponentModel.Annotations/5.0.0": {
         "type": "package",
         "compile": {
@@ -1463,6 +1504,23 @@
         "runtime": {
           "lib/net7.0/zxing.dll": {
             "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Bindings.Windows.Compatibility/0.16.12": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "7.0.0",
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0/ZXing.Windows.Compatibility.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/ZXing.Windows.Compatibility.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -3183,6 +3241,18 @@
         "tools/Win/netstandard.dll"
       ]
     },
+    "QRCoderNetCore/1.0.0": {
+      "sha512": "nTQ/vgpaQDn5iT7dDu5euM9bgmV8Ul25ZQwUGg2doh72yhmzyMdpVfQykp/WyuHoKmK2EXYB2+/MRq4e5dpuXw==",
+      "type": "package",
+      "path": "qrcodernetcore/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.1/QRCoder.dll",
+        "qrcodernetcore.1.0.0.nupkg.sha512",
+        "qrcodernetcore.nuspec"
+      ]
+    },
     "System.ComponentModel.Annotations/5.0.0": {
       "sha512": "dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
       "type": "package",
@@ -3662,6 +3732,34 @@
         "zxing.net.0.16.9.nupkg.sha512",
         "zxing.net.nuspec"
       ]
+    },
+    "ZXing.Net.Bindings.Windows.Compatibility/0.16.12": {
+      "sha512": "bmwWQ4mOQEJOD0IkxSNZScU+kjMT1YliZPLIQtuh1LbxolKqJLcvyIY/9xv/2g3tNO3mZlcCIUOx756Xu3kE6w==",
+      "type": "package",
+      "path": "zxing.net.bindings.windows.compatibility/0.16.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/ZXing.Windows.Compatibility.dll",
+        "lib/net6.0/ZXing.Windows.Compatibility.pdb",
+        "lib/net6.0/ZXing.Windows.Compatibility.xml",
+        "lib/net7.0/ZXing.Windows.Compatibility.dll",
+        "lib/net7.0/ZXing.Windows.Compatibility.pdb",
+        "lib/net7.0/ZXing.Windows.Compatibility.xml",
+        "lib/netcoreapp3.0/ZXing.Windows.Compatibility.dll",
+        "lib/netcoreapp3.0/ZXing.Windows.Compatibility.pdb",
+        "lib/netcoreapp3.0/ZXing.Windows.Compatibility.xml",
+        "lib/netcoreapp3.1/ZXing.Windows.Compatibility.dll",
+        "lib/netcoreapp3.1/ZXing.Windows.Compatibility.pdb",
+        "lib/netcoreapp3.1/ZXing.Windows.Compatibility.xml",
+        "lib/netstandard2.0/ZXing.Windows.Compatibility.dll",
+        "lib/netstandard2.0/ZXing.Windows.Compatibility.pdb",
+        "lib/netstandard2.0/ZXing.Windows.Compatibility.xml",
+        "logo.jpg",
+        "readme.md",
+        "zxing.net.bindings.windows.compatibility.0.16.12.nupkg.sha512",
+        "zxing.net.bindings.windows.compatibility.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -3674,8 +3772,10 @@
       "Microsoft.NET.Sdk.WebAssembly.Pack >= 8.0.2",
       "NSwag.ApiDescription.Client >= 13.18.2",
       "Newtonsoft.Json >= 13.0.1",
+      "QRCoderNetCore >= 1.0.0",
       "System.Net.Http.Json >= 6.0.0",
-      "ZXing.Net >= 0.16.9"
+      "ZXing.Net >= 0.16.9",
+      "ZXing.Net.Bindings.Windows.Compatibility >= 0.16.12"
     ]
   },
   "packageFolders": {
@@ -3764,6 +3864,10 @@
             "target": "Package",
             "version": "[13.0.1, )"
           },
+          "QRCoderNetCore": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
           "System.Net.Http.Json": {
             "target": "Package",
             "version": "[6.0.0, )"
@@ -3771,6 +3875,10 @@
           "ZXing.Net": {
             "target": "Package",
             "version": "[0.16.9, )"
+          },
+          "ZXing.Net.Bindings.Windows.Compatibility": {
+            "target": "Package",
+            "version": "[0.16.12, )"
           }
         },
         "imports": [

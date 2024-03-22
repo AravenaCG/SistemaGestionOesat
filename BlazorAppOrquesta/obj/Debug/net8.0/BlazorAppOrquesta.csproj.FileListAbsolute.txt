@@ -1035,6 +1035,13 @@ C:\Users\Exiuser\Desktop\SistemaOESAT\BlazorAppOrquesta\obj\Debug\net8.0\BlazorA
 C:\Users\Exiuser\Desktop\SistemaOESAT\BlazorAppOrquesta\obj\Debug\net8.0\refint\BlazorAppOrquesta.dll
 C:\Users\Exiuser\Desktop\SistemaOESAT\BlazorAppOrquesta\obj\Debug\net8.0\BlazorAppOrquesta.pdb
 C:\Users\Exiuser\Desktop\SistemaOESAT\BlazorAppOrquesta\obj\Debug\net8.0\ref\BlazorAppOrquesta.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\BlazorAppOrquesta.csproj.AssemblyReference.cache
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\BlazorAppOrquesta.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\BlazorAppOrquesta.AssemblyInfoInputs.cache
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\BlazorAppOrquesta.AssemblyInfo.cs
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\BlazorAppOrquesta.csproj.CoreCompileInputs.cache
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\BlazorAppOrquesta.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\BlazorAppOrquesta.sourcelink.json
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\BlazorAppOrquesta.pdb
@@ -1083,6 +1090,7 @@ C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\D
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\mscorlib.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\netstandard.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\Newtonsoft.Json.wasm
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\QRCoder.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.AppContext.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.Buffers.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.Collections.Concurrent.wasm
@@ -1247,6 +1255,8 @@ C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\D
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XPath.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XPath.XDocument.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\WindowsBase.wasm
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\zxing.wasm
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\ZXing.Windows.Compatibility.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Win32.Registry.wasm.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.InteropServices.wasm.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.IO.MemoryMappedFiles.wasm.gz
@@ -1382,6 +1392,7 @@ C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\D
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.Intrinsics.wasm.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.map.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.Net.Quic.wasm.gz
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\zxing.wasm.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.IO.FileSystem.DriveInfo.wasm.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.IO.FileSystem.Watcher.wasm.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.Private.Uri.wasm.gz
@@ -1413,6 +1424,7 @@ C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\D
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.Net.WebClient.wasm.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.Drawing.wasm.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.wasm.gz
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\QRCoder.wasm.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.Handles.wasm.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\WindowsBase.wasm.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.Net.Sockets.wasm.gz
@@ -1443,6 +1455,7 @@ C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\D
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.ComponentModel.EventBasedAsync.wasm.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.IO.Compression.wasm.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.Linq.wasm.gz
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\ZXing.Windows.Compatibility.wasm.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.Security.Cryptography.Encoding.wasm.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.FileSystemGlobbing.wasm.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\wwwroot\_framework\System.Security.Cryptography.wasm.gz
@@ -1491,9 +1504,12 @@ C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\D
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\Microsoft.JSInterop.WebAssembly.dll
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\QRCoder.dll
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\System.Drawing.Common.dll
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\System.IO.Pipelines.dll
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\zxing.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\ZXing.Windows.Compatibility.dll
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\Microsoft.CSharp.dll
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\Microsoft.VisualBasic.Core.dll
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\Microsoft.VisualBasic.dll
@@ -1671,13 +1687,6 @@ C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\D
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\icudt_CJK.dat
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\icudt_EFIGS.dat
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\icudt_no_CJK.dat
-C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\BlazorAppOrquesta.csproj.AssemblyReference.cache
-C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\BlazorAppOrquesta.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\BlazorAppOrquesta.AssemblyInfoInputs.cache
-C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\BlazorAppOrquesta.AssemblyInfo.cs
-C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\BlazorAppOrquesta.csproj.CoreCompileInputs.cache
-C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\BlazorAppOrquesta.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\BlazorAppOrquesta.sourcelink.json
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\webcil\EPPlus.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\webcil\EPPlus.Interfaces.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\webcil\EPPlus.System.Drawing.wasm
@@ -1706,9 +1715,12 @@ C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\D
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\webcil\Microsoft.JSInterop.WebAssembly.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\webcil\Microsoft.Win32.SystemEvents.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\webcil\Newtonsoft.Json.wasm
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\webcil\QRCoder.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\webcil\System.Drawing.Common.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\webcil\System.IO.Pipelines.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\webcil\System.Security.Cryptography.Pkcs.wasm
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\webcil\zxing.wasm
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\webcil\ZXing.Windows.Compatibility.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\webcil\Microsoft.CSharp.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\webcil\Microsoft.VisualBasic.Core.wasm
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\webcil\Microsoft.VisualBasic.wasm
@@ -1921,9 +1933,12 @@ C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\D
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\ksi7vkw7gw.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\yjvtklc3g5.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\ta97yoiuq5.gz
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\sosx9f9t7k.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\gc4qkm7gg6.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\3grshlbssv.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\c2dphk0ijs.gz
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\mxqp9pz7sm.gz
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\wdmacg8mu0.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\tpi4ygorzp.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\1vr58fo8ie.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\h7q2wyyywj.gz

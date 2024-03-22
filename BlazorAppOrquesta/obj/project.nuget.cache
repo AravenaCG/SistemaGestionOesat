@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vPmiI6F8SlTWPXhw42xqQ888uy/MGRNs54EQQJShb+pR8Ru0Gy+h2q8aHGZ3nYPdHtpSguc6M8gbu6h44u6mVQ==",
+  "dgSpecHash": "ZyIdP7I9jC/qfHluTh4k8xtAz6m/PT1Tp9j6YirJqJI2524VxS+dlVzwZL73M717D1dhCGpxasC6tnvwZYtvZw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
   "expectedPackageFiles": [
@@ -39,6 +39,7 @@
     "C:\\Users\\Exiuser\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\nswag.apidescription.client\\13.18.2\\nswag.apidescription.client.13.18.2.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\nswag.msbuild\\13.18.2\\nswag.msbuild.13.18.2.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\qrcodernetcore\\1.0.0\\qrcodernetcore.1.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.formats.asn1\\8.0.0\\system.formats.asn1.8.0.0.nupkg.sha512",
@@ -48,7 +49,8 @@
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.text.encoding.codepages\\8.0.0\\system.text.encoding.codepages.8.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
-    "C:\\Users\\Exiuser\\.nuget\\packages\\zxing.net\\0.16.9\\zxing.net.0.16.9.nupkg.sha512"
+    "C:\\Users\\Exiuser\\.nuget\\packages\\zxing.net\\0.16.9\\zxing.net.0.16.9.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\zxing.net.bindings.windows.compatibility\\0.16.12\\zxing.net.bindings.windows.compatibility.0.16.12.nupkg.sha512"
   ],
   "logs": []
 }

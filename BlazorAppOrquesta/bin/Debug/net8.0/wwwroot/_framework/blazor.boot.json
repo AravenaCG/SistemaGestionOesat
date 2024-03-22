@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "BlazorAppOrquesta",
   "resources": {
-    "hash": "sha256-9/5eyCN9dNRtY0/7APrKs+SuZZKuNUkjSIRujC97Kks=",
+    "hash": "sha256-xvp9PPjSVw6oGmCmcMsHbkN2GEeDAblTF6aZnvSGZxc=",
     "jsModuleNative": {
       "dotnet.native.8.0.2.deknxu92gu.js": "sha256-gPMK16QWoJSTxorlZJqcVtbBRTniIQWlLsJN2O4cJHg="
     },
@@ -45,9 +45,12 @@
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-3wQR1/VN+SB8r7Gkqf93l8O4F1aSbaghQWV2PoaJByI=",
       "Microsoft.Win32.SystemEvents.wasm": "sha256-Nt8kSuNK/CTuLqP7vyiZU6o5tFmsC4wEG0yB7FBAs90=",
       "Newtonsoft.Json.wasm": "sha256-PaicHOw1U7HF05kEvZI0Rgg1nwdA8hrzbzdkw1qgUuU=",
+      "QRCoder.wasm": "sha256-ZKo8c+jnizI61QnWK7WeZRwwK3nhiEJN/Z4y81deZ1s=",
       "System.Drawing.Common.wasm": "sha256-5ynaxkQWD9IWCcTe21JIKpCOo1DnpA6cUZwFs7ZRDdg=",
       "System.IO.Pipelines.wasm": "sha256-JqVBy6SV+3qk+IK3VJiyIDt9CsVk6b1/ytTXmrI4mTM=",
       "System.Security.Cryptography.Pkcs.wasm": "sha256-TI1HAEkartno9QmSkr9JqtqRsp3ucs75Zd81pACpkQY=",
+      "zxing.wasm": "sha256-tMfd0yYIsmnNL+xt9XPz0JttM4ydnaDExf6FoFjM0Kg=",
+      "ZXing.Windows.Compatibility.wasm": "sha256-hFczKEyovgJRQJrFVtdkjNUYtnJQIgyj3kPnu71W+aA=",
       "Microsoft.CSharp.wasm": "sha256-8nyldHzkTaUeTZ63Zp+JhpeQn6oscutjZPTmWsJeJN4=",
       "Microsoft.VisualBasic.Core.wasm": "sha256-Hlg/TgVrr8+Z6tbEwTiTu3r04uAp1z1sk7kg7RHiJbk=",
       "Microsoft.VisualBasic.wasm": "sha256-XiKUOiYt7BmIJw031WqkHbWTpRxx+JHjQASsFv11aQA=",
@@ -216,10 +219,10 @@
       "mscorlib.wasm": "sha256-OH3kXneWqQMz6CUSo6POZqIeMqn9+5RR+IgHn5TnIwA=",
       "netstandard.wasm": "sha256-ZOswxXEbR2TmqjpbaBEdgr85Bv1NC4GwOwoJ+oxXM3M=",
       "System.Private.CoreLib.wasm": "sha256-I2w0iHf5nvSQyF1YE1VbgdTzmmz6a4OE6J7vo5wFa/4=",
-      "BlazorAppOrquesta.wasm": "sha256-iCpMUtSv22R9rAzeRye7p+SChHv8IEA0jmdj2RKvg/g="
+      "BlazorAppOrquesta.wasm": "sha256-p38GY5hU3IGyALldnoY1CTqR864cCOMxxWZZcfdzBmw="
     },
     "pdb": {
-      "BlazorAppOrquesta.pdb": "sha256-YQm4oQTkdQCr7kX/MHwu+mdy6misEmqGueJ5+NQfNVw="
+      "BlazorAppOrquesta.pdb": "sha256-6LZo4E5IwKsms/17xJ1Quk/C5RYijYmuqtxrmjkx4l0="
     }
   },
   "cacheBootResources": true,

@@ -1,18 +1,20 @@
 ﻿@page "/instrumento"
 @inject HttpClient Http
-@using System.IO
-@using ZXing
-@using ZXing.Common
-@using System
+@using Microsoft.AspNetCore
 @using System.Drawing
-@using System.Web
-
+@using QRCoder
+@using System.Drawing.Imaging
 
 
 <PageTitle>Instrumento</PageTitle>
 
 <h3>Instrumento</h3>
 <button class="btn btn-primary" @onclick="ObtenerListaInstrumentos">Obtener lista de Instrumentos</button>
+<button class="btn btn-primary" @onclick="AltaInstrumento">Dar de Alta Instrumento</button>
+<button class="btn btn-primary" @onclick="GenerarTodosQR">Generar todos los QR</button>
+
+
+
 
 @if (Instrumentos == null)
 {
@@ -39,7 +41,15 @@ else
                     <td>@instrumento.Detalles</td>
                     <td>@instrumento.Disponible</td>
                     <td>
-                        <button class="btn btn-primary" @onclick="() => GenerateAndDownloadQRCode(instrumento)">Eliminar</button>
+                        <button class="btn btn-danger btn-sm" @onclick="() => EliminarInstrumento(instrumento.InstrumentoId)">Eliminar</button>
+                    </td>
+                    <td>
+
+                        <button @onclick="() => GenerateQRCode(instrumento)" class="btn btn-success">Generate QR Code</button>
+                        @if (generarTodos)
+                        {
+                            <img alt="" src="@QRByte[instrumento.InstrumentoId]" width="300" class="mb-5" />
+                        }
                     </td>
                 </tr>
 
@@ -47,12 +57,18 @@ else
         </tbody>
     </table>
 }
-
+@if (!generarTodos)
+{
+    <img alt="" src="@QRByteSolo" width="300" class="mb-5" />
+}
 
 @code {
-    private ICollection<BlazorAppOrquesta.Instrumento> Instrumentos;
+    private static ICollection<BlazorAppOrquesta.Instrumento> Instrumentos;
     private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://sistemagestionorquesta.azurewebsites.net", new HttpClient());
-    private byte[] qrCodeBytes;
+    public static List<string> QRByte =  new List<string>();
+    private static bool generarTodos = false;
+    public static string QRByteSolo;
+
 
 
     private async Task ObtenerListaInstrumentos()
@@ -61,41 +77,36 @@ else
         Instrumentos = await orquestaClient.InstrumentosAsync();
     }
 
-
-    private byte[] GenerarQR(BlazorAppOrquesta.Instrumento instrumento)
+    public static string GenerateQRCode(BlazorAppOrquesta.Instrumento instrumento)
     {
-        string qrCodeData = $"InstrumentoId: {instrumento.InstrumentoId}\nNombre: {instrumento.Nombre}\nDetalles: {instrumento.Detalles}";
-        BarcodeWriter writer = new BarcodeWriter();
-        writer.Format = BarcodeFormat.QR_CODE;
+        // Crear el generador de código QR
+        QRCodeGenerator qrGenerator = new QRCodeGenerator();
+        QRCodeData qrCodeData = qrGenerator.CreateQrCode(instrumento.Nombre, QRCodeGenerator.ECCLevel.Q);
+        QRCode qrCode = new QRCode(qrCodeData);
 
-        // Configuración adicional si es necesario
-        EncodingOptions options = new EncodingOptions();
-        options.Width = 300;
-        options.Height = 300;
-        options.Margin = 10; // Margen alrededor del código QR
+        // Generar la imagen del código QR
+        BitmapByteQRCode qrCodeImage = new BitmapByteQRCode(qrCodeData);
+        byte[] qrCodeBytes = qrCodeImage.GetGraphic(20);
 
-        writer.Options = options;
+        // Convertir la imagen a base64 para mostrarla en la aplicación
+        string qrData = $"data:image/png;base64,{Convert.ToBase64String(qrCodeBytes)}";
+        QRByteSolo = qrData;
+        return qrData;
+    }
 
-        // Generar el código QR como un bitmap
-        Bitmap qrCodeBitmap = writer.Write(qrCodeData);
 
-        // Convertir el bitmap a bytes en formato JPEG
-        using (MemoryStream ms = new MemoryStream())
+    public static void GenerarTodosQR()
+    {
+        QRByte.Add(null);
+        foreach (BlazorAppOrquesta.Instrumento instrumento in Instrumentos)
         {
-            qrCodeBitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-            return ms.ToArray();
+            QRByte.Add(GenerateQRCode(instrumento));
         }
+        generarTodos = true;
     }
 
-    public static void GenerateAndDownloadQRCode(string qrCodeData)
-    {
-        byte[] qrCodeBytes = GenerateQRCodeAsJpgBytes(qrCodeData);
+    public void AltaInstrumento(){}
 
-        // Descargar el archivo
-        HttpContext.Current.Response.Clear();
-        HttpContext.Current.Response.ContentType = "image/jpeg";
-        HttpContext.Current.Response.AddHeader("Content-Disposition", "attachment; filename=qrCode.jpg");
-        HttpContext.Current.Response.BinaryWrite(qrCodeBytes);
-        HttpContext.Current.Response.End();
-    }
+    public void EliminarInstrumento(int instrumentoId){}
+
 }
