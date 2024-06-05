@@ -10,3 +10,4 @@ SistemaGestionOrquesta/bin/
 SistemaGestionOrquesta/obj/
 # Ignorar archivos de configuración específicos
 appsettings.json
+SistemaGestionOrquesta/.vs/SistemaGestionOrquesta/FileContentIndex/3d43d7c2-50d7-4d9d-bcbb-d8c73f66c876.vsidx
