@@ -22,7 +22,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '8.0.4' # Especifica la versión de .NET SDK
+          dotnet-version: '8.0' # Especifica la versión de .NET SDK
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
