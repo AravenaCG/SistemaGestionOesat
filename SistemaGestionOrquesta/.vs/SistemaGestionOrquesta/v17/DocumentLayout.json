@@ -1,12 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EF5D31AD-2F63-4558-8A26-FD1AF651F413}|..\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj|c:\\users\\exiuser\\desktop\\copia oesat\\sistemagestionoesat\\blazorapporquesta\\blazorapporquesta.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BlazorAppOrquesta",
+              "DocumentMoniker": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
+              "RelativeDocumentMoniker": "..\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
+              "ToolTip": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
+              "RelativeToolTip": "..\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAUwC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-06T04:19:34.686Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
