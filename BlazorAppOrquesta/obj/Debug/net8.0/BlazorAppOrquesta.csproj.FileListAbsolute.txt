@@ -1903,7 +1903,6 @@ C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\D
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\scopedcss\Pages\Estudiante.razor.rz.scp.css
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\scopedcss\bundle\BlazorAppOrquesta.styles.css
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\scopedcss\projectbundle\BlazorAppOrquesta.bundle.scp.css
-C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\4tniszxd47.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\jq6o8t4phf.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\o6v4byw4t6.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\e9cv3setue.gz
@@ -2123,3 +2122,5 @@ C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\D
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\refint\BlazorAppOrquesta.dll
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\BlazorAppOrquesta.pdb
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\ref\BlazorAppOrquesta.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\1zbi5wmlv7.gz
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\bin\Debug\net8.0\global.json
