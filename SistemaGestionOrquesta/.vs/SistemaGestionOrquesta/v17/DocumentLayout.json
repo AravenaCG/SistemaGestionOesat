@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EF5D31AD-2F63-4558-8A26-FD1AF651F413}|..\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj|c:\\users\\exiuser\\desktop\\copia oesat\\sistemagestionoesat\\blazorapporquesta\\global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EF5D31AD-2F63-4558-8A26-FD1AF651F413}|..\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj|c:\\users\\exiuser\\desktop\\copia oesat\\sistemagestionoesat\\blazorapporquesta\\blazorapporquesta.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -18,12 +21,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "global.json",
+              "DocumentMoniker": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\global.json",
+              "RelativeDocumentMoniker": "..\\BlazorAppOrquesta\\global.json",
+              "ToolTip": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\global.json",
+              "RelativeToolTip": "..\\BlazorAppOrquesta\\global.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-06T14:57:07.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "BlazorAppOrquesta.csproj",
               "DocumentMoniker": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
               "RelativeDocumentMoniker": "..\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
               "ToolTip": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
               "RelativeToolTip": "..\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAUwBsAAABbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-06-06T04:19:34.686Z",
               "EditorCaption": ""
