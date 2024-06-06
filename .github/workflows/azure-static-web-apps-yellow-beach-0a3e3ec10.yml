@@ -22,20 +22,21 @@ jobs:
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v4.0.0
         with:
-          dotnet-version: '8.0.204' 
+          dotnet-version: '8.0.204'
+      - name: Check .NET Core SDK Version
+        run: dotnet --version
+      - name: Clean build directories
+        run: dotnet clean
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_YELLOW_BEACH_0A3E3EC10 }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "BlazorAppOrquesta" # App source code path
-          api_location: "Api" # Api source code path - optional
-          output_location: "wwwroot" # Built app content directory - optional
-          ###### End of Repository/Build Configurations ######
+          app_location: "BlazorAppOrquesta"
+          api_location: "Api"
+          output_location: "wwwroot"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
