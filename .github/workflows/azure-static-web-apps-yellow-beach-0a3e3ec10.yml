@@ -19,6 +19,15 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v4.0.0
+        with:
+              dotnet-version: 8.0.4
+      - name: Check .NET Core SDK Version
+        run: dotnet --version
+      - name: Clean build directories
+        run: dotnet clean
+        working-directory: BlazorAppOrquesta
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -32,7 +41,6 @@ jobs:
           api_location: "Api" # Api source code path - optional
           output_location: "wwwroot" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
-
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
