@@ -22,9 +22,12 @@ jobs:
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v4.0.0
         with:
-              dotnet-version: 8.0.4
+          dotnet-version: 8.0.204
       - name: Check .NET Core SDK Version
         run: dotnet --version
+      - name: Create temporary global.json
+        run: echo '{"sdk":{"version":"8.0.204"}}' > global.json
+        working-directory: BlazorAppOrquesta
       - name: Clean build directories
         run: dotnet clean
         working-directory: BlazorAppOrquesta
