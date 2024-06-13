@@ -22,7 +22,7 @@ jobs:
           lfs: false
 
       - name: Set up .NET Core
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.x' # Especificar la versión 8.0.4 de .NET
 
