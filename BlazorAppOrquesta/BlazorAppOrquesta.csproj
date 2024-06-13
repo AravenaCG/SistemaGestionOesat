@@ -17,6 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="global.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <OpenApiReference Include="swagger.json" ClassName="OrquestaCñ" CodeGenerator="NSwagCSharp" />
     <OpenApiReference Include="swaggerJWT.json" ClassName="JwtAUTHAPIClass" CodeGenerator="NSwagCSharp" Namespace="BlazorAppOrquestaAuthAPI" />
   </ItemGroup>
@@ -25,7 +29,7 @@
     <PackageReference Include="EPPlus" Version="7.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.4" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.NET.Sdk.WebAssembly.Pack" Version="8.0.4"/>
+    <PackageReference Include="Microsoft.NET.Sdk.WebAssembly.Pack" Version="8.0.4" />
     <PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="8.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
