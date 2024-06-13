@@ -19,12 +19,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -33,7 +29,7 @@
               "RelativeDocumentMoniker": "..\\.github\\workflows\\azure-static-web-apps-yellow-beach-0a3e3ec10.yml",
               "ToolTip": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\.github\\workflows\\azure-static-web-apps-yellow-beach-0a3e3ec10.yml",
               "RelativeToolTip": "..\\.github\\workflows\\azure-static-web-apps-yellow-beach-0a3e3ec10.yml",
-              "ViewState": "AQIAABMAAAAAAAAAAAAAwCsAAAAaAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAwB0AAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
               "WhenOpened": "2024-06-13T14:12:15.821Z",
               "EditorCaption": ""
@@ -48,8 +44,7 @@
               "RelativeToolTip": "..\\BlazorAppOrquesta\\global.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-06T18:41:09.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T18:41:09.634Z"
             },
             {
               "$type": "Document",
@@ -61,8 +56,7 @@
               "RelativeToolTip": "..\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
               "ViewState": "AQIAAAQAAAAAAAAAAAAUwC0AAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-06T04:19:34.686Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T04:19:34.686Z"
             }
           ]
         }
