@@ -56,18 +56,18 @@
             },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
-              "version": "[6.0.17, )"
+              "version": "[6.0.31, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.17, )"
+              "version": "[6.0.31, )"
             },
             "Microsoft.Extensions.ApiDescription.Client": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.17, )"
+              "version": "[6.0.31, )"
             },
             "Microsoft.NET.ILLink.Analyzers": {
               "suppressParent": "All",
@@ -83,13 +83,13 @@
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "target": "Package",
-              "version": "[6.0.17, )"
+              "version": "[8.0.0, )"
             },
             "NSwag.ApiDescription.Client": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[14.0.7, )"
+              "version": "[14.0.8, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

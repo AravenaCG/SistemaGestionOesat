@@ -1,21 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "HNnRB2pB4NI=",
+  "dgSpecHash": "g+UB1zb7o4w=",
   "success": true,
   "projectFilePath": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Exiuser\\.nuget\\packages\\epplus\\7.1.2\\epplus.7.1.2.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\epplus.interfaces\\6.1.1\\epplus.interfaces.6.1.1.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\epplus.system.drawing\\6.1.1\\epplus.system.drawing.6.1.1.nupkg.sha512",
-    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.18\\microsoft.aspnetcore.authorization.6.0.18.nupkg.sha512",
-    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.18\\microsoft.aspnetcore.components.6.0.18.nupkg.sha512",
-    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.18\\microsoft.aspnetcore.components.analyzers.6.0.18.nupkg.sha512",
-    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\6.0.18\\microsoft.aspnetcore.components.forms.6.0.18.nupkg.sha512",
-    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.components.web\\6.0.18\\microsoft.aspnetcore.components.web.6.0.18.nupkg.sha512",
-    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.18\\microsoft.aspnetcore.components.webassembly.6.0.18.nupkg.sha512",
-    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\6.0.18\\microsoft.aspnetcore.components.webassembly.devserver.6.0.18.nupkg.sha512",
-    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.18\\microsoft.aspnetcore.metadata.6.0.18.nupkg.sha512",
-    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.extensions.apidescription.client\\6.0.18\\microsoft.extensions.apidescription.client.6.0.18.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.31\\microsoft.aspnetcore.authorization.6.0.31.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.31\\microsoft.aspnetcore.components.6.0.31.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.31\\microsoft.aspnetcore.components.analyzers.6.0.31.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\6.0.31\\microsoft.aspnetcore.components.forms.6.0.31.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.components.web\\6.0.31\\microsoft.aspnetcore.components.web.6.0.31.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.31\\microsoft.aspnetcore.components.webassembly.6.0.31.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\6.0.31\\microsoft.aspnetcore.components.webassembly.devserver.6.0.31.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.31\\microsoft.aspnetcore.metadata.6.0.31.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.extensions.apidescription.client\\6.0.31\\microsoft.extensions.apidescription.client.6.0.31.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.extensions.configuration.binder\\6.0.0\\microsoft.extensions.configuration.binder.6.0.0.nupkg.sha512",
@@ -31,15 +31,15 @@
     "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.io.recyclablememorystream\\3.0.0\\microsoft.io.recyclablememorystream.3.0.0.nupkg.sha512",
-    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.jsinterop\\6.0.18\\microsoft.jsinterop.6.0.18.nupkg.sha512",
-    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.18\\microsoft.jsinterop.webassembly.6.0.18.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.jsinterop\\6.0.31\\microsoft.jsinterop.6.0.31.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.31\\microsoft.jsinterop.webassembly.6.0.31.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.net.illink.analyzers\\7.0.100-1.23401.1\\microsoft.net.illink.analyzers.7.0.100-1.23401.1.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.net.illink.tasks\\7.0.100-1.23401.1\\microsoft.net.illink.tasks.7.0.100-1.23401.1.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\8.0.0\\microsoft.net.sdk.webassembly.pack.8.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\Exiuser\\.nuget\\packages\\nswag.apidescription.client\\14.0.7\\nswag.apidescription.client.14.0.7.nupkg.sha512",
-    "C:\\Users\\Exiuser\\.nuget\\packages\\nswag.msbuild\\14.0.7\\nswag.msbuild.14.0.7.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\nswag.apidescription.client\\14.0.8\\nswag.apidescription.client.14.0.8.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\nswag.msbuild\\14.0.8\\nswag.msbuild.14.0.8.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\qrcodernetcore\\1.0.0\\qrcodernetcore.1.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
@@ -56,50 +56,5 @@
     "C:\\Users\\Exiuser\\.nuget\\packages\\zxing.net.bindings.windows.compatibility\\0.16.12\\zxing.net.bindings.windows.compatibility.0.16.12.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.30\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.30.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "BlazorAppOrquesta depende de Microsoft.AspNetCore.Components.WebAssembly (>= 6.0.17), pero no se encontró Microsoft.AspNetCore.Components.WebAssembly 6.0.17. Se resolvió una mejor coincidencia aproximada de Microsoft.AspNetCore.Components.WebAssembly 6.0.18.",
-      "libraryId": "Microsoft.AspNetCore.Components.WebAssembly",
-      "targetGraphs": [
-        "net6.0",
-        "net6.0/browser-wasm"
-      ]
-    },
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "BlazorAppOrquesta depende de Microsoft.AspNetCore.Components.WebAssembly.DevServer (>= 6.0.17), pero no se encontró Microsoft.AspNetCore.Components.WebAssembly.DevServer 6.0.17. Se resolvió una mejor coincidencia aproximada de Microsoft.AspNetCore.Components.WebAssembly.DevServer 6.0.18.",
-      "libraryId": "Microsoft.AspNetCore.Components.WebAssembly.DevServer",
-      "targetGraphs": [
-        "net6.0",
-        "net6.0/browser-wasm"
-      ]
-    },
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "BlazorAppOrquesta depende de Microsoft.Extensions.ApiDescription.Client (>= 6.0.17), pero no se encontró Microsoft.Extensions.ApiDescription.Client 6.0.17. Se resolvió una mejor coincidencia aproximada de Microsoft.Extensions.ApiDescription.Client 6.0.18.",
-      "libraryId": "Microsoft.Extensions.ApiDescription.Client",
-      "targetGraphs": [
-        "net6.0",
-        "net6.0/browser-wasm"
-      ]
-    },
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "BlazorAppOrquesta depende de Microsoft.NET.Sdk.WebAssembly.Pack (>= 6.0.17), pero no se encontró Microsoft.NET.Sdk.WebAssembly.Pack 6.0.17. Se resolvió una mejor coincidencia aproximada de Microsoft.NET.Sdk.WebAssembly.Pack 8.0.0.",
-      "libraryId": "Microsoft.NET.Sdk.WebAssembly.Pack",
-      "targetGraphs": [
-        "net6.0",
-        "net6.0/browser-wasm"
-      ]
-    }
-  ]
+  "logs": []
 }

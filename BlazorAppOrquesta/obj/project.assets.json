@@ -46,10 +46,10 @@
           "lib/net6.0/EPPlus.System.Drawing.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Authorization/6.0.18": {
+      "Microsoft.AspNetCore.Authorization/6.0.31": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Metadata": "6.0.18",
+          "Microsoft.AspNetCore.Metadata": "6.0.31",
           "Microsoft.Extensions.Logging.Abstractions": "6.0.4",
           "Microsoft.Extensions.Options": "6.0.0"
         },
@@ -64,11 +64,11 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components/6.0.18": {
+      "Microsoft.AspNetCore.Components/6.0.31": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "6.0.18",
-          "Microsoft.AspNetCore.Components.Analyzers": "6.0.18"
+          "Microsoft.AspNetCore.Authorization": "6.0.31",
+          "Microsoft.AspNetCore.Components.Analyzers": "6.0.31"
         },
         "compile": {
           "lib/net6.0/Microsoft.AspNetCore.Components.dll": {
@@ -81,16 +81,16 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Analyzers/6.0.18": {
+      "Microsoft.AspNetCore.Components.Analyzers/6.0.31": {
         "type": "package",
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
         }
       },
-      "Microsoft.AspNetCore.Components.Forms/6.0.18": {
+      "Microsoft.AspNetCore.Components.Forms/6.0.31": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "6.0.18"
+          "Microsoft.AspNetCore.Components": "6.0.31"
         },
         "compile": {
           "lib/net6.0/Microsoft.AspNetCore.Components.Forms.dll": {
@@ -103,13 +103,13 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Web/6.0.18": {
+      "Microsoft.AspNetCore.Components.Web/6.0.31": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "6.0.18",
-          "Microsoft.AspNetCore.Components.Forms": "6.0.18",
+          "Microsoft.AspNetCore.Components": "6.0.31",
+          "Microsoft.AspNetCore.Components.Forms": "6.0.31",
           "Microsoft.Extensions.DependencyInjection": "6.0.1",
-          "Microsoft.JSInterop": "6.0.18",
+          "Microsoft.JSInterop": "6.0.31",
           "System.IO.Pipelines": "6.0.3"
         },
         "compile": {
@@ -123,14 +123,14 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.WebAssembly/6.0.18": {
+      "Microsoft.AspNetCore.Components.WebAssembly/6.0.31": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components.Web": "6.0.18",
+          "Microsoft.AspNetCore.Components.Web": "6.0.31",
           "Microsoft.Extensions.Configuration.Binder": "6.0.0",
           "Microsoft.Extensions.Configuration.Json": "6.0.0",
           "Microsoft.Extensions.Logging": "6.0.0",
-          "Microsoft.JSInterop.WebAssembly": "6.0.18"
+          "Microsoft.JSInterop.WebAssembly": "6.0.31"
         },
         "compile": {
           "lib/net6.0/Microsoft.AspNetCore.Components.WebAssembly.dll": {
@@ -146,13 +146,13 @@
           "build/net6.0/Microsoft.AspNetCore.Components.WebAssembly.props": {}
         }
       },
-      "Microsoft.AspNetCore.Components.WebAssembly.DevServer/6.0.18": {
+      "Microsoft.AspNetCore.Components.WebAssembly.DevServer/6.0.31": {
         "type": "package",
         "build": {
           "build/Microsoft.AspNetCore.Components.WebAssembly.DevServer.targets": {}
         }
       },
-      "Microsoft.AspNetCore.Metadata/6.0.18": {
+      "Microsoft.AspNetCore.Metadata/6.0.31": {
         "type": "package",
         "compile": {
           "lib/net6.0/Microsoft.AspNetCore.Metadata.dll": {
@@ -165,7 +165,7 @@
           }
         }
       },
-      "Microsoft.Extensions.ApiDescription.Client/6.0.18": {
+      "Microsoft.Extensions.ApiDescription.Client/6.0.31": {
         "type": "package",
         "build": {
           "build/Microsoft.Extensions.ApiDescription.Client.props": {},
@@ -442,7 +442,7 @@
           }
         }
       },
-      "Microsoft.JSInterop/6.0.18": {
+      "Microsoft.JSInterop/6.0.31": {
         "type": "package",
         "compile": {
           "lib/net6.0/Microsoft.JSInterop.dll": {
@@ -455,10 +455,10 @@
           }
         }
       },
-      "Microsoft.JSInterop.WebAssembly/6.0.18": {
+      "Microsoft.JSInterop.WebAssembly/6.0.31": {
         "type": "package",
         "dependencies": {
-          "Microsoft.JSInterop": "6.0.18"
+          "Microsoft.JSInterop": "6.0.31"
         },
         "compile": {
           "lib/net6.0/Microsoft.JSInterop.WebAssembly.dll": {
@@ -525,18 +525,18 @@
           }
         }
       },
-      "NSwag.ApiDescription.Client/14.0.7": {
+      "NSwag.ApiDescription.Client/14.0.8": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Client": "6.0.3",
-          "NSwag.MSBuild": "14.0.7"
+          "NSwag.MSBuild": "14.0.8"
         },
         "build": {
           "build/NSwag.ApiDescription.Client.props": {},
           "build/NSwag.ApiDescription.Client.targets": {}
         }
       },
-      "NSwag.MSBuild/14.0.7": {
+      "NSwag.MSBuild/14.0.8": {
         "type": "package",
         "build": {
           "buildTransitive/NSwag.MSBuild.props": {}
@@ -852,10 +852,10 @@
           "lib/net6.0/EPPlus.System.Drawing.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Authorization/6.0.18": {
+      "Microsoft.AspNetCore.Authorization/6.0.31": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Metadata": "6.0.18",
+          "Microsoft.AspNetCore.Metadata": "6.0.31",
           "Microsoft.Extensions.Logging.Abstractions": "6.0.4",
           "Microsoft.Extensions.Options": "6.0.0"
         },
@@ -870,11 +870,11 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components/6.0.18": {
+      "Microsoft.AspNetCore.Components/6.0.31": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "6.0.18",
-          "Microsoft.AspNetCore.Components.Analyzers": "6.0.18"
+          "Microsoft.AspNetCore.Authorization": "6.0.31",
+          "Microsoft.AspNetCore.Components.Analyzers": "6.0.31"
         },
         "compile": {
           "lib/net6.0/Microsoft.AspNetCore.Components.dll": {
@@ -887,16 +887,16 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Analyzers/6.0.18": {
+      "Microsoft.AspNetCore.Components.Analyzers/6.0.31": {
         "type": "package",
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
         }
       },
-      "Microsoft.AspNetCore.Components.Forms/6.0.18": {
+      "Microsoft.AspNetCore.Components.Forms/6.0.31": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "6.0.18"
+          "Microsoft.AspNetCore.Components": "6.0.31"
         },
         "compile": {
           "lib/net6.0/Microsoft.AspNetCore.Components.Forms.dll": {
@@ -909,13 +909,13 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Web/6.0.18": {
+      "Microsoft.AspNetCore.Components.Web/6.0.31": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "6.0.18",
-          "Microsoft.AspNetCore.Components.Forms": "6.0.18",
+          "Microsoft.AspNetCore.Components": "6.0.31",
+          "Microsoft.AspNetCore.Components.Forms": "6.0.31",
           "Microsoft.Extensions.DependencyInjection": "6.0.1",
-          "Microsoft.JSInterop": "6.0.18",
+          "Microsoft.JSInterop": "6.0.31",
           "System.IO.Pipelines": "6.0.3"
         },
         "compile": {
@@ -929,14 +929,14 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.WebAssembly/6.0.18": {
+      "Microsoft.AspNetCore.Components.WebAssembly/6.0.31": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components.Web": "6.0.18",
+          "Microsoft.AspNetCore.Components.Web": "6.0.31",
           "Microsoft.Extensions.Configuration.Binder": "6.0.0",
           "Microsoft.Extensions.Configuration.Json": "6.0.0",
           "Microsoft.Extensions.Logging": "6.0.0",
-          "Microsoft.JSInterop.WebAssembly": "6.0.18"
+          "Microsoft.JSInterop.WebAssembly": "6.0.31"
         },
         "compile": {
           "lib/net6.0/Microsoft.AspNetCore.Components.WebAssembly.dll": {
@@ -952,13 +952,13 @@
           "build/net6.0/Microsoft.AspNetCore.Components.WebAssembly.props": {}
         }
       },
-      "Microsoft.AspNetCore.Components.WebAssembly.DevServer/6.0.18": {
+      "Microsoft.AspNetCore.Components.WebAssembly.DevServer/6.0.31": {
         "type": "package",
         "build": {
           "build/Microsoft.AspNetCore.Components.WebAssembly.DevServer.targets": {}
         }
       },
-      "Microsoft.AspNetCore.Metadata/6.0.18": {
+      "Microsoft.AspNetCore.Metadata/6.0.31": {
         "type": "package",
         "compile": {
           "lib/net6.0/Microsoft.AspNetCore.Metadata.dll": {
@@ -971,7 +971,7 @@
           }
         }
       },
-      "Microsoft.Extensions.ApiDescription.Client/6.0.18": {
+      "Microsoft.Extensions.ApiDescription.Client/6.0.31": {
         "type": "package",
         "build": {
           "build/Microsoft.Extensions.ApiDescription.Client.props": {},
@@ -1248,7 +1248,7 @@
           }
         }
       },
-      "Microsoft.JSInterop/6.0.18": {
+      "Microsoft.JSInterop/6.0.31": {
         "type": "package",
         "compile": {
           "lib/net6.0/Microsoft.JSInterop.dll": {
@@ -1261,10 +1261,10 @@
           }
         }
       },
-      "Microsoft.JSInterop.WebAssembly/6.0.18": {
+      "Microsoft.JSInterop.WebAssembly/6.0.31": {
         "type": "package",
         "dependencies": {
-          "Microsoft.JSInterop": "6.0.18"
+          "Microsoft.JSInterop": "6.0.31"
         },
         "compile": {
           "lib/net6.0/Microsoft.JSInterop.WebAssembly.dll": {
@@ -1325,18 +1325,18 @@
           }
         }
       },
-      "NSwag.ApiDescription.Client/14.0.7": {
+      "NSwag.ApiDescription.Client/14.0.8": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Client": "6.0.3",
-          "NSwag.MSBuild": "14.0.7"
+          "NSwag.MSBuild": "14.0.8"
         },
         "build": {
           "build/NSwag.ApiDescription.Client.props": {},
           "build/NSwag.ApiDescription.Client.targets": {}
         }
       },
-      "NSwag.MSBuild/14.0.7": {
+      "NSwag.MSBuild/14.0.8": {
         "type": "package",
         "build": {
           "buildTransitive/NSwag.MSBuild.props": {}
@@ -1654,10 +1654,10 @@
         "readme.md"
       ]
     },
-    "Microsoft.AspNetCore.Authorization/6.0.18": {
-      "sha512": "EG0nXXP49Sa2D/5Hak+kVxOloVJig0FHt+2u0u1ZWc25dyZ8gQeH2XtV4Zy3BlyqJbGOFsJ3D0TY08SXQ0McHg==",
+    "Microsoft.AspNetCore.Authorization/6.0.31": {
+      "sha512": "IuIc4MjVzrnw+qTeONaA+fP4W/c40+8mjhEn9irURwhghdMpwFWLgbg0H9fraz++rQe07KVPE+9PzYcAKATtmw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authorization/6.0.18",
+      "path": "microsoft.aspnetcore.authorization/6.0.31",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1669,14 +1669,14 @@
         "lib/net6.0/Microsoft.AspNetCore.Authorization.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
-        "microsoft.aspnetcore.authorization.6.0.18.nupkg.sha512",
+        "microsoft.aspnetcore.authorization.6.0.31.nupkg.sha512",
         "microsoft.aspnetcore.authorization.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components/6.0.18": {
-      "sha512": "iyK3AYe/4ttNP1r45CHO6ZAlBz71KcHo3IhP3qIp8RshCmmT+hBCJ9gDkHiRiR5cDlJmobUgqnDzcGOtDuLIpQ==",
+    "Microsoft.AspNetCore.Components/6.0.31": {
+      "sha512": "V22PkvRL6hD1MW2phIK0246B5JzQool2ZjLff7BZqDF/kW4N4vA6Ubeh3OmF67962x6d+pXc5CViYNiwspyDvQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components/6.0.18",
+      "path": "microsoft.aspnetcore.components/6.0.31",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1684,14 +1684,14 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/net6.0/Microsoft.AspNetCore.Components.dll",
         "lib/net6.0/Microsoft.AspNetCore.Components.xml",
-        "microsoft.aspnetcore.components.6.0.18.nupkg.sha512",
+        "microsoft.aspnetcore.components.6.0.31.nupkg.sha512",
         "microsoft.aspnetcore.components.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Analyzers/6.0.18": {
-      "sha512": "Kfe+FjOvXBnBv3JQkwchoayL7SYiwrIvzJdzwx8t9WcyVBPOzT3hCXxODxXnjRyv33hrTtXNS0CiDkurJEpsAA==",
+    "Microsoft.AspNetCore.Components.Analyzers/6.0.31": {
+      "sha512": "MqU/mJCTX07fVTJeGK+Y8ovpSZNr2OPr2IocO+NvVhN4JXB3m2leI37agEhiOoa9+bOK0gDYfXNHSBkiljFsGQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.analyzers/6.0.18",
+      "path": "microsoft.aspnetcore.components.analyzers/6.0.31",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1700,14 +1700,14 @@
         "analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll",
         "build/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
         "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
-        "microsoft.aspnetcore.components.analyzers.6.0.18.nupkg.sha512",
+        "microsoft.aspnetcore.components.analyzers.6.0.31.nupkg.sha512",
         "microsoft.aspnetcore.components.analyzers.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Forms/6.0.18": {
-      "sha512": "SYLK5kfXOW2E8rGnAMQRv6O0W54xu36mTaB5WOwQsALmIvx2EiWLK3Owj7avZUvsH4UwGrE8O3cuAdsir4MDxQ==",
+    "Microsoft.AspNetCore.Components.Forms/6.0.31": {
+      "sha512": "zUly+qivplyhj3n1shg982I4FE8Rv0j6PdsQAXW2LBVaUckhQ69aykHFAyGY3muadsfeAqNb9uy9lzrugvcPwQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.forms/6.0.18",
+      "path": "microsoft.aspnetcore.components.forms/6.0.31",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1715,14 +1715,14 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/net6.0/Microsoft.AspNetCore.Components.Forms.dll",
         "lib/net6.0/Microsoft.AspNetCore.Components.Forms.xml",
-        "microsoft.aspnetcore.components.forms.6.0.18.nupkg.sha512",
+        "microsoft.aspnetcore.components.forms.6.0.31.nupkg.sha512",
         "microsoft.aspnetcore.components.forms.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Web/6.0.18": {
-      "sha512": "V2bEOmSgzoCrp7HY/Z8X0xDWCGbR4juKJ/tNOrZnkwrOCuS9LXW0N4oSwjKIHwn/8m8Sifvo7oYY0DHhHB5MdQ==",
+    "Microsoft.AspNetCore.Components.Web/6.0.31": {
+      "sha512": "D8KqECSA7oFTCc1pL1quU1Tjt/HuHhB/jK+t5Nluax+FSU3XBsb5V1FwZoGnJklsCi1jSqBgopbs2MGt2NIJAQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.web/6.0.18",
+      "path": "microsoft.aspnetcore.components.web/6.0.31",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1730,14 +1730,14 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/net6.0/Microsoft.AspNetCore.Components.Web.dll",
         "lib/net6.0/Microsoft.AspNetCore.Components.Web.xml",
-        "microsoft.aspnetcore.components.web.6.0.18.nupkg.sha512",
+        "microsoft.aspnetcore.components.web.6.0.31.nupkg.sha512",
         "microsoft.aspnetcore.components.web.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.WebAssembly/6.0.18": {
-      "sha512": "g51g3nKhsfr4x5EfAoSg1hFOI5jlb/Z1Nqjpty5sIaqqULoHlQEZdCZ9N4yBl7xzxVX08mzI33oYwlaaDfmTbg==",
+    "Microsoft.AspNetCore.Components.WebAssembly/6.0.31": {
+      "sha512": "gZB0sbdQlhX67reZ5KgxPqRGw9XqLMjwSnu4GPtP5bgAchaop9JiW2EJpPB6PjB/16aib8LjjGaKU0eTVS7zpw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.webassembly/6.0.18",
+      "path": "microsoft.aspnetcore.components.webassembly/6.0.31",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1747,14 +1747,14 @@
         "build/net6.0/blazor.webassembly.js",
         "lib/net6.0/Microsoft.AspNetCore.Components.WebAssembly.dll",
         "lib/net6.0/Microsoft.AspNetCore.Components.WebAssembly.xml",
-        "microsoft.aspnetcore.components.webassembly.6.0.18.nupkg.sha512",
+        "microsoft.aspnetcore.components.webassembly.6.0.31.nupkg.sha512",
         "microsoft.aspnetcore.components.webassembly.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.WebAssembly.DevServer/6.0.18": {
-      "sha512": "YV9A7TGB2z5q66f08Nr9ANOooAx71suTh1EKbWeTQGna1TyY7BGosbgG/hykQuU1dX8nvtposJ0vGN6ESksSCA==",
+    "Microsoft.AspNetCore.Components.WebAssembly.DevServer/6.0.31": {
+      "sha512": "hgWJK0GaqBExctOwjb7M2Z0x/u5uN+yVy3O1HgXr/wlVDSMfmPq3Slfwb3FPiqTXSZ5aJQA+rMjWeZDWVLutCw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.webassembly.devserver/6.0.18",
+      "path": "microsoft.aspnetcore.components.webassembly.devserver/6.0.31",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -1762,7 +1762,7 @@
         "Icon.png",
         "THIRD-PARTY-NOTICES.txt",
         "build/Microsoft.AspNetCore.Components.WebAssembly.DevServer.targets",
-        "microsoft.aspnetcore.components.webassembly.devserver.6.0.18.nupkg.sha512",
+        "microsoft.aspnetcore.components.webassembly.devserver.6.0.31.nupkg.sha512",
         "microsoft.aspnetcore.components.webassembly.devserver.nuspec",
         "tools/BlazorDebugProxy/BrowserDebugHost.dll",
         "tools/BlazorDebugProxy/BrowserDebugHost.runtimeconfig.json",
@@ -1873,10 +1873,10 @@
         "tools/x86/aspnetcorev2_inprocess.dll"
       ]
     },
-    "Microsoft.AspNetCore.Metadata/6.0.18": {
-      "sha512": "jUdslp9xdZqvTfF2to6gNPTpUKzSd1aYGtIa8IIyBI9JruhBBsoOYsqLJNsBPNkyxiZExLFivTmS2D/vurpy2g==",
+    "Microsoft.AspNetCore.Metadata/6.0.31": {
+      "sha512": "r71keLBN33K/U2tqBFMSO4M2O+1gz++bYUTIoRqqDBay8tVaL0gfuN53kbjM93Nxfflmg85gU+Uv/02E/S3Tdw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.metadata/6.0.18",
+      "path": "microsoft.aspnetcore.metadata/6.0.31",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1888,14 +1888,14 @@
         "lib/net6.0/Microsoft.AspNetCore.Metadata.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
-        "microsoft.aspnetcore.metadata.6.0.18.nupkg.sha512",
+        "microsoft.aspnetcore.metadata.6.0.31.nupkg.sha512",
         "microsoft.aspnetcore.metadata.nuspec"
       ]
     },
-    "Microsoft.Extensions.ApiDescription.Client/6.0.18": {
-      "sha512": "l801tKTqSrVrZ1ABvcEEBzivH5IeUE66LBVxuvkdUQO5Dt4qnnXzCxAXvXbKTA1gi9Zf6uLz6vj3R6tkttccGw==",
+    "Microsoft.Extensions.ApiDescription.Client/6.0.31": {
+      "sha512": "b8+NRzw+xQCgTM2IdN35SZX9/cPMLCk0gqmn4vKmCwWf8KELQZDg2sCRxPlDwOAhC8kYAM+TdJ4Iv+d0UhayAQ==",
       "type": "package",
-      "path": "microsoft.extensions.apidescription.client/6.0.18",
+      "path": "microsoft.extensions.apidescription.client/6.0.31",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1905,7 +1905,7 @@
         "build/OpenApiItemsSchema.xaml",
         "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Client.props",
         "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Client.targets",
-        "microsoft.extensions.apidescription.client.6.0.18.nupkg.sha512",
+        "microsoft.extensions.apidescription.client.6.0.31.nupkg.sha512",
         "microsoft.extensions.apidescription.client.nuspec",
         "tasks/netstandard2.0/Microsoft.Extensions.ApiDescription.Client.deps.json",
         "tasks/netstandard2.0/Microsoft.Extensions.ApiDescription.Client.dll"
@@ -2264,10 +2264,10 @@
         "microsoft.io.recyclablememorystream.nuspec"
       ]
     },
-    "Microsoft.JSInterop/6.0.18": {
-      "sha512": "+RiIIX1jXPh9rAEKhUl7Z6sciN1hFwnsCh/FTuq3VUMbYVB/CehkKwpXzTuymHWoGHDTCPMOLN2I0D2Ksc86Iw==",
+    "Microsoft.JSInterop/6.0.31": {
+      "sha512": "jEiGGfbFUiAngRz5pzhal40dPNhhU1vHJm63UiqUFmHHyCd8IXx+HJhT3v2jyp6OYD7mtVRvIx9pUR6oiSOFqw==",
       "type": "package",
-      "path": "microsoft.jsinterop/6.0.18",
+      "path": "microsoft.jsinterop/6.0.31",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2275,14 +2275,14 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net6.0/Microsoft.JSInterop.dll",
         "lib/net6.0/Microsoft.JSInterop.xml",
-        "microsoft.jsinterop.6.0.18.nupkg.sha512",
+        "microsoft.jsinterop.6.0.31.nupkg.sha512",
         "microsoft.jsinterop.nuspec"
       ]
     },
-    "Microsoft.JSInterop.WebAssembly/6.0.18": {
-      "sha512": "fsfeBcRiuMWMRE/i+gvzB1SLYK0vAI3wTJ5YTkbp3TiSy1b/uIVtDCxgavYrWbaHMY3Iy8KNxaoYSU92rho5+g==",
+    "Microsoft.JSInterop.WebAssembly/6.0.31": {
+      "sha512": "qAp+7OQzaS3EfV0ELDLg5puWcFYmjRH3yTNYtNIQsCNG5hpSQlTMUMWHqNVZYohy90jSSMYnhPXX4xscbYty3Q==",
       "type": "package",
-      "path": "microsoft.jsinterop.webassembly/6.0.18",
+      "path": "microsoft.jsinterop.webassembly/6.0.31",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2290,7 +2290,7 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/net6.0/Microsoft.JSInterop.WebAssembly.dll",
         "lib/net6.0/Microsoft.JSInterop.WebAssembly.xml",
-        "microsoft.jsinterop.webassembly.6.0.18.nupkg.sha512",
+        "microsoft.jsinterop.webassembly.6.0.31.nupkg.sha512",
         "microsoft.jsinterop.webassembly.nuspec"
       ]
     },
@@ -2470,23 +2470,23 @@
         "packageIcon.png"
       ]
     },
-    "NSwag.ApiDescription.Client/14.0.7": {
-      "sha512": "qZhJYQpWvtYw+zPcyOa3nK/dfC0Gg3oanB57OvhH6osgsGggZp5sZJt7ecDcGvXieNW0pHnWuN57reEgpIBlHw==",
+    "NSwag.ApiDescription.Client/14.0.8": {
+      "sha512": "hBOroNZrvdSn/61OPxOOzvPcwDDe+o6OsS3fOclQuL74g0zYwJBwmOQhPC6lTlWzbcIxnDGOa1DzCfIPde8FtA==",
       "type": "package",
-      "path": "nswag.apidescription.client/14.0.7",
+      "path": "nswag.apidescription.client/14.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "build/NSwag.ApiDescription.Client.props",
         "build/NSwag.ApiDescription.Client.targets",
-        "nswag.apidescription.client.14.0.7.nupkg.sha512",
+        "nswag.apidescription.client.14.0.8.nupkg.sha512",
         "nswag.apidescription.client.nuspec"
       ]
     },
-    "NSwag.MSBuild/14.0.7": {
-      "sha512": "KsMOTIaU9g7BY0WYIcfeqX599Jc5is8RnOfVxspl/pSiZ0eYo4DTnIu/bcg8m1W05TlykERZNYLU8OFW3/Q7Jg==",
+    "NSwag.MSBuild/14.0.8": {
+      "sha512": "4Ys5FDblXyys4EATIDZLYAnfZ5UtRVW7vdVp8ETSNFVifj9Zjass5t6Pdxvvwi/fSUwlp/hwG2C5ixvuhHgS0A==",
       "type": "package",
-      "path": "nswag.msbuild/14.0.7",
+      "path": "nswag.msbuild/14.0.8",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -2494,14 +2494,16 @@
         "build/NSwag.MSBuild.props",
         "buildCrossTargeting/NSwag.MSBuild.props",
         "buildTransitive/NSwag.MSBuild.props",
-        "nswag.msbuild.14.0.7.nupkg.sha512",
+        "nswag.msbuild.14.0.8.nupkg.sha512",
         "nswag.msbuild.nuspec",
         "tools/Net60/Fluid.dll",
         "tools/Net60/Microsoft.AspNetCore.JsonPatch.dll",
         "tools/Net60/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll",
         "tools/Net60/Microsoft.AspNetCore.TestHost.dll",
         "tools/Net60/Microsoft.Extensions.DependencyModel.dll",
+        "tools/Net60/Microsoft.Extensions.FileProviders.Abstractions.dll",
         "tools/Net60/Microsoft.Extensions.PlatformAbstractions.dll",
+        "tools/Net60/Microsoft.Extensions.Primitives.dll",
         "tools/Net60/NConsole.dll",
         "tools/Net60/NJsonSchema.Annotations.dll",
         "tools/Net60/NJsonSchema.CodeGeneration.CSharp.dll",
@@ -2542,6 +2544,7 @@
         "tools/Net60/Newtonsoft.Json.Bson.dll",
         "tools/Net60/Newtonsoft.Json.dll",
         "tools/Net60/Parlot.dll",
+        "tools/Net60/System.Text.Encodings.Web.dll",
         "tools/Net60/TimeZoneConverter.dll",
         "tools/Net60/YamlDotNet.dll",
         "tools/Net60/dotnet-nswag.deps.json",
@@ -2549,12 +2552,15 @@
         "tools/Net60/dotnet-nswag.exe",
         "tools/Net60/dotnet-nswag.pdb",
         "tools/Net60/dotnet-nswag.runtimeconfig.json",
+        "tools/Net60/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll",
         "tools/Net70/Fluid.dll",
         "tools/Net70/Microsoft.AspNetCore.JsonPatch.dll",
         "tools/Net70/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll",
         "tools/Net70/Microsoft.AspNetCore.TestHost.dll",
         "tools/Net70/Microsoft.Extensions.DependencyModel.dll",
+        "tools/Net70/Microsoft.Extensions.FileProviders.Abstractions.dll",
         "tools/Net70/Microsoft.Extensions.PlatformAbstractions.dll",
+        "tools/Net70/Microsoft.Extensions.Primitives.dll",
         "tools/Net70/NConsole.dll",
         "tools/Net70/NJsonSchema.Annotations.dll",
         "tools/Net70/NJsonSchema.CodeGeneration.CSharp.dll",
@@ -2595,6 +2601,7 @@
         "tools/Net70/Newtonsoft.Json.Bson.dll",
         "tools/Net70/Newtonsoft.Json.dll",
         "tools/Net70/Parlot.dll",
+        "tools/Net70/System.Text.Encodings.Web.dll",
         "tools/Net70/TimeZoneConverter.dll",
         "tools/Net70/YamlDotNet.dll",
         "tools/Net70/dotnet-nswag.deps.json",
@@ -2602,6 +2609,7 @@
         "tools/Net70/dotnet-nswag.exe",
         "tools/Net70/dotnet-nswag.pdb",
         "tools/Net70/dotnet-nswag.runtimeconfig.json",
+        "tools/Net70/runtimes/browser/lib/net7.0/System.Text.Encodings.Web.dll",
         "tools/Net80/Fluid.dll",
         "tools/Net80/Microsoft.AspNetCore.JsonPatch.dll",
         "tools/Net80/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll",
@@ -3409,13 +3417,13 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "EPPlus >= 7.1.2",
-      "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.17",
-      "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.17",
-      "Microsoft.Extensions.ApiDescription.Client >= 6.0.17",
+      "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.31",
+      "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.31",
+      "Microsoft.Extensions.ApiDescription.Client >= 6.0.31",
       "Microsoft.NET.ILLink.Analyzers >= 7.0.100-1.23401.1",
       "Microsoft.NET.ILLink.Tasks >= 7.0.100-1.23401.1",
-      "Microsoft.NET.Sdk.WebAssembly.Pack >= 6.0.17",
-      "NSwag.ApiDescription.Client >= 14.0.7",
+      "Microsoft.NET.Sdk.WebAssembly.Pack >= 8.0.0",
+      "NSwag.ApiDescription.Client >= 14.0.8",
       "Newtonsoft.Json >= 13.0.3",
       "QRCoderNetCore >= 1.0.0",
       "System.Net.Http.Json >= 6.0.0",
@@ -3479,18 +3487,18 @@
           },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
-            "version": "[6.0.17, )"
+            "version": "[6.0.31, )"
           },
           "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[6.0.17, )"
+            "version": "[6.0.31, )"
           },
           "Microsoft.Extensions.ApiDescription.Client": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[6.0.17, )"
+            "version": "[6.0.31, )"
           },
           "Microsoft.NET.ILLink.Analyzers": {
             "suppressParent": "All",
@@ -3506,13 +3514,13 @@
           },
           "Microsoft.NET.Sdk.WebAssembly.Pack": {
             "target": "Package",
-            "version": "[6.0.17, )"
+            "version": "[8.0.0, )"
           },
           "NSwag.ApiDescription.Client": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[14.0.7, )"
+            "version": "[14.0.8, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",
@@ -3565,51 +3573,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "BlazorAppOrquesta depende de Microsoft.AspNetCore.Components.WebAssembly (>= 6.0.17), pero no se encontró Microsoft.AspNetCore.Components.WebAssembly 6.0.17. Se resolvió una mejor coincidencia aproximada de Microsoft.AspNetCore.Components.WebAssembly 6.0.18.",
-      "libraryId": "Microsoft.AspNetCore.Components.WebAssembly",
-      "targetGraphs": [
-        "net6.0",
-        "net6.0/browser-wasm"
-      ]
-    },
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "BlazorAppOrquesta depende de Microsoft.AspNetCore.Components.WebAssembly.DevServer (>= 6.0.17), pero no se encontró Microsoft.AspNetCore.Components.WebAssembly.DevServer 6.0.17. Se resolvió una mejor coincidencia aproximada de Microsoft.AspNetCore.Components.WebAssembly.DevServer 6.0.18.",
-      "libraryId": "Microsoft.AspNetCore.Components.WebAssembly.DevServer",
-      "targetGraphs": [
-        "net6.0",
-        "net6.0/browser-wasm"
-      ]
-    },
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "BlazorAppOrquesta depende de Microsoft.Extensions.ApiDescription.Client (>= 6.0.17), pero no se encontró Microsoft.Extensions.ApiDescription.Client 6.0.17. Se resolvió una mejor coincidencia aproximada de Microsoft.Extensions.ApiDescription.Client 6.0.18.",
-      "libraryId": "Microsoft.Extensions.ApiDescription.Client",
-      "targetGraphs": [
-        "net6.0",
-        "net6.0/browser-wasm"
-      ]
-    },
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "BlazorAppOrquesta depende de Microsoft.NET.Sdk.WebAssembly.Pack (>= 6.0.17), pero no se encontró Microsoft.NET.Sdk.WebAssembly.Pack 6.0.17. Se resolvió una mejor coincidencia aproximada de Microsoft.NET.Sdk.WebAssembly.Pack 8.0.0.",
-      "libraryId": "Microsoft.NET.Sdk.WebAssembly.Pack",
-      "targetGraphs": [
-        "net6.0",
-        "net6.0/browser-wasm"
-      ]
-    }
-  ]
+  }
 }
