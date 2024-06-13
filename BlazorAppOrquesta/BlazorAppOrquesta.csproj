@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
@@ -27,20 +27,20 @@
 
   <ItemGroup>
     <PackageReference Include="EPPlus" Version="7.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.31" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.31" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.NET.Sdk.WebAssembly.Pack" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.31">
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.4" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.NET.Sdk.WebAssembly.Pack" Version="8.0.4" />
+    <PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="8.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="NSwag.ApiDescription.Client" Version="14.0.8">
+    <PackageReference Include="NSwag.ApiDescription.Client" Version="14.0.7">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="QRCoderNetCore" Version="1.0.0" />
-    <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
+    <PackageReference Include="System.Net.Http.Json" Version="8.0.0" />
     <PackageReference Include="ZXing.Net" Version="0.16.9" />
     <PackageReference Include="ZXing.Net.Bindings.Windows.Compatibility" Version="0.16.12" />
   </ItemGroup>
