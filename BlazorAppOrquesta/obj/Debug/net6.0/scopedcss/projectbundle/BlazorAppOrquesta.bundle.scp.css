@@ -1,0 +1,257 @@
+/* /Layout/MainLayout.razor.rz.scp.css */
+.page[b-t0f8pyd11s] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-t0f8pyd11s] {
+    flex: 1;
+}
+
+.sidebar[b-t0f8pyd11s] {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+.top-row[b-t0f8pyd11s] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-t0f8pyd11s]  a, .top-row[b-t0f8pyd11s]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+    .top-row[b-t0f8pyd11s]  a:hover, .top-row[b-t0f8pyd11s]  .btn-link:hover {
+        text-decoration: underline;
+    }
+
+    .top-row[b-t0f8pyd11s]  a:first-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row[b-t0f8pyd11s] {
+        justify-content: space-between;
+    }
+
+    .top-row[b-t0f8pyd11s]  a, .top-row[b-t0f8pyd11s]  .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-t0f8pyd11s] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-t0f8pyd11s] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-t0f8pyd11s] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row.auth[b-t0f8pyd11s]  a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+
+    .top-row[b-t0f8pyd11s], article[b-t0f8pyd11s] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+/* /Pages/DetalleEstudiante.razor.rz.scp.css */
+.resume-wrapper[b-53uj2bvsu0] {
+    position: relative;
+    text-align: center;
+    height: 100%;
+}
+
+.container[b-53uj2bvsu0] {
+    min-height: 600px;
+}
+
+.profile[b-53uj2bvsu0] {
+    background: #fff;
+    width: 40%;
+    float: left;
+    color: #9099a0;
+}
+    .name-wrapper[b-53uj2bvsu0] {
+        float: left;
+        width: 60%;
+    }
+    h1[b-53uj2bvsu0] {
+        font-size: 2.5em;
+        text-align: left;
+        font-family: 'Varela Round', sans-serif;
+        color: #4a4e51;
+        text-transform: uppercase;
+        line-height: 1em;
+        padding-top: 40px;
+    }
+    .contact-info[b-53uj2bvsu0] {
+        margin-top: 100px;
+        font-weight: 300;
+    }
+    .list-titles[b-53uj2bvsu0] {
+        float: left;
+        text-align: left;
+        font-weight: 600;
+        width: 40%;
+        color: #4a4e51;
+    }
+    .list-content[b-53uj2bvsu0] {
+        float: left;
+        width: 60%;
+        text-align: left;
+        font-weight: 300;
+    }
+}
+
+.list-content li[b-53uj2bvsu0] {
+    margin-bottom: 10px;
+}
+
+.list-content li strong[b-53uj2bvsu0] {
+    color: #4a4e51;
+}
+
+.contact-info ul[b-53uj2bvsu0] {
+    padding-left: 0;
+}
+
+.contact-info ul li[b-53uj2bvsu0] {
+    list-style: none;
+}
+
+.contact-info ul li strong[b-53uj2bvsu0] {
+    margin-right: 5px;
+}
+
+.container[b-53uj2bvsu0] {
+    max-width: 960px;
+    margin: 0 auto;
+}
+/* Estilos para la imagen del estudiante */
+.student-image[b-53uj2bvsu0] {
+    text-align: center; /* Centrado horizontal */
+    margin-bottom: 20px; /* Espacio entre la imagen y el contenido */
+}
+
+    .student-image img[b-53uj2bvsu0] {
+        border-radius: 50%; /* Hacer la imagen redonda */
+        width: 400px; /* Tamaño de la imagen */
+        height: 400px;
+        object-fit: cover; /* Ajustar la imagen */
+        border: 5px solid #add8e6; /* Borde celeste */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    }
+.student-container[b-53uj2bvsu0] {
+    background-color: #CDCEF7; /* Color de fondo */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px; /* Establece márgenes automáticos en los lados izquierdo y derecho */
+    width: 99%; /* Ancho del contenedor */
+}
+strong[b-53uj2bvsu0] {
+    color: #000; /* Color de texto negro */
+    font-weight: bold; /* Asegura que el texto en negrita */
+}
+
+.button-container[b-53uj2bvsu0] {
+    text-align: right; /* Centra el contenido horizontalmente */
+    align: center
+}
+
+
+.row[b-53uj2bvsu0] {
+    margin-bottom: 10px;
+}
+
+.col-sm-6[b-53uj2bvsu0] {
+    padding: 0 5px;
+}
+
+.form-control[b-53uj2bvsu0] {
+    margin-bottom: 10px;
+}
+
+/* /Pages/Estudiante.razor.rz.scp.css */
+/* Estilos para la tabla */
+.table[b-4gtsbyytz6] {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #333;
+    border-collapse: collapse;
+}
+.h3[b-4gtsbyytz6] {
+    color: #4cff00
+}
+
+.lupa-icono[b-4gtsbyytz6] {
+    width: 35px; /* Ancho deseado */
+    height: 35px; /* Alto deseado */
+}
+
+.lupa-button[b-4gtsbyytz6] {
+    border-radius: 50%; /* Para hacer el botón circular */
+    padding: 0; /* Para eliminar el espacio interior del botón */
+}
+.mi-clase[b-4gtsbyytz6] {
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+}
+    .table th[b-4gtsbyytz6],
+    .table td[b-4gtsbyytz6] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-4gtsbyytz6] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+        background-color: #f8f9fa; /* Color de fondo para las cabeceras */
+    }
+
+    /* Estilos alternados para filas */
+    .table tbody tr:nth-of-type(odd)[b-4gtsbyytz6] {
+        background-color: rgba(0, 0, 0, 0.05); /* Color de fondo para filas impares */
+    }
+
+    /* Estilos para filas al pasar el ratón */
+    .table tbody tr:hover[b-4gtsbyytz6] {
+        background-color: rgba(0, 0, 0, 0.075); /* Color de fondo al pasar el ratón */
+    }
+
+    /* Estilos para las celdas de la primera columna */
+    .table tbody td:first-child[b-4gtsbyytz6] {
+        border-left: 1px solid #dee2e6;
+    }
+
+    /* Estilos para las celdas de la última columna */
+    .table tbody td:last-child[b-4gtsbyytz6] {
+        border-right: 1px solid #dee2e6;
+    }
+
+    /* Estilos para la última fila */
+    .table tbody tr:last-child td[b-4gtsbyytz6] {
+        border-bottom: 1px solid #dee2e6;
+    }

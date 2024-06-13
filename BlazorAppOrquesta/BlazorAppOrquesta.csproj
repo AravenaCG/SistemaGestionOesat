@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
@@ -27,10 +27,10 @@
 
   <ItemGroup>
     <PackageReference Include="EPPlus" Version="7.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.4" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.4" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.NET.Sdk.WebAssembly.Pack" Version="8.0.4" />
-    <PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="8.0.4">
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.17" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.NET.Sdk.WebAssembly.Pack" Version="6.0.17" />
+    <PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.17">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -40,7 +40,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="QRCoderNetCore" Version="1.0.0" />
-    <PackageReference Include="System.Net.Http.Json" Version="8.0.0" />
+    <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
     <PackageReference Include="ZXing.Net" Version="0.16.9" />
     <PackageReference Include="ZXing.Net.Bindings.Windows.Compatibility" Version="0.16.12" />
   </ItemGroup>
