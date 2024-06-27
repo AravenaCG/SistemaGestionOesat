@@ -26,16 +26,12 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Exiuser/Desktop/copia OESAT/SistemaGestionOesat/BlazorAppOrquesta/Layout/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+[C:/Users/Exiuser/Desktop/copia OESAT/SistemaGestionOesat/BlazorAppOrquesta/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Exiuser/Desktop/copia OESAT/SistemaGestionOesat/BlazorAppOrquesta/Pages/Curso.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3Vyc28ucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Exiuser/Desktop/copia OESAT/SistemaGestionOesat/BlazorAppOrquesta/Pages/DetalleCurso.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWxsZUN1cnNvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Exiuser/Desktop/copia OESAT/SistemaGestionOesat/BlazorAppOrquesta/Pages/Home.razor]
@@ -57,6 +53,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Exiuser/Desktop/copia OESAT/SistemaGestionOesat/BlazorAppOrquesta/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-t0f8pyd11s
+
+[C:/Users/Exiuser/Desktop/copia OESAT/SistemaGestionOesat/BlazorAppOrquesta/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-sjxwahycxf
 
 [C:/Users/Exiuser/Desktop/copia OESAT/SistemaGestionOesat/BlazorAppOrquesta/Pages/DetalleEstudiante.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWxsZUVzdHVkaWFudGUucmF6b3I=

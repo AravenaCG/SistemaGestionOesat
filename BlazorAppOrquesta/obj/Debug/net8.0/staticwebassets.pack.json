@@ -1,48 +1,52 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\obj\\Debug\\net8.0\\compressed\\1zbi5wmlv7.gz",
+      "Id": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\obj\\Debug\\net8.0\\compressed\\a2os0wca9o.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorAppOrquesta.styles.css",
+      "Id": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorAppOrquesta.styles.css",
       "PackagePath": "staticwebassets\\BlazorAppOrquesta.styles.css"
     },
     {
-      "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\BlazorDownloadFile.js",
-      "PackagePath": "staticwebassets\\BlazorDownloadFile.js"
-    },
-    {
-      "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\classic-blue-magnifying-glass.png",
+      "Id": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\classic-blue-magnifying-glass.png",
       "PackagePath": "staticwebassets\\classic-blue-magnifying-glass.png"
     },
     {
-      "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\icon-192.png",
+      "Id": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\index.html",
+      "Id": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\js\\BlazorDownloadFile.js",
+      "PackagePath": "staticwebassets\\js\\BlazorDownloadFile.js"
+    },
+    {
+      "Id": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BlazorAppOrquesta.Microsoft.AspNetCore.StaticWebAssets.props",

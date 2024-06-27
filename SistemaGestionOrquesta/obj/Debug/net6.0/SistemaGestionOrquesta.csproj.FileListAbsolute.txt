@@ -1,0 +1,286 @@
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\SistemaGestionOrquesta.exe
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\SistemaGestionOrquesta.deps.json
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\SistemaGestionOrquesta.runtimeconfig.json
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\SistemaGestionOrquesta.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\SistemaGestionOrquesta.pdb
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.csproj.AssemblyReference.cache
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.AssemblyInfoInputs.cache
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.AssemblyInfo.cs
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.csproj.CoreCompileInputs.cache
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.csproj.CopyComplete
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\refint\SistemaGestionOrquesta.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.pdb
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.genruntimeconfig.cache
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\ref\SistemaGestionOrquesta.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\appsettings.json
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\ClosedXML.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\ExcelNumberFormat.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Irony.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.Mvc.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.Razor.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.Helpers.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.WebPages.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\SixLabors.Fonts.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\System.IO.Packaging.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\XLParser.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets\msbuild.SistemaGestionOrquesta.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets\msbuild.build.SistemaGestionOrquesta.props
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.SistemaGestionOrquesta.props
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.SistemaGestionOrquesta.props
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Exiuser\Desktop\SistemaOESAT\SistemaGestionOrquesta\obj\Debug\net6.0\scopedcss\bundle\SistemaGestionOrquesta.styles.css
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\appsettings.json
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\SistemaGestionOrquesta.exe
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\SistemaGestionOrquesta.deps.json
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\SistemaGestionOrquesta.runtimeconfig.json
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\SistemaGestionOrquesta.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\SistemaGestionOrquesta.pdb
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\ClosedXML.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\ExcelNumberFormat.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Irony.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.Mvc.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.Razor.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.Helpers.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.WebPages.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\SixLabors.Fonts.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.IO.Packaging.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\XLParser.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.csproj.AssemblyReference.cache
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.AssemblyInfoInputs.cache
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.AssemblyInfo.cs
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.csproj.CoreCompileInputs.cache
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.sourcelink.json
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets\msbuild.SistemaGestionOrquesta.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets\msbuild.build.SistemaGestionOrquesta.props
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.SistemaGestionOrquesta.props
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.SistemaGestionOrquesta.props
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\scopedcss\bundle\SistemaGestionOrquesta.styles.css
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.csproj.CopyComplete
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\refint\SistemaGestionOrquesta.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.pdb
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.genruntimeconfig.cache
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\ref\SistemaGestionOrquesta.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\package-lock.json
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\package.json
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\appsettings.json
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\package-lock.json
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\package.json
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\SistemaGestionOrquesta.exe
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\SistemaGestionOrquesta.deps.json
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\SistemaGestionOrquesta.runtimeconfig.json
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\SistemaGestionOrquesta.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\SistemaGestionOrquesta.pdb
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\ClosedXML.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\ExcelNumberFormat.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Irony.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.Mvc.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.Razor.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.Helpers.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Web.WebPages.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\SixLabors.Fonts.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.IO.Packaging.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\XLParser.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.csproj.AssemblyReference.cache
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.AssemblyInfoInputs.cache
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.AssemblyInfo.cs
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.csproj.CoreCompileInputs.cache
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.sourcelink.json
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets\msbuild.SistemaGestionOrquesta.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets\msbuild.build.SistemaGestionOrquesta.props
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.SistemaGestionOrquesta.props
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.SistemaGestionOrquesta.props
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\scopedcss\bundle\SistemaGestionOrquesta.styles.css
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.csproj.CopyComplete
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\refint\SistemaGestionOrquesta.dll
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.pdb
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\SistemaGestionOrquesta.genruntimeconfig.cache
+C:\Users\Exiuser\Documents\Orquesta\SistemaGestionOesat\SistemaGestionOrquesta\obj\Debug\net6.0\ref\SistemaGestionOrquesta.dll

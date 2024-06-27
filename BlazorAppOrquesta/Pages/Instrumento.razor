@@ -1,20 +1,10 @@
 ﻿@page "/instrumento"
 @inject HttpClient Http
-@using Microsoft.AspNetCore
-@using System.Drawing
-@using QRCoder
-@using System.Drawing.Imaging
-
 
 <PageTitle>Instrumento</PageTitle>
 
 <h3>Instrumento</h3>
 <button class="btn btn-primary" @onclick="ObtenerListaInstrumentos">Obtener lista de Instrumentos</button>
-<button class="btn btn-primary" @onclick="AltaInstrumento">Dar de Alta Instrumento</button>
-<button class="btn btn-primary" @onclick="GenerarTodosQR">Generar todos los QR</button>
-
-
-
 
 @if (Instrumentos == null)
 {
@@ -40,36 +30,16 @@ else
                     <td>@instrumento.Nombre</td>
                     <td>@instrumento.Detalles</td>
                     <td>@instrumento.Disponible</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm" @onclick="() => EliminarInstrumento(instrumento.InstrumentoId)">Eliminar</button>
-                    </td>
-                    <td>
-
-                        <button @onclick="() => GenerateQRCode(instrumento)" class="btn btn-success">Generate QR Code</button>
-                        @if (generarTodos)
-                        {
-                            <img alt="" src="@QRByte[instrumento.InstrumentoId]" width="300" class="mb-5" />
-                        }
-                    </td>
                 </tr>
-
             }
         </tbody>
     </table>
 }
-@if (!generarTodos)
-{
-    <img alt="" src="@QRByteSolo" width="300" class="mb-5" />
-}
+
 
 @code {
-    private static ICollection<BlazorAppOrquesta.Instrumento> Instrumentos;
-    private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://sistemagestionorquesta.azurewebsites.net", new HttpClient());
-    public static List<string> QRByte =  new List<string>();
-    private static bool generarTodos = false;
-    public static string QRByteSolo;
-
-
+    private ICollection<BlazorAppOrquesta.Instrumento> Instrumentos;
+    private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://localhost:7182", new HttpClient());
 
     private async Task ObtenerListaInstrumentos()
     {
@@ -77,36 +47,5 @@ else
         Instrumentos = await orquestaClient.InstrumentosAsync();
     }
 
-    public static string GenerateQRCode(BlazorAppOrquesta.Instrumento instrumento)
-    {
-        // Crear el generador de código QR
-        QRCodeGenerator qrGenerator = new QRCodeGenerator();
-        QRCodeData qrCodeData = qrGenerator.CreateQrCode(instrumento.Nombre, QRCodeGenerator.ECCLevel.Q);
-        QRCode qrCode = new QRCode(qrCodeData);
-
-        // Generar la imagen del código QR
-        BitmapByteQRCode qrCodeImage = new BitmapByteQRCode(qrCodeData);
-        byte[] qrCodeBytes = qrCodeImage.GetGraphic(20);
-
-        // Convertir la imagen a base64 para mostrarla en la aplicación
-        string qrData = $"data:image/png;base64,{Convert.ToBase64String(qrCodeBytes)}";
-        QRByteSolo = qrData;
-        return qrData;
-    }
-
-
-    public static void GenerarTodosQR()
-    {
-        QRByte.Add(null);
-        foreach (BlazorAppOrquesta.Instrumento instrumento in Instrumentos)
-        {
-            QRByte.Add(GenerateQRCode(instrumento));
-        }
-        generarTodos = true;
-    }
-
-    public void AltaInstrumento(){}
-
-    public void EliminarInstrumento(int instrumentoId){}
 
 }

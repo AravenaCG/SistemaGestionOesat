@@ -18,7 +18,7 @@
 <button type="button" class="btn btn-primary" @onclick="ExportarCSV">Exportar a .csv</button>
 
 <div class="input-group mb-3">
-    <input type="text" class="form-control" style="width: 90%;" @bind="filtroNombre" placeholder="Filtrar por nombre">
+    <input type="text" class="form-control" style="width: 200px;" @bind="filtroNombre" placeholder="Filtrar por nombre">
     <div class="input-group-append">
         <button class="btn btn-outline-secondary lupa-button" type="button" @onclick="BuscarAlumnoPorNombreYApellido">
             <img src="./classic-blue-magnifying-glass.png" alt="Buscar" class="lupa-icono"> <!-- Imagen de la lupa -->
@@ -63,7 +63,7 @@ else{
                 <tr>
                     <td>@estudiante.Nombre</td>
                     <td>@estudiante.Apellido</td>
-                    <td>@estudiante.FechaNacimiento.Value.Date.ToString("dd-MM-yyyy")</td>
+                    <td>@estudiante.FechaNacimiento</td>
                     <td>@estudiante.Documento</td>
                     <td>@estudiante.Telefono</td>
                     <td>@estudiante.Direccion</td>
@@ -99,8 +99,8 @@ else{
 
 @code {
     private ICollection<BlazorAppOrquesta.Estudiante> Estudiantes;
-     private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://sistemagestionorquesta.azurewebsites.net", new HttpClient());
-    //private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://localhost:7182", new HttpClient());
+    // private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://sistemagestionorquesta.azurewebsites.net", new HttpClient());
+    private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://localhost:7182", new HttpClient());
 
     public BlazorAppOrquesta.Estudiante estudianteDetallado;
     private string accessToken;
@@ -145,7 +145,7 @@ else{
         }
     }
 
-    public static string ObtenerNombreInstrumento(int? idIntrumento)
+    private static string ObtenerNombreInstrumento(int? idIntrumento)
     {
         string nombreInstrumento = "";
 
@@ -245,7 +245,7 @@ else{
             {
                 worksheet.Cells[row, 1].Value = estudiante.Nombre;
                 worksheet.Cells[row, 2].Value = estudiante.Apellido;
-                worksheet.Cells[row, 3].Value = estudiante.FechaNacimiento.Value.Date.ToString("dd-MM-yyyy");
+                worksheet.Cells[row, 3].Value = estudiante.FechaNacimiento;
                 worksheet.Cells[row, 4].Value = estudiante.Documento;
                 worksheet.Cells[row, 5].Value = estudiante.Telefono;
                 worksheet.Cells[row, 6].Value = estudiante.Direccion;
@@ -296,7 +296,7 @@ else{
 
 
 
-        var module = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./BlazorDownloadFile.js");
+        var module = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./js/blazorDownloadFile.js");
         await module.InvokeVoidAsync("BlazorDownloadFile", fileName, excelContent);
 
     }

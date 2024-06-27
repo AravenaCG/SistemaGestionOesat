@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj": {}
+    "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj": {
+    "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
+        "projectUniqueName": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
         "projectName": "BlazorAppOrquesta",
-        "projectPath": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
+        "projectPath": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
         "packagesPath": "C:\\Users\\Exiuser\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\obj\\",
+        "outputPath": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Exiuser\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -52,58 +42,48 @@
           "dependencies": {
             "EPPlus": {
               "target": "Package",
-              "version": "[7.1.2, )"
+              "version": "[7.0.8, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.1, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.1, )"
             },
             "Microsoft.Extensions.ApiDescription.Client": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[7.0.2, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.5, )",
+              "version": "[8.0.1, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.1, )",
+              "autoReferenced": true
             },
             "NSwag.ApiDescription.Client": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[14.0.7, )"
+              "version": "[13.18.2, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[13.0.3, )"
-            },
-            "QRCoderNetCore": {
-              "target": "Package",
-              "version": "[1.0.0, )"
+              "version": "[13.0.1, )"
             },
             "System.Net.Http.Json": {
               "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "ZXing.Net": {
-              "target": "Package",
-              "version": "[0.16.9, )"
-            },
-            "ZXing.Net.Bindings.Windows.Compatibility": {
-              "target": "Package",
-              "version": "[0.16.12, )"
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -120,7 +100,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[8.0.5, 8.0.5]"
+              "version": "[8.0.1, 8.0.1]"
             }
           ],
           "frameworkReferences": {
@@ -128,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
