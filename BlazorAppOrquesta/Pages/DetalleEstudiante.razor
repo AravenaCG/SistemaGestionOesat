@@ -198,7 +198,9 @@
     [Parameter]
     public string EstudianteId { get; set; }
     private BlazorAppOrquesta.Estudiante estudianteDetallado;
-    private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://localhost:7182", new HttpClient());
+   //private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://localhost:7182", new HttpClient());
+    private BlazorAppOrquesta.OrquestaCñ orquestaClient = new OrquestaCñ("https://sistemagestionorquesta.azurewebsites.net", new HttpClient());
+
     private BlazorAppOrquesta.Instrumento instrumento;
     private ICollection<BlazorAppOrquesta.Curso> Cursos;
     private string accessToken;

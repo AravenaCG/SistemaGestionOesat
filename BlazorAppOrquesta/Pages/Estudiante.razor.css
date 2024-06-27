@@ -9,18 +9,7 @@
     color: #4cff00
 }
 
-.lupa-icono {
-    width: 35px; /* Ancho deseado */
-    height: 35px; /* Alto deseado */
-}
 
-.lupa-button {
-    border-radius: 50%; /* Para hacer el botón circular */
-    padding: 0; /* Para eliminar el espacio interior del botón */
-}
-.mi-clase {
-    width: 200px; /* Ajusta el ancho según tus necesidades */
-}
     .table th,
     .table td {
         padding: 0.75rem;

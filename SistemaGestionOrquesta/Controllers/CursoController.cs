@@ -47,7 +47,7 @@ namespace SistemaGestionOrquesta.Controllers
 
         [Microsoft.AspNetCore.Mvc.HttpPost("/curso/save")]
         public async Task<IActionResult> Post([FromBody] Curso curso)
-        {
+        {   
             var customResponse = await cursoService.Save(curso);
             return HandleCustomResponse(customResponse);
         }
@@ -64,12 +64,12 @@ namespace SistemaGestionOrquesta.Controllers
             {
                 return NotFound(ex.Message);
             }
-
+            
         }
 
 
         [Microsoft.AspNetCore.Mvc.HttpPut("/curso/update/{id}")]
-        public async Task<IActionResult> Edit(int id, [FromBody] Curso curso)
+        public async Task<IActionResult> Edit(int id,[FromBody] Curso curso)
         {
 
             try
@@ -87,54 +87,48 @@ namespace SistemaGestionOrquesta.Controllers
         [Microsoft.AspNetCore.Mvc.HttpGet("/cursos")]
         public async Task<List<Curso>> Get()
         {
-            var customResponse =  cursoService.Get();
+            var customResponse = cursoService.Get();
             return customResponse;
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet("/curso/{id}")]
-        public async Task<Curso> Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
             try
             {
                 var customResponse = await cursoService.Get(id);
-                if (customResponse != null)
-                {
-                    return customResponse;
-                }
-                else { return null; }
+                if(customResponse != null) { 
+                return Ok(customResponse);
+                     }
+                else { return BadRequest(); }
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return null;
+                return NotFound(ex.Message);
             }
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet("/cursoNombre/{nombre}")]
-        public async Task<Curso> GetCursoNombre(string nombre)
+        public async Task<IActionResult> GetProfesor(string nombre)
         {
             try
             {
                 var customResponse = await cursoService.GetCursoByNombre(nombre);
                 if (customResponse != null)
                 {
-                    return customResponse; 
+                    return Ok(customResponse);
                 }
-                else
-                {
-                
-                    throw new Exception("El curso especificado no fue encontrado.");
-                }
+                else { return BadRequest(); }
+
             }
             catch (Exception ex)
             {
-                // Puedes manejar el error de acuerdo a tus necesidades
-                throw new Exception("Error al obtener el curso: " + ex.Message);
+                return NotFound(ex.Message);
             }
         }
 
-
+   
 
     }
 }

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj": {}
+    "C:\\Users\\Exiuser\\Documents\\APIBACKORQUESTA\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj": {
+    "C:\\Users\\Exiuser\\Documents\\APIBACKORQUESTA\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
+        "projectUniqueName": "C:\\Users\\Exiuser\\Documents\\APIBACKORQUESTA\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
         "projectName": "SistemaGestionOrquesta",
-        "projectPath": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
+        "projectPath": "C:\\Users\\Exiuser\\Documents\\APIBACKORQUESTA\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
         "packagesPath": "C:\\Users\\Exiuser\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\SistemaGestionOrquesta\\obj\\",
+        "outputPath": "C:\\Users\\Exiuser\\Documents\\APIBACKORQUESTA\\SistemaGestionOesat\\SistemaGestionOrquesta\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Exiuser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -88,15 +93,15 @@
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.35.0, )"
+              "version": "[7.3.1, )"
             },
             "System.Security.Claims": {
               "target": "Package",
               "version": "[4.3.0, )"
             },
-            "System.Security.Principal": {
+            "System.Security.Principal.Windows": {
               "target": "Package",
-              "version": "[4.3.0, )"
+              "version": "[5.0.0, )"
             }
           },
           "imports": [

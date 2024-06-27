@@ -87,7 +87,6 @@ C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.SistemaGestionOrquesta.props
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\staticwebassets.pack.json
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\scopedcss\bundle\SistemaGestionOrquesta.styles.css
-C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\SistemaGestionOrquesta.csproj.CopyComplete
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\SistemaGestionOrquesta.dll
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\refint\SistemaGestionOrquesta.dll
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\SistemaGestionOrquesta.pdb
@@ -95,3 +94,4 @@ C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\ref\SistemaGestionOrquesta.dll
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Release\net6.0\package-lock.json
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\bin\Release\net6.0\package.json
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\SistemaGestionOrquesta\obj\Release\net6.0\SistemaG.0513F475.Up2Date

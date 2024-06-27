@@ -7,27 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="swagger.json" />
-    <Content Remove="swaggerJWT.json" />
+    <OpenApiReference Include="..\..\..\..\Documents\swagger.json" CodeGenerator="NSwagCSharp" ClassName="OrquestaCñ" Link="OpenAPIs\swagger.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Pages\DetalleEstudiante.razor.css" />
-    <None Remove="Pages\DetalleEstudiante.razor.js" />
-    <None Remove="Pages\Home.razor.css" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Pages\DetalleEstudiante.razor.css" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <OpenApiReference Include="swagger.json" ClassName="OrquestaCñ" CodeGenerator="NSwagCSharp" />
-    <OpenApiReference Include="swaggerJWT.json" ClassName="JwtAUTHAPIClass" CodeGenerator="NSwagCSharp" Namespace="BlazorAppOrquestaAuthAPI" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="EPPlus" Version="7.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.1" PrivateAssets="all" />
     <PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="7.0.2">
@@ -39,7 +22,6 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
   </ItemGroup>
 
 </Project>

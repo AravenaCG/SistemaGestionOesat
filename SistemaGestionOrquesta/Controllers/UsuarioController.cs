@@ -15,16 +15,16 @@ namespace SistemaGestionOrquesta.Controllers
     public class UsuarioController : ControllerBase
     {
         public IConfiguration _configuration { get; set; }
-        public UsuarioController(IConfiguration configuration)
+        public UsuarioController(IConfiguration configuration) 
         {
             _configuration = configuration;
         }
 
         [HttpPost]
         [Route("login")]
-        public dynamic IniciarSesion([FromBody] Usuario requestUser)
+      public dynamic IniciarSesion([FromBody] Usuario requestUser)
         {
-
+           
 
             Usuario usuario = Usuario.DB().Where(x => x.Email == requestUser.Email && x.Password == requestUser.Password).FirstOrDefault();
 
@@ -34,7 +34,7 @@ namespace SistemaGestionOrquesta.Controllers
                 return new
                 {
                     success = false,
-                    message = "Credenciales incorrectas champion",
+                    message = "Credenciales incorrectas",
                     result = ""
                 };
             }
@@ -45,8 +45,8 @@ namespace SistemaGestionOrquesta.Controllers
                 new Claim(JwtRegisteredClaimNames.Sub, jwt.Subject),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                // new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
-             //   new Claim("id", usuario.IdUsuario),
-              //  new Claim("usuario", usuario.User)
+                new Claim("id", usuario.IdUsuario),
+                new Claim("usuario", usuario.User)
             };
 
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
@@ -70,3 +70,4 @@ namespace SistemaGestionOrquesta.Controllers
         }
     }
 }
+    

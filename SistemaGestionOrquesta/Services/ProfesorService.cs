@@ -8,12 +8,11 @@ using static ClosedXML.Excel.XLPredefinedFormat;
 namespace SistemaGestionOrquesta.Services
 {
     public class ProfesorService : IProfesorService
-    {
-        CustomResponse<Profesor> customResponse;
-        OrquestaOESATContext _orquestaContext;
+{
+    CustomResponse<Profesor> customResponse;
+    OrquestaOESATContext _orquestaContext;
 
-        public ProfesorService(OrquestaOESATContext devContext)
-        {
+    public ProfesorService(OrquestaOESATContext devContext) { 
             _orquestaContext = devContext;
             customResponse = new CustomResponse<Profesor>();  // Inicializar customResponse
         }
@@ -50,7 +49,7 @@ namespace SistemaGestionOrquesta.Services
             {
                 Profesor profesor = await LinQueris.GetProfesorById(_orquestaContext, id);
                 message = await LinQueris.DeleteProfesor(_orquestaContext, profesor);
-                return customResponse.BuildCustomResponse(profesor, "Profesor", "respuesta exitosa", message);
+                return customResponse.BuildCustomResponse(profesor, "Profesor", "respuesta exitosa",message);
                 // Resto del código para manejar el mensaje
             }
             catch (DbUpdateException ex)
@@ -65,8 +64,8 @@ namespace SistemaGestionOrquesta.Services
 
         async Task<CustomResponse<Profesor>> IProfesorService.Baja(Guid id)
         {
-            Profesor profesor = await LinQueris.GetProfesorById(_orquestaContext, id);
-            LinQueris.DarBajaProfesorAsync(_orquestaContext, id);
+            Profesor profesor = await LinQueris.GetProfesorById(_orquestaContext,id);
+             LinQueris.DarBajaProfesorAsync(_orquestaContext, id);
             return customResponse.BuildCustomResponse(profesor, "Profesor", "respuesta exitosa", "Estudiante dado de baja exitosamente");
         }
         async Task<CustomResponse<Profesor>> IProfesorService.Update(Guid id, Profesor profesorModificado)
@@ -88,7 +87,7 @@ namespace SistemaGestionOrquesta.Services
 
         List<Profesor> IProfesorService.Get()
         {
-            return LinQueris.GetProfesoresActive(_orquestaContext);
+           return LinQueris.GetProfesoresActive(_orquestaContext);
         }
 
         async Task<Profesor> IProfesorService.Get(Guid id)
@@ -112,7 +111,7 @@ namespace SistemaGestionOrquesta.Services
 
         public Task<Profesor> GetProfesorByNombreYApellido(string nombre, string apellido)
         {
-            return LinQueris.GetProfesorByNameAsync(_orquestaContext, nombre, apellido);
+            return LinQueris.GetProfesorByNameAsync(_orquestaContext,nombre, apellido);
         }
 
     }
@@ -126,7 +125,7 @@ public interface IProfesorService
     Task<CustomResponse<Profesor>> Delete(Guid id);
     Task<CustomResponse<Profesor>> Baja(Guid id);
     Task<CustomResponse<Profesor>> Update(Guid id, Profesor profesor);
-
+    
     List<Profesor> Get();
     Task<Profesor> Get(Guid id);
     Task<Profesor> GetProfesorByNombreYDocumento(string nombre, string documento);

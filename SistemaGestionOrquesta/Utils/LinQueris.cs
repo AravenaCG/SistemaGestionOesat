@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Data.SqlClient;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query.Internal;
@@ -114,8 +112,7 @@ namespace SistemaGestionOrquesta.Utils
 
         public static async Task<Estudiante> GetEstudianteById(OrquestaOESATContext context, Guid estudianteId)
         {
-            var estudiante = await context.Estudiantes.FirstOrDefaultAsync(p => p.EstudianteId == estudianteId);
-            return estudiante;
+            return await context.Estudiantes.FirstOrDefaultAsync(p => p.EstudianteId == estudianteId);
 
         }
 
@@ -129,14 +126,10 @@ namespace SistemaGestionOrquesta.Utils
             return await context.Estudiantes.FirstOrDefaultAsync(p => p.Nombre == nombreEstudiante && p.Apellido == apellidoEstudiante);
         }
 
-        public static async Task<List<Estudiante>> GetEstudiantesActiveAsync(OrquestaOESATContext context)
+        public static List<Estudiante> GetEstudiantesActive(OrquestaOESATContext context)
         {
-            var activeEstudiantes = context.Estudiantes.Where(p => p.Activo == true).ToList();
-            foreach (var estudiante in activeEstudiantes)
-            {
-                estudiante.Cursos = await GetCursosByEstudiante(context, estudiante.EstudianteId);
-            }
-            return activeEstudiantes;
+            var activeCountries = context.Estudiantes.Where(p => p.Activo == true).ToList();
+            return activeCountries;
         }
 
         public static List<Estudiante> GetEstudiantesByCurso(OrquestaOESATContext context, int idCurso)
@@ -190,7 +183,9 @@ namespace SistemaGestionOrquesta.Utils
             try
             {
                 // Obtener el estudiante por su ID
-                var estudiante = await GetEstudianteById(context, estudianteId);
+                var estudiante = await context.Estudiantes
+                    .Include(e => e.Cursos)  // Asegurarse de incluir la relación de cursos
+                    .FirstOrDefaultAsync(e => e.EstudianteId == estudianteId);
 
                 if (estudiante != null)
                 {
@@ -199,25 +194,8 @@ namespace SistemaGestionOrquesta.Utils
 
                     if (curso != null)
                     {
-                        SqlParameter estudianteIdParam = null;
-                        SqlParameter cursoIdParam = null;
                         // Verificar si el estudiante ya está inscrito en el curso
-                        if (estudianteId != null && cursoId != null)
-                        {
-                            estudianteIdParam = new SqlParameter("@EstudianteID", SqlDbType.UniqueIdentifier);
-                            estudianteIdParam.Value = estudianteId; // Aquí debes asignar el valor adecuado
-
-                            cursoIdParam = new SqlParameter("@CursoID", SqlDbType.Int);
-                            cursoIdParam.Value = cursoId;
-                        }
-                        else
-                        {
-                            throw new ArgumentException("Los parámetros estudianteId y cursoId no pueden ser nulos.");
-                        }
-                        var result = context.VerificarExistenciaAlumnoCursoResults
-    .FromSqlRaw("EXEC VerificarExistenciaAlumnoCurso @EstudianteID, @CursoID", estudianteIdParam, cursoIdParam)
-    .ToList();
-                        if (!result[0].ExisteRegistro)
+                        if (!estudiante.Cursos.Any(c => c.CursoId == cursoId))
                         {
                             // Agregar el curso al estudiante
                             estudiante.Cursos.Add(curso);
@@ -408,7 +386,7 @@ namespace SistemaGestionOrquesta.Utils
                 return "Estudiante Modificado Exitosamente!";
             }
             else { return "El estudiante al parecer no existe en la DB"; }
-
+        
         }
 
         public static async Task<Profesor> GetProfesorById(OrquestaOESATContext context, Guid profesorId)
@@ -617,7 +595,7 @@ namespace SistemaGestionOrquesta.Utils
             }
             else { return "El curso al parecer no existe en la DB"; }
         }
-
+        
 
         public static async Task<Curso?> GetCursoById(OrquestaOESATContext context, int cursoId)
         {
@@ -639,8 +617,6 @@ namespace SistemaGestionOrquesta.Utils
 
 
         #endregion
-
-
     }
 }
 

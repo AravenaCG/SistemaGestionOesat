@@ -21,14 +21,13 @@ namespace SistemaGestionOrquesta.Models
         public virtual DbSet<Instrumento> Instrumentos { get; set; } = null!;
         public virtual DbSet<PrestamosInstrumento> PrestamosInstrumentos { get; set; } = null!;
         public virtual DbSet<Profesor> Profesors { get; set; } = null!;
-        public virtual DbSet<VerificarExistenciaAlumnoCursoResult> VerificarExistenciaAlumnoCursoResults { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=sqldb-orquestaoesat.database.windows.net;Initial Catalog=OrquestaOESAT;User ID=sqloesatuser;Password=5eeBbEp8wi_2HP*;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
+                optionsBuilder.UseSqlServer("Data Source=E000158\\SQLEXPRESS;Initial Catalog=OrquestaOESAT;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
             }
         }
 
@@ -183,8 +182,6 @@ namespace SistemaGestionOrquesta.Models
 
                 entity.Property(e => e.Telefono).HasMaxLength(20);
             });
-
-            modelBuilder.Entity<VerificarExistenciaAlumnoCursoResult>().HasNoKey().ToView(null);
 
             OnModelCreatingPartial(modelBuilder);
         }

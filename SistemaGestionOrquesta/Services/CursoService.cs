@@ -11,19 +11,18 @@ namespace SistemaGestionOrquesta.Services
 {
     public class CursoService : ICursoService
     {
-        CustomResponse<Curso> customResponse;
-        OrquestaOESATContext _orquestaContext;
+    CustomResponse<Curso> customResponse;
+    OrquestaOESATContext _orquestaContext;
 
-        public CursoService(OrquestaOESATContext devContext)
-        {
+    public CursoService(OrquestaOESATContext devContext) { 
             _orquestaContext = devContext;
             customResponse = new CustomResponse<Curso>();  // Inicializar customResponse
         }
-
+      
         public async Task<CustomResponse<Curso>> Save(Curso curso)
         {
 
-            Curso cursoExistente = await LinQueris.GetCursoByNameAsync(_orquestaContext, curso.Nombre);
+            Curso cursoExistente = await LinQueris.GetCursoByNameAsync(_orquestaContext,curso.Nombre);
             if (cursoExistente != null)
             {
                 customResponse = customResponse.BuildCustomResponse(curso, "Curso", "Error", "El curso ya existe en la base de datos.");
@@ -52,8 +51,8 @@ namespace SistemaGestionOrquesta.Services
             {
                 Curso curso = await LinQueris.GetCursoById(_orquestaContext, id);
                 if (curso != null)
-                    message = await LinQueris.DeleteCurso(_orquestaContext, curso);
-                return customResponse.BuildCustomResponse(curso, "Curso", "respuesta exitosa", message);
+                message = await LinQueris.DeleteCurso(_orquestaContext, curso);
+                return customResponse.BuildCustomResponse(curso, "Curso", "respuesta exitosa",message);
                 // Resto del código para manejar el mensaje
             }
             catch (DbUpdateException ex)
@@ -80,10 +79,10 @@ namespace SistemaGestionOrquesta.Services
                 return customResponse.HandleDbUpdateException(ex, "Curso", "Parámetros de entrada inválidos/mal escritos", "Violación de clave única");
             }
         }
-
+      
         List<Curso> ICursoService.Get()
         {
-            return LinQueris.GetCursos(_orquestaContext);
+           return LinQueris.GetCursos(_orquestaContext);
         }
 
         async Task<Curso> ICursoService.Get(int id)
@@ -102,7 +101,7 @@ namespace SistemaGestionOrquesta.Services
 
         public Task<Curso> GetCursoByNombre(string nombre)
         {
-            return LinQueris.GetCursoByNameAsync(_orquestaContext, nombre);
+            return LinQueris.GetCursoByNameAsync(_orquestaContext,nombre);
         }
     }
 }
@@ -114,7 +113,7 @@ public interface ICursoService
     Task<CustomResponse<Curso>> Save(Curso curso);
     Task<CustomResponse<Curso>> Delete(int id);
     Task<CustomResponse<Curso>> Update(int id, Curso estudiante);
-
+    
     List<Curso> Get();
     Task<Curso> Get(int id);
 

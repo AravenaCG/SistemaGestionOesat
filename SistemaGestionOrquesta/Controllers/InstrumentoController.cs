@@ -47,7 +47,7 @@ namespace SistemaGestionOrquesta.Controllers
 
         [Microsoft.AspNetCore.Mvc.HttpPost("/instrumento/save")]
         public async Task<IActionResult> Post([FromBody] Instrumento instrumento)
-        {
+        {   
             var customResponse = await instrumentoService.Save(instrumento);
             return HandleCustomResponse(customResponse);
         }
@@ -64,12 +64,12 @@ namespace SistemaGestionOrquesta.Controllers
             {
                 return NotFound(ex.Message);
             }
-
+            
         }
 
 
         [Microsoft.AspNetCore.Mvc.HttpPut("/instrumento/update/{id}")]
-        public async Task<IActionResult> Edit(int id, [FromBody] Instrumento instrumento)
+        public async Task<IActionResult> Edit(int id,[FromBody] Instrumento instrumento)
         {
 
             try
@@ -92,55 +92,53 @@ namespace SistemaGestionOrquesta.Controllers
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet("/instrumento/{id}")]
-        public async Task<Instrumento> Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
             try
             {
                 var customResponse = await instrumentoService.Get(id);
-                if (customResponse != null)
-                {
-                    return customResponse;
-                }
-                else { return null; }
+                if(customResponse != null) { 
+                return Ok(customResponse);
+                     }
+                else { return BadRequest(); }
 
             }
             catch (Exception ex)
             {
-                 throw new Exception(ex.Message);
-
+                return NotFound(ex.Message);
             }
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet("/instrumentoNombre/{nombre}")]
-        public async Task<Instrumento> GetProfesor(string nombre)
+        public async Task<IActionResult> GetProfesor(string nombre)
         {
             try
             {
                 var customResponse = await instrumentoService.GetInstrumentoByNombre(nombre);
                 if (customResponse != null)
                 {
-                    return customResponse;
+                    return Ok(customResponse);
                 }
-                else { return null; }
+                else { return BadRequest(); }
 
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                return NotFound(ex.Message);
             }
         }
 
         [Microsoft.AspNetCore.Mvc.HttpPost("/instrumento/prestamo/{idEstudiante}/{idInstrumento}")]
-        public async Task<IActionResult> PostPrestamo(Guid idEstudiante, int idInstrumento)
+        public async Task<IActionResult> PostPrestamo( Guid idEstudiante, int idInstrumento)
         {
-            await instrumentoService.PrestarInstrumento(idEstudiante, idInstrumento);
+             await instrumentoService.PrestarInstrumento(idEstudiante, idInstrumento);
             return Ok();
         }
 
         [Microsoft.AspNetCore.Mvc.HttpPost("/instrumento/devolucion/{idEstudiante}/{idInstrumento}")]
         public async Task<IActionResult> PostDevolucion(Guid idEstudiante, int idInstrumento)
         {
-            await instrumentoService.DevolverInstrumentoAsync(idEstudiante, idInstrumento);
+             await instrumentoService.DevolverInstrumentoAsync(idEstudiante, idInstrumento);
             return Ok();
         }
 

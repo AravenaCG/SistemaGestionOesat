@@ -1,95 +1,12 @@
 ﻿@page "/"
-@using BlazorAppOrquesta.Model
-@using BlazorAppOrquestaAuthAPI
-@using BlazorAppOrquesta.Interfaces
-@inject HttpClient httpClient
-@inject NavigationManager navigationManager
-@inject Microsoft.JSInterop.IJSRuntime JSRuntime
-@using Newtonsoft.Json;
-
 
 <PageTitle>Home</PageTitle>
 
-<div class="login">
-    <h1>Sistema de Gestión OESAT</h1>
-    <form @onsubmit="HandleLogin">
-        <InputText @bind-Value="@passwordInput" type="password" id="passwordInput" placeholder="Password" />
-        <InputText @bind-Value="@emailInput" id="emailInput" placeholder="Email" />
+<h1>Hello, world!</h1>
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Ingresar</button>
-    </form>
-</div>
+Welcome to your new app.
 
-@if (showLoginSuccessMessage)
-{
-    <div class="alert alert-success" role="alert">
-        ¡Inicio de sesión exitoso!
-    </div>
-}
-
-
-@if (showLoginErrorMessage)
-{
-    <div class="alert alert-danger" role="alert">
-        El inicio de sesión ha fallado.
-    </div>
-}
-@code {
-    private string emailInput;
-    private string passwordInput;
-    private bool showLoginSuccessMessage = false;
-    private bool showLoginErrorMessage = false;
-
-    private async Task HandleLogin()
-    {
-
-        try
-        {
-            var loginDto = new LoginUserDTOBz
-                {
-                    Email = emailInput,
-                    Password = passwordInput
-                };
-
-            var response = await httpClient.PostAsJsonAsync("https://jwtauthapi.azurewebsites.net/usuario/login", loginDto);
-
-            response.EnsureSuccessStatusCode(); // Lanza una excepción si la solicitud no es exitosa
-            var responseContent = await response.Content.ReadAsStringAsync();
-            try
-            {
-                var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(responseContent);
-                // Verifica si se obtuvo un token
-                if (tokenResponse != null && !string.IsNullOrEmpty(tokenResponse.Token))
-                {
-                    var accessToken = tokenResponse.Token;
-
-                    // Almacena el token en localStorage
-                    await JSRuntime.InvokeVoidAsync("localStorage.setItem", "accessToken", accessToken);
-
-                    // Indica que el inicio de sesión fue exitoso
-                    showLoginSuccessMessage = true;
-                }
-                else
-                {
-                    showLoginErrorMessage = true;
-
-                    // Maneja el caso en el que no se obtiene un token válido
-                    // Puedes mostrar un mensaje de error o realizar alguna otra acción
-                    Console.WriteLine("No se obtuvo un token válido");
-                }
-            }catch(Exception ex)
-            {
-                Console.WriteLine(ex);
-            }
-            
-        }
-        catch (Exception ex)
-        {
-            showLoginErrorMessage = true;
-
-            // Maneja el caso en el que la solicitud lanza una excepción
-            // Puedes mostrar un mensaje de error o realizar alguna otra acción
-            Console.WriteLine($"Error: {ex.Message}");
-        }
-    }
+@code   {
+    private ICollection<BlazorAppOrquesta.Estudiante> Estudiantes;
+  //  private SistemaGestionOrquesta.
 }
