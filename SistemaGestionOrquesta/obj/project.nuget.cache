@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LJ/4yH0IaTy4MCBavcLADJq/Mhq9Z/J5WxZryE5H3N4swR1Ihq2b/ZhHfAswndP5KzeBFiOfA2cgf284kLVCpg==",
+  "dgSpecHash": "Eu7+Nc4+XEprGiKwv07k6AXaEuq2adHw0TqibNI+qAzwnnq1wWlidf9EWqX79fWUsyky36NeskfOkdcOmr32Jg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
+  "projectFilePath": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Exiuser\\.nuget\\packages\\closedxml\\0.102.2\\closedxml.0.102.2.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\documentformat.openxml\\2.16.0\\documentformat.openxml.2.16.0.nupkg.sha512",

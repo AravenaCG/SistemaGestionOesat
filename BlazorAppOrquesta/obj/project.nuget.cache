@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ig6DaOaYWXUNQeUSrt/WlBvECYxgSH2r717smBGtMErAoRP3C8eHp6vA5z1L9EY1rrZzIRZTnB09BYq3JtWBog==",
+  "dgSpecHash": "hpzzFypjhXe20OhjrgKomQ8NeNHuNJlDrcesm/5I+SE+vTvgcG3Ko/yixCVOwDRfQZCENgUtNeFvUYxziY6dnQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
+  "projectFilePath": "C:\\Users\\Exiuser\\Documents\\Orquesta\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Exiuser\\.nuget\\packages\\epplus\\7.0.8\\epplus.7.0.8.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\epplus.interfaces\\6.1.1\\epplus.interfaces.6.1.1.nupkg.sha512",
@@ -34,7 +34,7 @@
     "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.jsinterop\\8.0.1\\microsoft.jsinterop.8.0.1.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.jsinterop.webassembly\\8.0.1\\microsoft.jsinterop.webassembly.8.0.1.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.1\\microsoft.net.illink.tasks.8.0.1.nupkg.sha512",
-    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\8.0.2\\microsoft.net.sdk.webassembly.pack.8.0.2.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\8.0.1\\microsoft.net.sdk.webassembly.pack.8.0.1.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\nswag.apidescription.client\\13.18.2\\nswag.apidescription.client.13.18.2.nupkg.sha512",
@@ -47,7 +47,8 @@
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.0\\system.security.cryptography.pkcs.8.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.text.encoding.codepages\\8.0.0\\system.text.encoding.codepages.8.0.0.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
-    "C:\\Users\\Exiuser\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512"
+    "C:\\Users\\Exiuser\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
+    "C:\\Users\\Exiuser\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.1\\microsoft.netcore.app.runtime.mono.browser-wasm.8.0.1.nupkg.sha512"
   ],
   "logs": []
 }
