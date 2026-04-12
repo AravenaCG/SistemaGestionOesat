@@ -10,6 +10,13 @@ namespace SistemaGestionOrquesta.Services
 {
     public class AsistenciaService : IAsistenciaService
     {
+        private static readonly HashSet<string> EstadosValidos = new(StringComparer.OrdinalIgnoreCase)
+        {
+            "presente",
+            "ausente",
+            "ausente_con_aviso"
+        };
+
         private readonly OrquestaOESATContext _context;
 
         public AsistenciaService(OrquestaOESATContext context)
@@ -40,12 +47,20 @@ namespace SistemaGestionOrquesta.Services
             }
 
             // Insertar los nuevos registros
-            var nuevasAsistencias = dto.Asistencias.Select(item => new Asistencia
+            var nuevasAsistencias = dto.Asistencias.Select(item =>
             {
-                EstudianteId = item.EstudianteId,
-                CursoId = dto.CursoId,
-                Fecha = fechaSolo,
-                Presente = item.Presente
+                var estado = NormalizarEstadoAsistencia(item.EstadoAsistencia);
+                var presente = estado is null ? item.Presente : estado == "presente";
+
+                return new Asistencia
+                {
+                    EstudianteId = item.EstudianteId,
+                    CursoId = dto.CursoId,
+                    Fecha = fechaSolo,
+                    Presente = presente,
+                    EstadoAsistencia = estado ?? (item.Presente ? "presente" : "ausente"),
+                    Observacion = item.Observacion
+                };
             }).ToList();
 
             _context.Asistencias.AddRange(nuevasAsistencias);
@@ -66,16 +81,19 @@ namespace SistemaGestionOrquesta.Services
                 .Include(a => a.Curso)
                 .OrderBy(a => a.Estudiante!.Apellido)
                 .ThenBy(a => a.Estudiante!.Nombre)
-                .Select(a => new AsistenciaResponseDto(
-                    a.AsistenciaId,
-                    a.EstudianteId,
-                    a.Estudiante != null ? a.Estudiante.Nombre : null,
-                    a.Estudiante != null ? a.Estudiante.Apellido : null,
-                    a.CursoId,
-                    a.Curso != null ? a.Curso.Nombre : null,
-                    a.Fecha,
-                    a.Presente
-                ))
+                .Select(a => new AsistenciaResponseDto
+                {
+                    AsistenciaId = a.AsistenciaId,
+                    EstudianteId = a.EstudianteId,
+                    NombreEstudiante = a.Estudiante != null ? a.Estudiante.Nombre : null,
+                    ApellidoEstudiante = a.Estudiante != null ? a.Estudiante.Apellido : null,
+                    CursoId = a.CursoId,
+                    NombreCurso = a.Curso != null ? a.Curso.Nombre : null,
+                    Fecha = a.Fecha,
+                    Presente = a.Presente,
+                    EstadoAsistencia = a.EstadoAsistencia ?? (a.Presente ? "presente" : "ausente"),
+                    Observacion = a.Observacion
+                })
                 .ToListAsync();
         }
 
@@ -86,17 +104,32 @@ namespace SistemaGestionOrquesta.Services
                 .Include(a => a.Estudiante)
                 .Include(a => a.Curso)
                 .OrderByDescending(a => a.Fecha)
-                .Select(a => new AsistenciaResponseDto(
-                    a.AsistenciaId,
-                    a.EstudianteId,
-                    a.Estudiante != null ? a.Estudiante.Nombre : null,
-                    a.Estudiante != null ? a.Estudiante.Apellido : null,
-                    a.CursoId,
-                    a.Curso != null ? a.Curso.Nombre : null,
-                    a.Fecha,
-                    a.Presente
-                ))
+                .Select(a => new AsistenciaResponseDto
+                {
+                    AsistenciaId = a.AsistenciaId,
+                    EstudianteId = a.EstudianteId,
+                    NombreEstudiante = a.Estudiante != null ? a.Estudiante.Nombre : null,
+                    ApellidoEstudiante = a.Estudiante != null ? a.Estudiante.Apellido : null,
+                    CursoId = a.CursoId,
+                    NombreCurso = a.Curso != null ? a.Curso.Nombre : null,
+                    Fecha = a.Fecha,
+                    Presente = a.Presente,
+                    EstadoAsistencia = a.EstadoAsistencia ?? (a.Presente ? "presente" : "ausente"),
+                    Observacion = a.Observacion
+                })
                 .ToListAsync();
+        }
+
+        private static string? NormalizarEstadoAsistencia(string? estadoAsistencia)
+        {
+            if (string.IsNullOrWhiteSpace(estadoAsistencia))
+                return null;
+
+            var estadoNormalizado = estadoAsistencia.Trim().ToLowerInvariant();
+            if (!EstadosValidos.Contains(estadoNormalizado))
+                throw new ArgumentException("EstadoAsistencia inválido. Valores permitidos: presente, ausente, ausente_con_aviso.");
+
+            return estadoNormalizado;
         }
     }
 }

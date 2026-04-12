@@ -5,6 +5,77 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/asistencia": {
+      "post": {
+        "tags": [
+          "Asistencia"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/SaveAttendanceDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Asistencia"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "cursoId",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "fecha",
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/asistencia/estudiante/{estudianteId}": {
+      "get": {
+        "tags": [
+          "Asistencia"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "estudianteId",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/curso/save": {
       "post": {
         "tags": [
@@ -134,11 +205,6 @@
         "tags": [
           "Curso"
         ],
-        "produces": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
         "parameters": [
           {
             "in": "path",
@@ -149,10 +215,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
-            "schema": {
-              "$ref": "#/definitions/Curso"
-            }
+            "description": "Success"
           }
         }
       }
@@ -172,7 +235,7 @@
             "in": "body",
             "name": "body",
             "schema": {
-              "$ref": "#/definitions/EstudianteDTO"
+              "$ref": "#/definitions/Estudiante"
             }
           }
         ],
@@ -247,7 +310,7 @@
             "in": "body",
             "name": "body",
             "schema": {
-              "$ref": "#/definitions/EstudianteDTO"
+              "$ref": "#/definitions/Estudiante"
             }
           }
         ],
@@ -359,11 +422,6 @@
         "tags": [
           "Estudiante"
         ],
-        "produces": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
         "parameters": [
           {
             "in": "path",
@@ -375,13 +433,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Estudiante"
-              }
-            }
+            "description": "Success"
           }
         }
       }
@@ -390,11 +442,6 @@
       "get": {
         "tags": [
           "Estudiante"
-        ],
-        "produces": [
-          "text/plain",
-          "application/json",
-          "text/json"
         ],
         "parameters": [
           {
@@ -407,13 +454,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Curso"
-              }
-            }
+            "description": "Success"
           }
         }
       }
@@ -500,6 +541,114 @@
             "required": true,
             "type": "integer",
             "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/eventos": {
+      "get": {
+        "tags": [
+          "Evento"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "month",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "courseId",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/evento/save": {
+      "post": {
+        "tags": [
+          "Evento"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateCalendarEventDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/evento/update/{id}": {
+      "put": {
+        "tags": [
+          "Evento"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateCalendarEventDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/evento/delete/{id}": {
+      "delete": {
+        "tags": [
+          "Evento"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -709,6 +858,124 @@
         }
       }
     },
+    "/api/prestamos/asignar": {
+      "post": {
+        "tags": [
+          "Prestamos"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/AsignarPrestamoDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/prestamos/devolver": {
+      "post": {
+        "tags": [
+          "Prestamos"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/DevolverPrestamoDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/prestamos": {
+      "get": {
+        "tags": [
+          "Prestamos"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/prestamos/activos": {
+      "get": {
+        "tags": [
+          "Prestamos"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/prestamos/estudiante/{estudianteId}": {
+      "get": {
+        "tags": [
+          "Prestamos"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "estudianteId",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/prestamos/{id}": {
+      "get": {
+        "tags": [
+          "Prestamos"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/profesor/save": {
       "post": {
         "tags": [
@@ -724,7 +991,7 @@
             "in": "body",
             "name": "body",
             "schema": {
-              "$ref": "#/definitions/ProfesorDTO"
+              "$ref": "#/definitions/Profesor"
             }
           }
         ],
@@ -799,7 +1066,7 @@
             "in": "body",
             "name": "body",
             "schema": {
-              "$ref": "#/definitions/ProfesorDTO"
+              "$ref": "#/definitions/Profesor"
             }
           }
         ],
@@ -906,6 +1173,154 @@
         }
       }
     },
+    "/api/stock": {
+      "post": {
+        "tags": [
+          "Stock"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateStockDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Stock"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/stock/disponibles/{instrumentoId}": {
+      "get": {
+        "tags": [
+          "Stock"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "instrumentoId",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/stock/{id}": {
+      "get": {
+        "tags": [
+          "Stock"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Stock"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateStockDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Stock"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/stock/codigo/{codigoInventario}": {
+      "get": {
+        "tags": [
+          "Stock"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "codigoInventario",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/usuario/login": {
       "post": {
         "tags": [
@@ -934,6 +1349,91 @@
     }
   },
   "definitions": {
+    "AsignarPrestamoDto": {
+      "type": "object",
+      "properties": {
+        "estudianteId": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "stockInstrumentoId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "AttendanceItemDto": {
+      "type": "object",
+      "properties": {
+        "estudianteId": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "presente": {
+          "type": "boolean"
+        },
+        "estadoAsistencia": {
+          "type": "string"
+        },
+        "observacion": {
+          "type": "string"
+        }
+      }
+    },
+    "CreateCalendarEventDto": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "subtitle": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "start": {
+          "type": "string"
+        },
+        "end": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "tag": {
+          "type": "string"
+        },
+        "attendees": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "courseId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "CreateStockDto": {
+      "type": "object",
+      "properties": {
+        "instrumentoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "codigoInventario": {
+          "type": "string"
+        },
+        "numeroSerie": {
+          "type": "string"
+        }
+      }
+    },
     "Curso": {
       "type": "object",
       "properties": {
@@ -947,6 +1447,15 @@
         "profesorId": {
           "format": "uuid",
           "type": "string"
+        }
+      }
+    },
+    "DevolverPrestamoDto": {
+      "type": "object",
+      "properties": {
+        "stockInstrumentoId": {
+          "format": "int32",
+          "type": "integer"
         }
       }
     },
@@ -1024,107 +1533,6 @@
         },
         "autoretiro": {
           "type": "boolean"
-        },
-        "instrumento": {
-          "$ref": "#/definitions/Instrumento"
-        },
-        "prestamosInstrumentos": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/PrestamosInstrumento"
-          }
-        },
-        "cursos": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Curso"
-          }
-        }
-      }
-    },
-    "EstudianteDTO": {
-      "type": "object",
-      "properties": {
-        "estudianteId": {
-          "format": "uuid",
-          "type": "string"
-        },
-        "nombre": {
-          "type": "string"
-        },
-        "apellido": {
-          "type": "string"
-        },
-        "documento": {
-          "type": "string"
-        },
-        "fechaNacimiento": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "direccion": {
-          "type": "string"
-        },
-        "nacionalidad": {
-          "type": "string"
-        },
-        "telefono": {
-          "type": "string"
-        },
-        "email": {
-          "type": "string"
-        },
-        "nombreTutor": {
-          "type": "string"
-        },
-        "documentoTutor": {
-          "type": "string"
-        },
-        "nombreTutor2": {
-          "type": "string"
-        },
-        "documentoTutor2": {
-          "type": "string"
-        },
-        "telefonoTutor": {
-          "type": "string"
-        },
-        "telefonoTutor2": {
-          "type": "string"
-        },
-        "orquesta": {
-          "type": "string"
-        },
-        "instrumentoId": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "profeCursoViolin": {
-          "type": "string"
-        },
-        "rutaFoto": {
-          "type": "string"
-        },
-        "activo": {
-          "type": "boolean"
-        },
-        "asegurado": {
-          "type": "boolean"
-        },
-        "tmtMédico": {
-          "type": "string"
-        },
-        "epPsicoMotriz": {
-          "type": "string"
-        },
-        "particularidad": {
-          "type": "string"
-        },
-        "autoretiro": {
-          "type": "boolean"
-        },
-        "instrumentoNombre": {
-          "type": "string"
         }
       }
     },
@@ -1143,37 +1551,6 @@
         },
         "disponible": {
           "type": "boolean"
-        }
-      }
-    },
-    "PrestamosInstrumento": {
-      "type": "object",
-      "properties": {
-        "prestamoInstrumentoId": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "fechaPrestamo": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "fechaDevolucion": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "instrumentoId": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "estudianteId": {
-          "format": "uuid",
-          "type": "string"
-        },
-        "estudiante": {
-          "$ref": "#/definitions/Estudiante"
-        },
-        "instrumento": {
-          "$ref": "#/definitions/Instrumento"
         }
       }
     },
@@ -1217,37 +1594,78 @@
         }
       }
     },
-    "ProfesorDTO": {
+    "SaveAttendanceDto": {
       "type": "object",
       "properties": {
-        "profesorId": {
-          "format": "uuid",
-          "type": "string"
+        "cursoId": {
+          "format": "int32",
+          "type": "integer"
         },
-        "nombre": {
-          "type": "string"
-        },
-        "apellido": {
-          "type": "string"
-        },
-        "fechaNacimiento": {
+        "fecha": {
           "format": "date-time",
           "type": "string"
         },
-        "documento": {
+        "asistencias": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AttendanceItemDto"
+          }
+        }
+      }
+    },
+    "UpdateCalendarEventDto": {
+      "type": "object",
+      "properties": {
+        "title": {
           "type": "string"
         },
-        "telefono": {
+        "subtitle": {
           "type": "string"
         },
-        "direccion": {
+        "type": {
           "type": "string"
         },
-        "email": {
+        "start": {
           "type": "string"
         },
-        "activo": {
-          "type": "boolean"
+        "end": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "tag": {
+          "type": "string"
+        },
+        "attendees": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "courseId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      }
+    },
+    "UpdateStockDto": {
+      "type": "object",
+      "properties": {
+        "codigoInventario": {
+          "type": "string"
+        },
+        "numeroSerie": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
         }
       }
     },

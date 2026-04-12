@@ -19,6 +19,7 @@ namespace SistemaGestionOrquesta.Models
         public virtual DbSet<Asistencia> Asistencias { get; set; } = null!;
         public virtual DbSet<Curso> Cursos { get; set; } = null!;
         public virtual DbSet<Estudiante> Estudiantes { get; set; } = null!;
+        public virtual DbSet<Evento> Eventos { get; set; } = null!;
         public virtual DbSet<Instrumento> Instrumentos { get; set; } = null!;
         public virtual DbSet<PrestamosInstrumento> PrestamosInstrumentos { get; set; } = null!;
         public virtual DbSet<Profesor> Profesors { get; set; } = null!;
@@ -50,6 +51,12 @@ namespace SistemaGestionOrquesta.Models
 
                 entity.Property(e => e.Fecha)
                     .HasColumnType("date");
+
+                entity.Property(e => e.EstadoAsistencia)
+                    .HasMaxLength(30);
+
+                entity.Property(e => e.Observacion)
+                    .HasMaxLength(500);
 
                 // Índice único para evitar duplicados: un estudiante, un curso, una fecha
                 entity.HasIndex(e => new { e.EstudianteId, e.CursoId, e.Fecha })
@@ -160,6 +167,41 @@ namespace SistemaGestionOrquesta.Models
 
                             j.IndexerProperty<int>("CursoId").HasColumnName("CursoID");
                         });
+            });
+
+            modelBuilder.Entity<Evento>(entity =>
+            {
+                entity.ToTable("Evento");
+
+                entity.HasKey(e => e.EventoId);
+
+                entity.Property(e => e.EventoId)
+                    .HasColumnName("EventoID")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Title)
+                    .IsRequired()
+                    .HasMaxLength(200);
+
+                entity.Property(e => e.Subtitle)
+                    .HasMaxLength(300);
+
+                entity.Property(e => e.Type)
+                    .IsRequired()
+                    .HasMaxLength(30);
+
+                entity.Property(e => e.Location)
+                    .IsRequired()
+                    .HasMaxLength(300);
+
+                entity.Property(e => e.Tag)
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.AttendeesJson)
+                    .HasColumnType("nvarchar(max)");
+
+                entity.Property(e => e.Description)
+                    .HasMaxLength(1000);
             });
 
             modelBuilder.Entity<Instrumento>(entity =>

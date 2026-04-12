@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
 namespace SistemaGestionOrquesta.Models
@@ -10,6 +11,12 @@ namespace SistemaGestionOrquesta.Models
         public int CursoId { get; set; }
         public DateTime Fecha { get; set; }
         public bool Presente { get; set; }
+
+        [MaxLength(30)]
+        public string? EstadoAsistencia { get; set; }
+
+        [MaxLength(500)]
+        public string? Observacion { get; set; }
 
         [JsonIgnore]
         public virtual Estudiante? Estudiante { get; set; }

@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "+r05EC30i06DQXdqdj0e9x0Iwad+gKg9SJKgqe9/aGw=",
-  "Source": "SistemaGestionOrquesta",
-  "BasePath": "_content/SistemaGestionOrquesta",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"rbUWfqd+W2vQ9iOayEoxBW9KfkQdk7lCafCnD6gI+Vk=","Source":"SistemaGestionOrquesta","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

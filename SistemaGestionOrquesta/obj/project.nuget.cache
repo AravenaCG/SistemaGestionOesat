@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Oqec64ABkfarn+FAGsb6FOS67bcSYPu1fCTrdlxgO4aLPgatBigIPCY5NLSdYJ4iL0xP7k07ytqirBu0gzth7w==",
+  "dgSpecHash": "k/M5yQRgInE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Exiuser\\Documents\\APIBACKORQUESTA\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
+  "projectFilePath": "C:\\Users\\Exiuser\\Documents\\Personal\\Sistema Gestion OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Exiuser\\.nuget\\packages\\closedxml\\0.102.2\\closedxml.0.102.2.nupkg.sha512",
     "C:\\Users\\Exiuser\\.nuget\\packages\\documentformat.openxml\\2.16.0\\documentformat.openxml.2.16.0.nupkg.sha512",
@@ -152,8 +152,10 @@
     {
       "code": "NU1701",
       "level": "Warning",
-      "warningLevel": 1,
       "message": "El paquete \"Microsoft.AspNet.Mvc 5.3.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "projectPath": "C:\\Users\\Exiuser\\Documents\\Personal\\Sistema Gestion OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Exiuser\\Documents\\Personal\\Sistema Gestion OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
       "libraryId": "Microsoft.AspNet.Mvc",
       "targetGraphs": [
         "net6.0"
@@ -162,8 +164,10 @@
     {
       "code": "NU1701",
       "level": "Warning",
-      "warningLevel": 1,
       "message": "El paquete \"Microsoft.AspNet.Razor 3.3.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "projectPath": "C:\\Users\\Exiuser\\Documents\\Personal\\Sistema Gestion OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Exiuser\\Documents\\Personal\\Sistema Gestion OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
       "libraryId": "Microsoft.AspNet.Razor",
       "targetGraphs": [
         "net6.0"
@@ -172,8 +176,10 @@
     {
       "code": "NU1701",
       "level": "Warning",
-      "warningLevel": 1,
       "message": "El paquete \"Microsoft.AspNet.WebApi.Core 5.3.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "projectPath": "C:\\Users\\Exiuser\\Documents\\Personal\\Sistema Gestion OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Exiuser\\Documents\\Personal\\Sistema Gestion OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
       "libraryId": "Microsoft.AspNet.WebApi.Core",
       "targetGraphs": [
         "net6.0"
@@ -182,8 +188,10 @@
     {
       "code": "NU1701",
       "level": "Warning",
-      "warningLevel": 1,
       "message": "El paquete \"Microsoft.AspNet.WebPages 3.3.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "projectPath": "C:\\Users\\Exiuser\\Documents\\Personal\\Sistema Gestion OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Exiuser\\Documents\\Personal\\Sistema Gestion OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
       "libraryId": "Microsoft.AspNet.WebPages",
       "targetGraphs": [
         "net6.0"
@@ -192,8 +200,10 @@
     {
       "code": "NU1701",
       "level": "Warning",
-      "warningLevel": 1,
       "message": "El paquete \"Microsoft.Web.Infrastructure 1.0.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "projectPath": "C:\\Users\\Exiuser\\Documents\\Personal\\Sistema Gestion OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Exiuser\\Documents\\Personal\\Sistema Gestion OESAT\\SistemaGestionOesat\\SistemaGestionOrquesta\\SistemaGestionOrquesta.csproj",
       "libraryId": "Microsoft.Web.Infrastructure",
       "targetGraphs": [
         "net6.0"
