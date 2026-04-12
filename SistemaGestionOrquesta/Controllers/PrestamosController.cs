@@ -10,9 +10,9 @@ namespace SistemaGestionOrquesta.Controllers
     [Route("api/prestamos")]
     public class PrestamosController : ControllerBase
     {
-        private readonly PrestamosService _prestamosService;
+        private readonly IPrestamosService _prestamosService;
 
-        public PrestamosController(PrestamosService prestamosService)
+        public PrestamosController(IPrestamosService prestamosService)
         {
             _prestamosService = prestamosService;
         }
@@ -58,6 +58,67 @@ namespace SistemaGestionOrquesta.Controllers
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            try
+            {
+                var list = await _prestamosService.GetAllAsync();
+                return Ok(list);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { error = ex.Message });
+            }
+        }
+
+        [HttpGet("activos")]
+        public async Task<IActionResult> GetActivos()
+        {
+            try
+            {
+                var list = await _prestamosService.GetActivosAsync();
+                return Ok(list);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { error = ex.Message });
+            }
+        }
+
+        [HttpGet("estudiante/{estudianteId}")]
+        public async Task<IActionResult> GetByEstudiante(Guid estudianteId)
+        {
+            try
+            {
+                var list = await _prestamosService.GetByEstudianteAsync(estudianteId);
+                return Ok(list);
+            }
+            catch (KeyNotFoundException knf)
+            {
+                return NotFound(knf.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { error = ex.Message, traceId = HttpContext.TraceIdentifier });
+            }
+        }
+
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            try
+            {
+                var prestamo = await _prestamosService.GetByIdAsync(id);
+                if (prestamo is null) return NotFound();
+                return Ok(prestamo);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { error = ex.Message });
             }
         }
     }

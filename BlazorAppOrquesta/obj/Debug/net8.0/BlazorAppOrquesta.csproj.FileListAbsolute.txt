@@ -2072,3 +2072,4 @@ C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\D
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\compressed\fveyapdap7.gz
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\BlazorAppOrquesta.csproj.CopyComplete
 C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\ref\BlazorAppOrquesta.dll
+C:\Users\Exiuser\Desktop\copia OESAT\SistemaGestionOesat\BlazorAppOrquesta\obj\Debug\net8.0\rpswa.dswa.cache.json

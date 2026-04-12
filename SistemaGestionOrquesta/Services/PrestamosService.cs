@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SistemaGestionOrquesta.Models;
@@ -7,7 +6,7 @@ using System.Linq;
 
 namespace SistemaGestionOrquesta.Services
 {
-    public class PrestamosService
+    public class PrestamosService : IPrestamosService
     {
         private readonly OrquestaOESATContext _context;
 
@@ -49,7 +48,6 @@ namespace SistemaGestionOrquesta.Services
 
             await _context.SaveChangesAsync();
 
-            // Actualizar Instrumento.Disponible según queden ejemplares disponibles
             var quedanDisponibles = await _context.StockInstrumentos
                 .AnyAsync(s => s.InstrumentoId == stock.InstrumentoId && s.Estado == "Disponible");
 
@@ -86,7 +84,6 @@ namespace SistemaGestionOrquesta.Services
             stock.Estado = "Disponible";
             _context.StockInstrumentos.Update(stock);
 
-            // Actualizar Instrumento.Disponible: si hay al menos uno disponible -> true
             var hayDisponibles = await _context.StockInstrumentos
                 .AnyAsync(s => s.InstrumentoId == stock.InstrumentoId && s.Estado == "Disponible");
 
@@ -98,5 +95,59 @@ namespace SistemaGestionOrquesta.Services
 
             return prestamo;
         }
+
+        public async Task<List<PrestamosInstrumento>> GetAllAsync()
+        {
+            return await _context.PrestamosInstrumentos
+                .Include(p => p.Estudiante)
+                .Include(p => p.Instrumento)
+                .Include(p => p.StockInstrumento)
+                .OrderByDescending(p => p.FechaPrestamo)
+                .ToListAsync();
+        }
+
+        public async Task<List<PrestamosInstrumento>> GetActivosAsync()
+        {
+            return await _context.PrestamosInstrumentos
+                .Where(p => p.FechaDevolucion == null)
+                .Include(p => p.Estudiante)
+                .Include(p => p.Instrumento)
+                .Include(p => p.StockInstrumento)
+                .OrderByDescending(p => p.FechaPrestamo)
+                .ToListAsync();
+        }
+
+        public async Task<List<PrestamosInstrumento>> GetByEstudianteAsync(Guid estudianteId)
+        {
+            var estudiante = await _context.Estudiantes.FindAsync(estudianteId);
+            if (estudiante is null)
+                throw new KeyNotFoundException($"Estudiante {estudianteId} no existe.");
+
+            return await _context.PrestamosInstrumentos
+                .Where(p => p.EstudianteId == estudianteId)
+                .Include(p => p.Instrumento)
+                .Include(p => p.StockInstrumento)
+                .OrderByDescending(p => p.FechaPrestamo)
+                .ToListAsync();
+        }
+
+        public async Task<PrestamosInstrumento?> GetByIdAsync(int id)
+        {
+            return await _context.PrestamosInstrumentos
+                .Include(p => p.Estudiante)
+                .Include(p => p.Instrumento)
+                .Include(p => p.StockInstrumento)
+                .FirstOrDefaultAsync(p => p.PrestamoInstrumentoId == id);
+        }
+    }
+
+    public interface IPrestamosService
+    {
+        Task<PrestamosInstrumento> AsignarPrestamoAsync(AsignarPrestamoDto dto);
+        Task<PrestamosInstrumento> DevolverPrestamoAsync(DevolverPrestamoDto dto);
+        Task<List<PrestamosInstrumento>> GetAllAsync();
+        Task<List<PrestamosInstrumento>> GetActivosAsync();
+        Task<List<PrestamosInstrumento>> GetByEstudianteAsync(Guid estudianteId);
+        Task<PrestamosInstrumento?> GetByIdAsync(int id);
     }
 }

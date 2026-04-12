@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SistemaGestionOrquesta.Models;
 
@@ -11,9 +12,10 @@ using SistemaGestionOrquesta.Models;
 namespace SistemaGestionOrquesta.Migrations
 {
     [DbContext(typeof(OrquestaOESATContext))]
-    partial class OrquestaOESATContextModelSnapshot : ModelSnapshot
+    [Migration("20260405031959_SyncSnapshot")]
+    partial class SyncSnapshot
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

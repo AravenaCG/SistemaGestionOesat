@@ -5,12 +5,12 @@ namespace SistemaGestionOrquesta.Models
     public class Jwt
     {
         public Jwt() { }
-        public string  Key { get; set; }
-        public string Issuer { get; set; }
-        public string Audience { get; set; }
-        public string  Subject{ get; set; }
+        public string Key { get; set; } = null!;
+        public string Issuer { get; set; } = null!;
+        public string Audience { get; set; } = null!;
+        public string Subject { get; set; } = null!;
 
-            
+
         public static dynamic ValidarToken(ClaimsIdentity identity)
         {
             try
@@ -25,8 +25,7 @@ namespace SistemaGestionOrquesta.Models
                     };
                 }
 
-                var id = identity.Claims.FirstOrDefault(x => x.Type == "id").Value;
-
+                var id = identity.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier || x.Type == "id")?.Value;
                 Usuario usuario = Usuario.DB().FirstOrDefault(x => x.IdUsuario == id);
 
                 return new
@@ -36,7 +35,7 @@ namespace SistemaGestionOrquesta.Models
                     result = usuario
                 };
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 return new
                 {

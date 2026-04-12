@@ -10,6 +10,7 @@ namespace SistemaGestionOrquesta.Models
         {
             Estudiantes = new HashSet<Estudiante>();
             PrestamosInstrumentos = new HashSet<PrestamosInstrumento>();
+            StockInstrumentos = new HashSet<StockInstrumento>();
         }
 
         public int InstrumentoId { get; set; }
@@ -22,5 +23,8 @@ namespace SistemaGestionOrquesta.Models
         [JsonIgnore]
 
         public virtual ICollection<PrestamosInstrumento> PrestamosInstrumentos { get; set; }
+        [JsonIgnore]
+
+        public virtual ICollection<StockInstrumento> StockInstrumentos { get; set; }
     }
 }

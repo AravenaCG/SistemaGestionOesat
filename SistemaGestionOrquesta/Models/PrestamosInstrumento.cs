@@ -9,9 +9,11 @@ namespace SistemaGestionOrquesta.Models
         public DateTime FechaPrestamo { get; set; }
         public DateTime? FechaDevolucion { get; set; }
         public int InstrumentoId { get; set; }
+        public int StockInstrumentoId { get; set; }
         public Guid EstudianteId { get; set; }
 
         public virtual Estudiante Estudiante { get; set; } = null!;
         public virtual Instrumento Instrumento { get; set; } = null!;
+        public virtual StockInstrumento StockInstrumento { get; set; } = null!;
     }
 }

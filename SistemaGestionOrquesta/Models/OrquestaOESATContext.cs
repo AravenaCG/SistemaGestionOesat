@@ -16,23 +16,57 @@ namespace SistemaGestionOrquesta.Models
         {
         }
 
+        public virtual DbSet<Asistencia> Asistencias { get; set; } = null!;
         public virtual DbSet<Curso> Cursos { get; set; } = null!;
         public virtual DbSet<Estudiante> Estudiantes { get; set; } = null!;
         public virtual DbSet<Instrumento> Instrumentos { get; set; } = null!;
         public virtual DbSet<PrestamosInstrumento> PrestamosInstrumentos { get; set; } = null!;
         public virtual DbSet<Profesor> Profesors { get; set; } = null!;
+        public virtual DbSet<StockInstrumento> StockInstrumentos { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=E000158\\SQLEXPRESS;Initial Catalog=OrquestaOESAT;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
-            }
+            // Borramos el UseSqlServer de acá adentro.
+            // Si necesitás hacer scaffold, la herramienta te pedirá la cadena por consola 
+            // o la tomará de un parámetro, no hace falta que esté escrita acá.
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Asistencia>(entity =>
+            {
+                entity.ToTable("Asistencia");
+
+                entity.HasKey(e => e.AsistenciaId);
+
+                entity.Property(e => e.AsistenciaId)
+                    .HasColumnName("AsistenciaID");
+
+                entity.Property(e => e.EstudianteId)
+                    .HasColumnName("EstudianteID");
+
+                entity.Property(e => e.CursoId)
+                    .HasColumnName("CursoID");
+
+                entity.Property(e => e.Fecha)
+                    .HasColumnType("date");
+
+                // Índice único para evitar duplicados: un estudiante, un curso, una fecha
+                entity.HasIndex(e => new { e.EstudianteId, e.CursoId, e.Fecha })
+                    .IsUnique()
+                    .HasDatabaseName("IX_Asistencia_Estudiante_Curso_Fecha");
+
+                entity.HasOne(d => d.Estudiante)
+                    .WithMany()
+                    .HasForeignKey(d => d.EstudianteId)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasOne(d => d.Curso)
+                    .WithMany()
+                    .HasForeignKey(d => d.CursoId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
             modelBuilder.Entity<Curso>(entity =>
             {
                 entity.ToTable("Curso");
@@ -143,6 +177,34 @@ namespace SistemaGestionOrquesta.Models
                 entity.Property(e => e.Nombre).HasMaxLength(100);
             });
 
+            modelBuilder.Entity<StockInstrumento>(entity =>
+            {
+                entity.ToTable("StockInstrumento");
+
+                entity.HasKey(e => e.StockInstrumentoId);
+
+                entity.Property(e => e.StockInstrumentoId)
+                    .HasColumnName("StockInstrumentoID");
+
+                entity.HasIndex(e => e.CodigoInventario).IsUnique();
+
+                entity.Property(e => e.CodigoInventario).HasMaxLength(50);
+
+                entity.Property(e => e.NumeroSerie).HasMaxLength(100);
+
+                entity.Property(e => e.Estado)
+                    .HasMaxLength(50)
+                    .HasDefaultValue("Disponible");
+
+                entity.Property(e => e.InstrumentoId)
+                    .HasColumnName("InstrumentoID");
+
+                entity.HasOne(d => d.Instrumento)
+                    .WithMany(p => p.StockInstrumentos)
+                    .HasForeignKey(d => d.InstrumentoId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
             modelBuilder.Entity<PrestamosInstrumento>(entity =>
             {
                 entity.HasKey(e => e.PrestamoInstrumentoId);
@@ -151,6 +213,8 @@ namespace SistemaGestionOrquesta.Models
 
                 entity.HasIndex(e => e.InstrumentoId, "IX_PrestamosInstrumentos_InstrumentoId");
 
+                entity.HasIndex(e => e.StockInstrumentoId, "IX_PrestamosInstrumentos_StockInstrumentoId");
+
                 entity.HasOne(d => d.Estudiante)
                     .WithMany(p => p.PrestamosInstrumentos)
                     .HasForeignKey(d => d.EstudianteId);
@@ -158,6 +222,11 @@ namespace SistemaGestionOrquesta.Models
                 entity.HasOne(d => d.Instrumento)
                     .WithMany(p => p.PrestamosInstrumentos)
                     .HasForeignKey(d => d.InstrumentoId);
+
+                entity.HasOne(d => d.StockInstrumento)
+                    .WithMany(p => p.PrestamosInstrumentos)
+                    .HasForeignKey(d => d.StockInstrumentoId)
+                    .OnDelete(DeleteBehavior.Restrict);
             });
 
             modelBuilder.Entity<Profesor>(entity =>

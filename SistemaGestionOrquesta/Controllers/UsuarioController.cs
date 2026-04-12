@@ -4,7 +4,6 @@ using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using SistemaGestionOrquesta.Models;
 using System.IdentityModel.Tokens.Jwt;
-using System.Net;
 using System.Security.Claims;
 using System.Text;
 
@@ -22,12 +21,9 @@ namespace SistemaGestionOrquesta.Controllers
 
         [HttpPost]
         [Route("login")]
-      public dynamic IniciarSesion([FromBody] Usuario requestUser)
+        public dynamic IniciarSesion([FromBody] Usuario requestUser)
         {
-           
-
             Usuario usuario = Usuario.DB().Where(x => x.Email == requestUser.Email && x.Password == requestUser.Password).FirstOrDefault();
-
 
             if (usuario == null)
             {
@@ -44,9 +40,9 @@ namespace SistemaGestionOrquesta.Controllers
             {
                 new Claim(JwtRegisteredClaimNames.Sub, jwt.Subject),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-               // new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
-                new Claim("id", usuario.IdUsuario),
-                new Claim("usuario", usuario.User)
+                new Claim(ClaimTypes.NameIdentifier, usuario.IdUsuario),
+                new Claim(ClaimTypes.Name, usuario.User),
+                new Claim(ClaimTypes.Role, usuario.Rol)
             };
 
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
@@ -59,8 +55,6 @@ namespace SistemaGestionOrquesta.Controllers
                 expires: DateTime.Now.AddMinutes(60),
                 signingCredentials: credentials);
 
-
-
             return new
             {
                 succes = true,
@@ -70,4 +64,3 @@ namespace SistemaGestionOrquesta.Controllers
         }
     }
 }
-    

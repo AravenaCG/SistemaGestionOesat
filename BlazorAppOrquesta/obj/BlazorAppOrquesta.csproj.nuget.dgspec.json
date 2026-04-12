@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Exiuser\\Documents\\APIBACKORQUESTA\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj": {}
+    "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Exiuser\\Documents\\APIBACKORQUESTA\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj": {
+    "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Exiuser\\Documents\\APIBACKORQUESTA\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
+        "projectUniqueName": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
         "projectName": "BlazorAppOrquesta",
-        "projectPath": "C:\\Users\\Exiuser\\Documents\\APIBACKORQUESTA\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
+        "projectPath": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\BlazorAppOrquesta.csproj",
         "packagesPath": "C:\\Users\\Exiuser\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Exiuser\\Documents\\APIBACKORQUESTA\\SistemaGestionOesat\\BlazorAppOrquesta\\obj\\",
+        "outputPath": "C:\\Users\\Exiuser\\Desktop\\copia OESAT\\SistemaGestionOesat\\BlazorAppOrquesta\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -39,7 +39,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -63,13 +69,13 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.1, )",
+              "version": "[8.0.24, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.1, )",
+              "version": "[9.0.13, )",
               "autoReferenced": true
             },
             "NSwag.ApiDescription.Client": {
@@ -97,7 +103,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[8.0.1, 8.0.1]"
+              "version": "[8.0.24, 8.0.24]"
             }
           ],
           "frameworkReferences": {
@@ -105,7 +111,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

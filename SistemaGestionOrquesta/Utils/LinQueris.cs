@@ -46,8 +46,29 @@ namespace SistemaGestionOrquesta.Utils
         {
             try
             {
-                // Intenta eliminar el estudiante
-                context.Remove(estudianteToDelete);
+                // Recargar el estudiante con sus relaciones para poder limpiarlas
+                var estudiante = await context.Estudiantes
+                    .Include(e => e.Cursos)
+                    .Include(e => e.PrestamosInstrumentos)
+                    .FirstOrDefaultAsync(e => e.EstudianteId == estudianteToDelete.EstudianteId);
+
+                if (estudiante == null)
+                    return "El estudiante no existe en la base de datos.";
+
+                // Eliminar relaciones con cursos (borra registros en AlumnosCurso)
+                if (estudiante.Cursos.Any())
+                {
+                    estudiante.Cursos.Clear();
+                }
+
+                // Eliminar préstamos asociados (si los tiene)
+                if (estudiante.PrestamosInstrumentos.Any())
+                {
+                    context.PrestamosInstrumentos.RemoveRange(estudiante.PrestamosInstrumentos);
+                }
+
+                // Eliminar el estudiante
+                context.Remove(estudiante);
                 await context.SaveChangesAsync();
                 return "Estudiante eliminado exitosamente!";
             }
@@ -619,6 +640,10 @@ namespace SistemaGestionOrquesta.Utils
         #endregion
     }
 }
+
+
+
+
 
 
 
