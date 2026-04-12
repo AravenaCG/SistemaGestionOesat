@@ -1,0 +1,47 @@
+# =========================
+# Build / Output
+# =========================
+*.exe
+*.dll
+**/[Bb]in/
+**/[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+
+# =========================
+# Dependencies
+# =========================
+/packages/
+/node_modules/
+
+# =========================
+# Visual Studio / IDE
+# =========================
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# =========================
+# Project-specific ignores
+# =========================
+SistemaGestionOrquesta/.vs/
+SistemaGestionOrquesta/bin/
+SistemaGestionOrquesta/obj/
+
+# BlazorAppOrquesta (deprecado)
+/BlazorAppOrquesta/
+
+# =========================
+# Local configuration / secrets
+# =========================
+appsettings.Development.json
+appsettings.*.local.json
+.env
+.env.*
+
+# Si querés mantener appsettings.json fuera del repo, dejá esta línea activa.
+# Si no, comentala:
+# appsettings.json
